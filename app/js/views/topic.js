@@ -56,8 +56,6 @@ define([
                                            }));
           }
 
-          $('#title').text (that.topicCollection.title);
-          
           $(that.el).append (_.template (TopicTemplate,
                                          {entries: entries.toJSON ()}));
 
