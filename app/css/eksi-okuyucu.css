@@ -95,6 +95,11 @@ div.entry span.glyphicon-button {
   margin-left: 250px;
 }
 
+.page-nav {
+  width: 250px;
+  border-right: 1px dashed #e7e7e7;
+}
+
 
 /* SIDEBAR */
 
@@ -110,7 +115,7 @@ div.entry span.glyphicon-button {
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  top: 0;
+  top: 50px;
   bottom: 0;
   transition: all 0.4s ease 0s;
 }
