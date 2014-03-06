@@ -1,0 +1,28 @@
+
+<ul>
+  <% _.each(entries, function (entry) { %>
+  <li>
+
+    <a href="#t/2<%= entry.url %>">
+
+      <div class="title">
+        
+          <%= entry.title %>
+
+      </div>
+
+
+      <div class="count">
+
+        <span class="glyphicon glyphicon-tint"></span>
+        <%= entry.count%>
+
+      </div>
+
+      <div class="clear"></div>
+
+    </a>
+  
+  </li>
+  <% }); %>
+</ul>

@@ -1,0 +1,26 @@
+
+
+<% _.each(entries, function (entry) { %>
+
+<div class="entry border-color-1">
+
+  <p class="meta">
+
+    <span class="author">
+      <span class="glyphicon glyphicon-user"></span> <%= entry.author %>
+    </span>
+
+    <span class="time">
+      -
+      <%= entry.creationTime %>
+    </span>
+  
+  </p>
+
+  <p class="content">
+    <%= entry.rawContent %>
+  </p>
+
+</div>
+
+<% }); %>
