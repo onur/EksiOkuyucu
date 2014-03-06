@@ -54,7 +54,7 @@ ul, li {
   overflow-y: auto;
   overflow-x: hide;
   right: 0;
-  top: 50px;
+  top: 51px;
   bottom: 0;
   left: 250px;
 }
@@ -115,7 +115,7 @@ div.entry span.glyphicon-button {
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  top: 50px;
+  top: 51px;
   bottom: 0;
   transition: all 0.4s ease 0s;
 }
