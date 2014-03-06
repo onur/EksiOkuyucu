@@ -122,8 +122,6 @@ define([
 
       this.isLoading = true;
 
-      $(ev.currentTarget).attr ('title', $(ev.currentTarget).text ());
-
       var topicCollection = new TopicCollection ();
       topicCollection.external_url = link;
       topicCollection.order = 0;
@@ -132,7 +130,6 @@ define([
           $(ev.currentTarget).attr ('data-content',
                    // FIXME: need to get normal content
                    $('<p>' + entries.at (0).get ('rawContent') + '</p>').text ());
-          console.log (that.el);
           $(ev.currentTarget).popover ({ placement: position,
                                          trigget: 'manual' });
           $(ev.currentTarget).popover ('show');
