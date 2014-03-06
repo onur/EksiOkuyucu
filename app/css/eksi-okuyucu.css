@@ -107,7 +107,7 @@ div.entry span.glyphicon-button {
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  top: 50px;
+  top: 0;
   bottom: 0;
   transition: all 0.4s ease 0s;
 }
@@ -117,7 +117,7 @@ div.entry span.glyphicon-button {
   display: block;
   left: 250px;
   right: 0;
-  top: 50px;
+  top: 0;
   bottom: 0;
 }
 
