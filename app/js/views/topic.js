@@ -50,7 +50,7 @@ define([
         success: function (entries) {
 
           if (external_url) {
-            $(that.el).append (_.template (TopicHeadTemplate, {
+            $("#nav").append (_.template (TopicHeadTemplate, {
                                              title: that.topicCollection.title,
                                              external_url: external_url
                                            }));

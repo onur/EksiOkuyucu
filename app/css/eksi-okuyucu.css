@@ -50,15 +50,13 @@ ul, li {
 }
 
 #main {
-  height: 100%;
-  position: absolute;
+  position: fixed;
   overflow-y: auto;
   overflow-x: hide;
-  display: block;
-  left: 0;
   right: 0;
-  top: 0;
+  top: 50px;
   bottom: 0;
+  left: 250px;
 }
 
 .clear {
@@ -91,6 +89,11 @@ div.entry span.glyphicon-button {
   overflow-y: auto;
 }
 
+
+.eksi-nav {
+  position: fixed;
+  margin-left: 250px;
+}
 
 
 /* SIDEBAR */

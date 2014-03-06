@@ -1,4 +1,4 @@
-<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+<nav id="navbar-example" class="navbar navbar-default navbar-fixed-top eksi-nav" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
@@ -14,6 +14,7 @@
         <li class="dropdown">
          <a href="#" id="order-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-sort"></span></a>
          <ul class="dropdown-menu" role="menu" aria-labelledby="order-drop">
+           <li class="dropdown-header">Sıralama</li>
            <li><a href="#t/0/<%= external_url %>"><span class="glyphicon glyphicon-sort-by-order"></span> Baştan sona</a></li>
            <li><a href="#t/1/<%= external_url %>"><span class="glyphicon glyphicon-sort-by-order-alt"></span> Sondan başa</a></li>
            <li><a href="#t/2/<%= external_url %>"><span class="glyphicon glyphicon-sort-by-order-alt"></span> Bugün</a></li>
