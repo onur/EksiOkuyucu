@@ -240,3 +240,20 @@ div.entry span.glyphicon-button {
   background-image: url('/img/twit_bg.png');
   background-repeat: repeat-x;
 }
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: #ccc;
+}
