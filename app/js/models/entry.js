@@ -28,27 +28,27 @@ define([
       var elapsed = current - new Date (time) + (2*60*60*1000);
 
       if (elapsed < msPerMinute) {
-        return Math.round (elapsed/1000) + 'saniye';   
+        return Math.round (elapsed/1000) + ' saniye';   
       }
 
       else if (elapsed < msPerHour) {
-        return Math.round (elapsed/msPerMinute) + 'dakika';   
+        return Math.round (elapsed/msPerMinute) + ' dakika';   
       }
 
       else if (elapsed < msPerDay ) {
-        return Math.round (elapsed/msPerHour ) + 'saat';   
+        return Math.round (elapsed/msPerHour ) + ' saat';   
       }
 
       else if (elapsed < msPerMonth) {
-        return '≈ ' + Math.round (elapsed/msPerDay) + 'gün';   
+        return Math.round (elapsed/msPerDay) + ' gün';   
       }
 
       else if (elapsed < msPerYear) {
-        return '≈ ' + Math.round (elapsed/msPerMonth) + 'ay';   
+        return Math.round (elapsed/msPerMonth) + ' ay';   
       }
 
       else {
-        return '≈ ' + Math.round (elapsed/msPerYear ) + 'yıl';   
+        return Math.round (elapsed/msPerYear ) + ' yıl';   
       }
     },
 
