@@ -34,10 +34,7 @@ define([
 
       // external_url used for new pages
       if (external_url) {
-
         this.topicCollection.external_url = external_url;
-        // clearing page
-        $(this.el).html ('');
       }
 
       // FIXME: need to check valid orders
@@ -50,6 +47,10 @@ define([
         success: function (entries) {
 
           if (external_url) {
+
+            // clearing page
+            $(that.el).html ('');
+
             $(that.el).append (_.template (TopicHeadTemplate, {
                                              title: that.topicCollection.title,
                                              external_url: external_url
