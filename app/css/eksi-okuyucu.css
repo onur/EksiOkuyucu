@@ -8,7 +8,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 * {
-  border-color: #ccc;
+  border-color: #eee;
 }
 
 ul, li {
@@ -64,8 +64,7 @@ ul, li {
 }
 
 div.entry {
-  padding: 10px 15px;
-  font-size: 1.1em;
+  padding: 15px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -250,10 +249,10 @@ div.entry span.glyphicon-button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #eee;
     -webkit-border-radius: 1ex;
 }
 
 ::-webkit-scrollbar-corner {
-    background: #ccc;
+    background: #eee;
 }
