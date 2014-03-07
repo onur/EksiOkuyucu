@@ -109,6 +109,10 @@ div.entry span.glyphicon-button {
   padding-right: 10px;
 }
 
+ul.dropdown-menu li a {
+  padding: 3px 20px;
+}
+
 
 /* SIDEBAR */
 
