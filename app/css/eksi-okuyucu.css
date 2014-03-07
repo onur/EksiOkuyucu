@@ -95,6 +95,11 @@ div.entry span.glyphicon-button {
   margin-left: 250px;
 }
 
+.eksi-nav ul li a {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .page-nav {
   width: 250px;
   border-right: 1px dashed #e7e7e7;
