@@ -29,6 +29,7 @@ define([
 
       var that = this;
 
+
       this.isLoading = true;
 
 
@@ -72,7 +73,8 @@ define([
 
     events: {
       'scroll': 'checkScroll',
-      'click div.entry a': 'click'
+      'click div.entry a': 'click',
+      'click a#refresh-topic': 'refresh'
     },
 
 
@@ -150,6 +152,16 @@ define([
       });
 
 
+      return false;
+    },
+
+
+    refresh: function () {
+      var order = this.topicCollection.order;
+      var external_url = this.topicCollection.external_url;
+      this.topicCollection.reset ();
+      this.topicCollection.firstPage ();
+      this.loadResults (order, external_url);
       return false;
     }
 

@@ -54,6 +54,14 @@ define([
 
     },
 
+
+    // TODO: add DESC order
+    firstPage: function () {
+
+      this.page = 1;
+
+    },
+
     nextPage: function () {
 
       this.page++;
