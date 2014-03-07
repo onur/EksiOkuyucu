@@ -100,6 +100,11 @@ div.entry span.glyphicon-button {
   border-right: 1px dashed #e7e7e7;
 }
 
+.page-nav ul li a {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 
 /* SIDEBAR */
 
