@@ -14,7 +14,13 @@ define([
 
     initialize: function () {
       this.sidebarCollection = new SidebarCollection ();
+
       $("#left-navbar").html (_.template (SidebarNavTemplate));
+
+
+      // register channels event
+      var that = this;
+      $("#channels a").click (function () { that.click (this); });
     },
 
     render: function () {
@@ -34,6 +40,13 @@ define([
     },
 
 
+    click: function (ev) {
+      var channel = $(ev).attr ('href').replace(/^#/, '');
+      this.sidebarCollection.channel = channel;
+      this.sidebarCollection.reset ();
+      $(this.el).html ('');
+      this.render ();
+    }
 
   });
 
