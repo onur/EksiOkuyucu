@@ -19,26 +19,26 @@ ul, li {
 #sidebar {
 }
 
-#sidebar li {
+#sidebar ul.sidebar-items li {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   clear: left;
   position: relative;
 }
 
-#sidebar li a {
+#sidebar ul.sidebar-items li a {
   padding: 10px 15px;
   display: block;
   font-weight: 400;
   color: #333;
 }
 
-#sidebar li div.title {
+#sidebar ul.sidebar-items li div.title {
   width: 170px;
   display: block;
 }
 
-#sidebar li div.count {
+#sidebar ul.sidebar-items li div.count {
   position: absolute;
   display: flex;
   right: 0;
