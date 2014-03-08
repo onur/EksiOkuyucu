@@ -70,6 +70,11 @@ define([
 
     lastPage: function () {
 
+      // if pageCount is not defined, there's only one page
+      // and it's our last page
+      if (!this.pageCount)
+        return true;
+
       return this.page >= this.pageCount;
 
     },
