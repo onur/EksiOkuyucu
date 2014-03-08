@@ -49,8 +49,9 @@ define([
 
           if (external_url) {
 
-            // clearing page
+            // clear page
             $(that.el).html ('');
+            $(that.el).scrollTop ();
 
             $('#right-navbar').html (_.template (TopicNavTemplate, {
                                              title: that.topicCollection.title,
