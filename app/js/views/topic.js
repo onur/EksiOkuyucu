@@ -52,7 +52,7 @@ define([
             // clearing page
             $(that.el).html ('');
 
-            $(that.el).append (_.template (TopicHeadTemplate, {
+            $('#right-navbar').html (_.template (TopicHeadTemplate, {
                                              title: that.topicCollection.title,
                                              external_url: external_url
                                            }));
