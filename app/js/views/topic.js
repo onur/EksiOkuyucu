@@ -56,6 +56,10 @@ define([
                                              title: that.topicCollection.title,
                                              external_url: external_url
                                            }));
+
+            // bind refresh button
+            $('#refresh-topic').click (function () { that.refresh ();
+                                                     return false; });
           }
 
           $(that.el).append (_.template (TopicTemplate,
@@ -73,8 +77,7 @@ define([
 
     events: {
       'scroll': 'checkScroll',
-      'click div.entry a': 'click',
-      'click a#refresh-topic': 'refresh'
+      'click div.entry a': 'click'
     },
 
 
