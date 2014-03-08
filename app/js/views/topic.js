@@ -5,8 +5,8 @@ define([
   'backbone',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/topic_head.html'
-], function ($, _, Backbone, TopicCollection, TopicTemplate, TopicHeadTemplate) {
+  'text!templates/topic_nav.html'
+], function ($, _, Backbone, TopicCollection, TopicTemplate, TopicNavTemplate) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -52,7 +52,7 @@ define([
             // clearing page
             $(that.el).html ('');
 
-            $('#right-navbar').html (_.template (TopicHeadTemplate, {
+            $('#right-navbar').html (_.template (TopicNavTemplate, {
                                              title: that.topicCollection.title,
                                              external_url: external_url
                                            }));
