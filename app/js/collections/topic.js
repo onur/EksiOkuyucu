@@ -45,6 +45,10 @@ define([
       this.title = $(htmlDoc).find ('#title a').text ();
       this.pageCount = $(htmlDoc).find ('div.pager').attr ('data-pagecount');
 
+      this.external_url = $(htmlDoc).find ('#topic a')
+                                    .attr ('href')
+                                    .replace (/^\/*/, '');
+
       $(htmlDoc).find ('article').each (function () {
         var entry = new EksiEntry ({ htmlDoc: this });
         entries.push (entry);
