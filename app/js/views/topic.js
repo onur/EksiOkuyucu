@@ -54,8 +54,6 @@ define([
             $(that.el).scrollTop ();
 
             $('#right-navbar').html (_.template (TopicNavTemplate, {
-                                             page_current: that.topicCollection.page,
-                                             page_count: that.topicCollection.pageCount,
                                              title: that.topicCollection.title,
                                              external_url: external_url
                                            }));
