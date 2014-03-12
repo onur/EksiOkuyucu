@@ -109,12 +109,18 @@ define([
       var position = function (context, source) {
         var position = $(source).position ();
         var main_position = $(that.el).width ();
-        console.log (position);
-        console.log (main_position);
 
-        if (position.left < 200)
-          return "right";
-        return "top";
+        if ($(window).width () < 767) {
+          return "auto";
+        }
+
+        if (position.top < 100)
+          return "auto bottom";
+
+        if (position.left < 300)
+          return "auto left";
+
+        return "auto top";
       };
 
       // external link
@@ -148,7 +154,7 @@ define([
           $(ev.currentTarget).attr ('data-content',
             '404 böyle bir başlık/entry yok')
           $(ev.currentTarget).popover ({ placement: position,
-                                         trigget: 'manual' });
+                                         trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
