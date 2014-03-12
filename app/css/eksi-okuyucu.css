@@ -209,7 +209,6 @@ ul.dropdown-menu li a {
 
 #wrapper {
   padding-left: 0;
-  transition: all 0.4s ease 0s;
 }
 
 #sidebar-wrapper {
@@ -218,6 +217,7 @@ ul.dropdown-menu li a {
 
 #main {
   left: 0;
+  transition: all 0.4s ease 0s;
 }
 
 .page-nav {
@@ -226,6 +226,7 @@ ul.dropdown-menu li a {
 
 .eksi-nav {
   margin-left: 0;
+  transition: all 0.4s ease 0s;
 }
 
 #wrapper.active {
