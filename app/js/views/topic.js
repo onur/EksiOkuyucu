@@ -115,7 +115,7 @@ define([
         }
 
         if (position.top < 100)
-          return "auto bottom";
+          return "bottom";
 
         if (position.left < 300)
           return "auto left";
