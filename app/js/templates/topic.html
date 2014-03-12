@@ -4,6 +4,12 @@
 
 <div class="entry border-color-1">
 
+  <% if (typeof (entry_title) != 'undefined') { %>
+
+  <h3><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h3>
+
+  <% } %>
+
   <p class="meta">
 
     <span class="author">
