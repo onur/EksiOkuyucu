@@ -143,8 +143,7 @@ define([
           $(ev.currentTarget).attr ('data-content',
                    // FIXME: need to get normal content
                    $('<p>' + entries.at (0).get ('rawContent') + '</p>').text ());
-          $(ev.currentTarget).popover ({ placement: position,
-                                         trigget: 'manual' });
+          $(ev.currentTarget).popover ({ placement: position });
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
@@ -153,8 +152,7 @@ define([
         error: function () {
           $(ev.currentTarget).attr ('data-content',
             '404 böyle bir başlık/entry yok')
-          $(ev.currentTarget).popover ({ placement: position,
-                                         trigger: 'manual' });
+          $(ev.currentTarget).popover ({ placement: position });
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
