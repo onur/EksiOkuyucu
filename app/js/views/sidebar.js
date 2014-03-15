@@ -41,7 +41,11 @@ define([
 
 
     click: function (ev) {
-      var channel = $(ev).attr ('href').replace(/^#/, '');
+      var channel = $(ev).attr ('href').match (/^#(hot)*(\/)*(.*?)$/, '')[3];
+
+      if (channel == '')
+        channel = 'gundem';
+
       this.sidebarCollection.channel = channel;
       this.sidebarCollection.reset ();
       $(this.el).html ('');
