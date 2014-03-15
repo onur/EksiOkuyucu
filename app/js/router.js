@@ -11,6 +11,7 @@ define([
     routes: {
       '': 'defaultAction',
       't/:order/:topic': 'topic',
+      'hot/:channel': 'hotchannel',
       'hot': 'hot',
       'sukela': 'sukela',
     },
@@ -27,6 +28,10 @@ define([
     router.on ('route:hot', function () {
       var hotView = new HotView ();
       hotView.render ();
+    });
+    router.on ('route:hotchannel', function (channel) {
+      var hotView = new HotView ();
+      hotView.render (channel);
     });
     router.on ('route:sukela', function () {
       var sukelaView = new SukelaView ();

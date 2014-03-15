@@ -39,7 +39,7 @@ define([
     },
 
 
-    render: function () {
+    render: function (channel) {
 
       var that = this;
 
@@ -49,6 +49,14 @@ define([
       this.isLoading = true;
 
       if (!this.current_topics) {
+
+        if (typeof (channel) != 'undefined') {
+          this.sidebarCollection.channel = channel;
+          if (channel == 'bugun')
+            $('#title').html ('Bugün ki başlıklar');
+          else if (channel != 'gundem')
+            $('#title').html ('#' + channel);
+        }
 
         this.sidebarCollection.fetch ({
 
