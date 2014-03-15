@@ -30,7 +30,8 @@ define([
       // clear page content
       $(this.el).html ('');
 
-      $('#right-navbar').html (_.template (HotNavTemplate));
+      $('#right-navbar').html (_.template (HotNavTemplate,
+                                           { title: 'Gündem' }));
     },
 
 
