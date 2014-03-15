@@ -32,6 +32,10 @@ define([
 
       $('#right-navbar').html (_.template (HotNavTemplate,
                                            { title: 'Gündem' }));
+
+      // bind refresh button
+      var that = this;
+      $('#refresh-topic').click ( function () { return that.refresh (); } );
     },
 
 
@@ -106,6 +110,17 @@ define([
           this.el.scrollHeight) {
         this.render ();
       }
+    },
+
+
+    refresh: function () {
+      $(this.el).html ('');
+      this.sidebarCollection.reset ();
+      this.topicCollection.reset ();
+      this.current_topics = false;
+      this.current_item = 0;
+      this.render ();
+      return false;
     }
 
   });
