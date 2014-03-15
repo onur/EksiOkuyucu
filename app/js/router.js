@@ -4,13 +4,15 @@ define([
   'backbone',
   'views/sidebar',
   'views/topic',
-  'views/hot'
-], function ($, _, Backbone, SidebarView, TopicView, HotView) {
+  'views/hot',
+  'views/sukela'
+], function ($, _, Backbone, SidebarView, TopicView, HotView, SukelaView) {
   var AppRouter = Backbone.Router.extend ({
     routes: {
       '': 'defaultAction',
       't/:order/:topic': 'topic',
       'hot': 'hot',
+      'sukela': 'sukela',
     },
   });
 
@@ -25,6 +27,10 @@ define([
     router.on ('route:hot', function () {
       var hotView = new HotView ();
       hotView.render ();
+    });
+    router.on ('route:sukela', function () {
+      var sukelaView = new SukelaView ();
+      sukelaView.render ();
     });
     Backbone.history.start ();
   };
