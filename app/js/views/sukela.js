@@ -29,6 +29,10 @@ define([
 
       $('#right-navbar').html (_.template (HotNavTemplate,
                                            { title: '$ükela' }));
+
+      // bind refresh button
+      var that = this;
+      $('#refresh-topic').click ( function () { return that.refresh (); } );
     },
 
 
@@ -81,6 +85,13 @@ define([
           this.el.scrollHeight) {
         this.render ();
       }
+    },
+
+
+    refresh: function () {
+      $(this.el).html ('');
+      this.render ();
+      return false;
     }
 
   });
