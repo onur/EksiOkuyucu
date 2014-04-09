@@ -52,6 +52,53 @@ define([
       }
     },
 
+
+    parseYoutubeUrl: function (url) {
+      // FIXME: 80+
+      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+      var match = url.match (regExp);
+      if (match && match[7].length == 11){
+        return match[7];
+      } else {
+        return false;
+      }
+    },
+
+
+    parseContent: function (content) {
+
+      var that = this;
+
+      var contentObj = $.parseHTML ('<p>' + content + '</p>');
+
+      $(contentObj).find ('a').each (function () {
+
+
+        // EXTERNAL LINKS
+        if ($(this).attr ('href').match (/^https?\:\/\//)) {
+
+          var matches = $(this).attr ('href')
+                               .match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+          var domain = matches && matches[1];
+          domain = domain.replace (/^[^.]+\./g, '');
+          $(this).html ('<span class="glyphicon glyphicon-globe"></span> ' +
+                        domain);
+
+          // show youtube videos
+          var youtube_id = that.parseYoutubeUrl ($(this).attr ('href'));
+          if (youtube_id != false) {
+            $(this).after ('<br /><iframe width="560" height="315" ' +
+                 'src="https://www.youtube.com/embed/' + youtube_id +
+                 '" frameborder="0" allowfullscreen></iframe><br />');
+          }
+        }
+
+      });
+
+      return $(contentObj).html ();
+
+    },
+
     initialize: function () {
 
       if (!this.has ('htmlDoc'))
@@ -60,6 +107,7 @@ define([
       var htmlDoc = this.get ('htmlDoc');
 
       this.set ('rawContent', $(htmlDoc).find ('div.content').html ());
+      this.set ('content', this.parseContent (this.get ('rawContent')));
       this.set ('creationTime',
                 this.relativeTime(
                   $(htmlDoc).find ('time[itemprop="commentTime"]')

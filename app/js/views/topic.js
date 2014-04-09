@@ -5,8 +5,10 @@ define([
   'backbone',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/topic_nav.html'
-], function ($, _, Backbone, TopicCollection, TopicTemplate, TopicNavTemplate) {
+  'text!templates/topic_nav.html',
+  'helpers/popover'
+], function ($, _, Backbone, TopicCollection,
+             TopicTemplate, TopicNavTemplate, PopoverHelper) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -78,7 +80,7 @@ define([
 
     events: {
       'scroll': 'checkScroll',
-      'click div.entry a': 'click'
+      'click div.entry p.content a': 'popover'
     },
 
 
@@ -95,75 +97,6 @@ define([
     },
 
 
-    click: function (ev) {
-
-      var that = this;
-      var link = $(ev.currentTarget).attr ('href');
-
-
-      if (this.isLoading) {
-        return false;
-      }
-
-      // TODO: expand this
-      var position = function (context, source) {
-        var position = $(source).position ();
-        var main_position = $(that.el).width ();
-
-        if ($(window).width () < 767) {
-          return "auto";
-        }
-
-        if (position.top < 100)
-          return "bottom";
-
-        if (position.left < 300)
-          return "auto left";
-
-        return "auto top";
-      };
-
-      // external link
-      if (link.match (/^http(s)*:\/\//)) {
-        window.open (link);
-        return false;
-      }
-
-      if ($(ev.currentTarget).attr ('data-content')) {
-        return false;
-      }
-
-      this.isLoading = true;
-
-      var topicCollection = new TopicCollection ();
-      topicCollection.external_url = link;
-      topicCollection.order = 0;
-      topicCollection.fetch ({
-        success: function (entries) {
-          $(ev.currentTarget).attr ('data-content',
-                   // FIXME: need to get normal content
-                   $('<p>' + entries.at (0).get ('rawContent') + '</p>').text ());
-          $(ev.currentTarget).popover ({ placement: position });
-          $(ev.currentTarget).popover ('show');
-
-          that.isLoading = false;
-        },
-
-        error: function () {
-          $(ev.currentTarget).attr ('data-content',
-            '404 böyle bir başlık/entry yok')
-          $(ev.currentTarget).popover ({ placement: position });
-          $(ev.currentTarget).popover ('show');
-
-          that.isLoading = false;
-        }
-      });
-
-
-      return false;
-    },
-
-
     refresh: function () {
       var order = this.topicCollection.order;
       var external_url = this.topicCollection.external_url;
@@ -171,6 +104,11 @@ define([
       this.topicCollection.firstPage ();
       this.loadResults (order, external_url);
       return false;
+    },
+
+
+    popover: function (ev) {
+      return PopoverHelper.popover (ev);
     }
 
   });
