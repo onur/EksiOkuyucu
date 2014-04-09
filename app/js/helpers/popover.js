@@ -36,7 +36,40 @@ define([
 
       // external link
       if (link.match (/^http(s)*:\/\//)) {
-        window.open (link);
+
+        // do nothing if we already show content
+        if ($(ev.currentTarget).attr ('data-loaded')) {
+          console.log ("ZATEN GOSTERILDI");
+          return false;
+        }
+
+        // check if its image
+        // FIXME: 80+
+        if (link.match(/(?:([^:\/?#]+):)?(?:\/\/([^\/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?/i)) {
+            
+          $(ev.currentTarget).after ('<div><blockquote><img src="' + 
+                                     link +
+                                     '" alt="" /></blockquote></div>');
+          $(ev.currentTarget).attr ('data-loaded', 'true');
+
+          return false;
+
+        }
+
+        // get content from readability if external url is not an image
+        $.ajax ('https://readability.com/api/content/v1/parser?url=' +
+                escape (link) + '&token=' +
+                // token supposed to be secret but who cares
+                'd83f7c87d05f46dcff11e87cbe4b278268f30132'
+               ).done (function (data) {
+
+                  $(ev.currentTarget).after ('<div><blockquote>' + 
+                                             data.content +
+                                             '</blockquote></div>');
+                  $(ev.currentTarget).attr ('data-loaded', 'true');
+
+               });
+
         return false;
       }
 
