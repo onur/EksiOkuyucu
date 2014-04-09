@@ -52,7 +52,6 @@ define([
       topicCollection.fetch ({
         success: function (entries) {
           $(ev.currentTarget).attr ('data-content',
-                   // FIXME: need to get normal content
                    $('<p>' + entries.at (0).get ('content') + '</p>').text ());
           $(ev.currentTarget).popover ({ placement: position });
           $(ev.currentTarget).popover ('show');
