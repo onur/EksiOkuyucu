@@ -39,7 +39,6 @@ define([
 
         // do nothing if we already show content
         if ($(ev.currentTarget).attr ('data-loaded')) {
-          console.log ("ZATEN GOSTERILDI");
           return false;
         }
 
