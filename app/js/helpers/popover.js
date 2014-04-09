@@ -46,6 +46,11 @@ define([
       };
 
       // external link
+
+      // FIXME: this is shitty code I've ever written
+      //        code repeats, hard to read etc.
+      //        need to refactor ASAP
+
       if (link.match (/^http(s)*:\/\//)) {
 
         // do nothing if we already show content
