@@ -6,9 +6,11 @@ define([
   'collections/sidebar',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/hot_nav.html'
+  'text!templates/hot_nav.html',
+  'helpers/popover'
 ], function ($, _, Backbone, SidebarCollection,
-             TopicCollection, TopicTemplate, HotNavTemplate) {
+             TopicCollection, TopicTemplate, HotNavTemplate,
+             PopoverHelper) {
 
   var HotView = Backbone.View.extend ({
     el: '#main',
@@ -106,8 +108,8 @@ define([
 
 
     events: {
-      'scroll': 'checkScroll'
-      // TODO: need to listen click event in content for popovers
+      'scroll': 'checkScroll',
+      'click div.entry p.content a': 'popover'
     },
 
 
@@ -129,6 +131,11 @@ define([
       this.current_item = 0;
       this.render ();
       return false;
+    },
+
+
+    popover: function (ev) {
+      return PopoverHelper.popover (ev);
     }
 
   });

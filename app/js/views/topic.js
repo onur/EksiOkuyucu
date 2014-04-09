@@ -106,6 +106,7 @@ define([
       return false;
     },
 
+
     popover: function (ev) {
       return PopoverHelper.popover (ev);
     }
