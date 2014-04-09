@@ -5,8 +5,10 @@ define([
   'backbone',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/topic_nav.html'
-], function ($, _, Backbone, TopicCollection, TopicTemplate, TopicNavTemplate) {
+  'text!templates/topic_nav.html',
+  'helpers/popover'
+], function ($, _, Backbone, TopicCollection,
+             TopicTemplate, TopicNavTemplate, PopoverHelper) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -77,7 +79,8 @@ define([
     },
 
     events: {
-      'scroll': 'checkScroll'
+      'scroll': 'checkScroll',
+      'click div.entry p.content a': 'popover'
     },
 
 
@@ -101,6 +104,10 @@ define([
       this.topicCollection.firstPage ();
       this.loadResults (order, external_url);
       return false;
+    },
+
+    popover: function (ev) {
+      return PopoverHelper.popover (ev);
     }
 
   });
