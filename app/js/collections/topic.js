@@ -67,7 +67,6 @@ define([
     },
 
 
-    // TODO: add DESC order
     firstPage: function () {
 
       if (this.order == 1) {
