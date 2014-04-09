@@ -139,7 +139,7 @@ define([
 
       var that = this;
 
-      var contentObj = $.parseHTML ('<p>' + this.content + '</p>');
+      var contentObj = $.parseHTML ('<p>' + content + '</p>');
 
       $(contentObj).find ('a').each (function () {
 
@@ -177,7 +177,7 @@ define([
         }
       });
 
-      return contentObj;
+      return $(contentObj).html ();
 
     },
 
