@@ -79,15 +79,11 @@ define([
 
     nextPage: function () {
 
-      console.log ("CURRET PAGE: " + this.page);
-
       if (this.order == 1) {
         this.page--;
       } else {
         this.page++;
       }
-
-      console.log ("NEXT PAGE IS: " + this.page);
 
     },
 
