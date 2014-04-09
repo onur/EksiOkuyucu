@@ -54,18 +54,6 @@ define([
     },
 
 
-    parseYoutubeUrl: function (url) {
-      // FIXME: 80+
-      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-      var match = url.match (regExp);
-      if (match && match[7].length == 11){
-        return match[7];
-      } else {
-        return false;
-      }
-    },
-
-
     parseContent: function (content) {
 
       var that = this;
@@ -85,13 +73,6 @@ define([
           $(this).html ('<span class="glyphicon glyphicon-globe"></span> ' +
                         domain);
 
-          // show youtube videos
-          var youtube_id = that.parseYoutubeUrl ($(this).attr ('href'));
-          if (youtube_id != false) {
-            $(this).after ('<br /><iframe width="560" height="315" ' +
-                 'src="https://www.youtube.com/embed/' + youtube_id +
-                 '" frameborder="0" allowfullscreen></iframe><br />');
-          }
         }
 
       });

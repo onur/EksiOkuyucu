@@ -5,6 +5,17 @@ define([
   'collections/topic',
 ], function($, _, Backbone, TopicCollection){
   return {
+
+    parseYoutubeUrl: function (url) {
+      // FIXME: 80+
+      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+      var match = url.match (regExp);
+      if (match && match[7].length == 11){
+        return match[7];
+      } else {
+        return false;
+      }
+    },
   
     popover: function (ev) {
 
@@ -39,6 +50,15 @@ define([
 
         // do nothing if we already show content
         if ($(ev.currentTarget).attr ('data-loaded')) {
+          return false;
+        }
+
+
+        if ((youtube_id = this.parseYoutubeUrl (link)) != false) {
+          $(ev.currentTarget).after ('<div><blockquote><iframe width="560" height="315" ' +
+                 'src="https://www.youtube.com/embed/' + youtube_id +
+                 '" frameborder="0" allowfullscreen></blockquote></div>');
+          $(ev.currentTarget).attr ('data-loaded', 'true');
           return false;
         }
 
