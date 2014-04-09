@@ -17,7 +17,7 @@ define([
     title: '',
     external_url: '',
 
-    page: 1,
+    page: -1,
     pageCount: -1,
   
 
@@ -39,6 +39,8 @@ define([
 
     parse: function (resp) {
 
+      var that = this;
+
       var entries = [];
       var htmlDoc = $.parseHTML (resp);
 
@@ -51,7 +53,13 @@ define([
 
       $(htmlDoc).find ('article').each (function () {
         var entry = new EksiEntry ({ htmlDoc: this });
-        entries.push (entry);
+
+        // add entry to end of array if order is desc
+        if (that.order == 1) {
+          entries.unshift (entry);
+        } else {
+          entries.push (entry);
+        }
       });
 
       return entries;
@@ -62,13 +70,25 @@ define([
     // TODO: add DESC order
     firstPage: function () {
 
-      this.page = 1;
+      if (this.order == 1) {
+        this.page = this.pageCount;
+      } else {
+        this.page = 1;
+      }
 
     },
 
     nextPage: function () {
 
-      this.page++;
+      console.log ("CURRET PAGE: " + this.page);
+
+      if (this.order == 1) {
+        this.page--;
+      } else {
+        this.page++;
+      }
+
+      console.log ("NEXT PAGE IS: " + this.page);
 
     },
 
@@ -79,7 +99,11 @@ define([
       if (!this.pageCount)
         return true;
 
-      return this.page >= this.pageCount;
+      if (this.order == 1) {
+        return this.pageCount <= 1;
+      } else {
+        return this.page >= this.pageCount;
+      }
 
     },
 
@@ -87,6 +111,26 @@ define([
     fetch: function (options) {
       options = options || {};
       options.dataType = 'html';
+
+      // if order is DESC, getting last page number
+      // last page number is out first page in this collection
+      if (this.order == 1 && this.page == -1) {
+        var response = $.ajax ({
+          type: 'GET',
+          async: false,
+          url: this.url ()
+        }).responseText;
+        var pageCount = $($.parseHTML (response)).find ('div.pager')
+                                                 .attr ('data-pagecount');
+        this.page = pageCount;
+      }
+      
+      // if order is not DESC
+      // first page is 1
+      else if (this.page == -1) {
+        this.page = 1;
+      }
+
       return Backbone.Collection.prototype.fetch.call (this, options);
     }
 
