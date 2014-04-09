@@ -25,7 +25,8 @@ define([
       var msPerMonth = msPerDay * 30;
       var msPerYear = msPerDay * 365;
 
-      var elapsed = current - new Date (time) + (2*60*60*1000);
+      // FIXME: need to check DST
+      var elapsed = current - new Date (time) + (3*60*60*1000);
 
       if (elapsed < msPerMinute) {
         return Math.round (elapsed/1000) + ' saniye';   
