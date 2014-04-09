@@ -83,10 +83,6 @@ define([
           domain = domain.replace (/^[^.]+\./g, '');
           $(this).html ('<span class="glyphicon glyphicon-globe"></span> ' +
                         domain);
-          $(this).click (function () {
-            window.open ($(this).attr ('href'));
-            return false;
-          });
 
           // show youtube videos
           var youtube_id = that.parseYoutubeUrl ($(this).attr ('href'));
@@ -97,14 +93,6 @@ define([
           }
         }
 
-        // INTERNAL LINKS
-        else {
-
-          $(this).click (function () {
-            return that.popover (this);
-          });
-
-        }
       });
 
       return $(contentObj).html ();
