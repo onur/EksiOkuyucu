@@ -36,7 +36,6 @@ define([
       }
 
       if (this.currentPopover == ev.currentTarget) {
-        console.log ("CLICKED TWICE");
         if ($(ev.currentTarget).attr ('data-content-url')) {
           location.href = $(ev.currentTarget).attr ('href');
           return true;
