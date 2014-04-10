@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'router',
-  'views/sidebar'
+  'views/sidebar',
+  'bootstrap'
 ], function ($, _, Backbone, Router, SidebarView) {
   var initialize = function () {
 
