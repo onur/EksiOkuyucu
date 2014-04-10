@@ -3,6 +3,10 @@ body {
   padding-top: 50px;
 }
 
+* {
+  transition: all 0.4s ease 0s;
+}
+
 
 img {
   max-width: 100%;
