@@ -3,13 +3,6 @@ body {
   padding-top: 50px;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
-  color: #333;
-}
-
-* {
-  border-color: #eee;
-}
 
 img {
   max-width: 100%;
@@ -34,7 +27,6 @@ ul, li {
   padding: 10px 15px;
   display: block;
   font-weight: 400;
-  color: #333;
 }
 
 #sidebar ul.sidebar-items li div.title {
@@ -286,6 +278,155 @@ ul.dropdown-menu li a {
 }
 
 ::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+
+
+/* CONF */
+
+div.eksi-okuyucu-conf ul.theme {
+  display: inline;
+}
+
+div.eksi-okuyucu-conf ul.theme li {
+  display: inline;
+}
+
+div.eksi-okuyucu-conf ul.theme li a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+
+div.eksi-okuyucu-conf ul.theme li a.theme-default {
+  background-color: #40a6ff;
+}
+
+
+div.eksi-okuyucu-conf ul.theme li a.theme-dark {
+  background-color: #333;
+}
+
+div.eksi-okuyucu-conf ul.theme li a.theme-fb {
+  background-color: #3B5998;
+}
+
+
+div.eksi-okuyucu-conf ul.theme li a.theme-twitter {
+  background-color: #4099FF;
+}
+
+div.eksi-okuyucu-conf ul.theme li a.theme-antik{
+  background-color: #660066;
+}
+
+
+
+/* THEMES */
+/* FIXME: old theme system was better */
+
+/* DEFAULT THEME */
+
+body.theme-default,
+body.theme-default h1,
+body.theme-default h2,
+body.theme-default h3,
+body.theme-default h4,
+body.theme-default h5,
+body.theme-default h6 {
+  color: #333;
+}
+
+
+body.theme-default * {
+  border-color: #eee;
+}
+
+
+body.theme-default #sidebar ul.sidebar-items li a {
+  color: #333;
+}
+
+
+/* DARK THEME */
+
+body.theme-dark,
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+  color: #aaa;
+}
+
+body.theme-dark {
+  background-color: #111;
+}
+
+body.theme-dark .navbar {
+  background-color: #333;
+}
+
+body.theme-dark .navbar a {
+  color: #fff;
+}
+
+body.theme-dark .navbar a:hover {
+  color: #ccc;
+}
+
+body.theme-dark .navbar a:focus {
+  color: #fff;
+}
+
+
+body.theme-dark .dropdown-menu {
+  background-color: #333;
+}
+
+
+body.theme-dark .dropdown-menu li a:hover {
+  color: #ddd;
+  background-color: #444;
+}
+
+
+body.theme-dark * {
+  border-color: #222;
+}
+
+body.theme-dark #sidebar ul.sidebar-items li a {
+  color: #aaa;
+}
+
+
+body.theme-dark ::-webkit-scrollbar {
+  height: 16px;
+  width: 16px;
+}
+
+body.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: #333;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1),inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+
+body.theme-dark ::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+body.theme-dark ::-webkit-scrollbar-track {
   background-clip: padding-box;
   border: solid transparent;
   border-width: 0 0 0 4px;
