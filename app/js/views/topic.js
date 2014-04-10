@@ -115,7 +115,7 @@ define([
 
 
     click: function (ev) {
-      return PopoverHelper.dropdown (ev);
+      return PopoverHelper.trigger (ev);
     }
 
   });

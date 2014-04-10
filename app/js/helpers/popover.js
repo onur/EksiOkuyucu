@@ -16,6 +16,14 @@ define([
         return false;
       }
     },
+
+
+    hidePopover: function () {
+      if (this.currentPopover) {
+        $(this.currentPopover).popover ('hide');
+        this.currentPopover = false;
+      }
+    },
   
     popover: function (ev) {
 
@@ -25,6 +33,10 @@ define([
 
       if (this.isLoading) {
         return false;
+      }
+
+      if (this.currentPopover) {
+        this.hidePopover ();
       }
 
       // TODO: expand this
@@ -114,6 +126,8 @@ define([
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
+
+          that.currentPopover = ev.currentTarget;
         },
 
         error: function () {
@@ -123,6 +137,8 @@ define([
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
+
+          that.currentPopover = ev.currentTarget;
         }
       });
 
@@ -143,6 +159,18 @@ define([
                                      .css ('top', ev.offsetY);
         $('#entry-drop-' + entry).dropdown ('toggle');
         this.currentDropdown = entry;
+      }
+
+      return false;
+    },
+
+
+    trigger: function (ev) {
+
+      if (this.currentPopover) {
+        this.hidePopover ()
+      } else {
+        this.dropdown (ev);
       }
 
       return false;
