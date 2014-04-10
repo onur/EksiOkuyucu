@@ -189,6 +189,12 @@ define([
       }
 
       return false;
+    },
+
+
+    reset: function () {
+      this.currentPopover = false;
+      this.currentDropdown = false;
     }
   
   };
