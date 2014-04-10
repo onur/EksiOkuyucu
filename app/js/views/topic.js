@@ -115,10 +115,7 @@ define([
 
 
     click: function (ev) {
-      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-/, '');
-      $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50).css ('top', ev.offsetY);
-      $('#entry-drop-' + entry).dropdown ('toggle');
-      return false;
+      return PopoverHelper.dropdown (ev);
     }
 
   });
