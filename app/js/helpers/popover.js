@@ -21,7 +21,7 @@ define([
     hidePopover: function () {
       if (this.currentPopover) {
         $(this.currentPopover).popover ('hide');
-        this.currentPopover = false;
+        this.currentPopover = 0;
       }
     },
   
@@ -35,9 +35,12 @@ define([
         return false;
       }
 
-      if (this.currentPopover) {
-        this.hidePopover ();
+      if (this.currentPopover == ev.currentTarget) {
+        return false;
       }
+
+      this.hidePopover ();
+      this.hideDropdown ();
 
       // TODO: expand this
       var position = function (context, source) {
@@ -110,6 +113,8 @@ define([
       }
 
       if ($(ev.currentTarget).attr ('data-content')) {
+        that.currentPopover = ev.currentTarget;
+        $(ev.currentTarget).popover ('show');
         return false;
       }
 
@@ -122,7 +127,8 @@ define([
         success: function (entries) {
           $(ev.currentTarget).attr ('data-content',
                    $('<p>' + entries.at (0).get ('content') + '</p>').text ());
-          $(ev.currentTarget).popover ({ placement: position });
+          $(ev.currentTarget).popover ({ placement: position,
+                                         trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
@@ -133,7 +139,8 @@ define([
         error: function () {
           $(ev.currentTarget).attr ('data-content',
             '404 böyle bir başlık/entry yok')
-          $(ev.currentTarget).popover ({ placement: position });
+          $(ev.currentTarget).popover ({ placement: position,
+                                         trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
           that.isLoading = false;
@@ -148,18 +155,24 @@ define([
     },
 
 
-    dropdown: function (ev) {
-
-      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-/, '');
+    hideDropdown: function () {
       if (this.currentDropdown) {
         $('#entry-drop-' + this.currentDropdown).dropdown ('toggle');
-        this.currentDropdown = 0;
-      } else {
-        $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50)
-                                     .css ('top', ev.offsetY);
-        $('#entry-drop-' + entry).dropdown ('toggle');
-        this.currentDropdown = entry;
+        this.currentDropdown = false;
       }
+    },
+
+
+    dropdown: function (ev) {
+
+      this.hideDropdown ();
+
+      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-/, '');
+
+      $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50)
+                                   .css ('top', ev.offsetY);
+      $('#entry-drop-' + entry).dropdown ('toggle');
+      this.currentDropdown = entry;
 
       return false;
     },
@@ -168,7 +181,9 @@ define([
     trigger: function (ev) {
 
       if (this.currentPopover) {
-        this.hidePopover ()
+        this.hidePopover ();
+      } else if (this.currentDropdown) {
+        this.hideDropdown ();
       } else {
         this.dropdown (ev);
       }
