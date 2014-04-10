@@ -112,7 +112,8 @@ define([
 
     events: {
       'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover'
+      'click div.entry p.content a': 'popover',
+      'click div.entry': 'click'
     },
 
 
@@ -139,6 +140,11 @@ define([
 
     popover: function (ev) {
       return PopoverHelper.popover (ev);
+    },
+
+
+    click: function (ev) {
+      return PopoverHelper.trigger (ev);
     }
 
   });
