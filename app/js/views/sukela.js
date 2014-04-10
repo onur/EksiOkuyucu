@@ -35,6 +35,9 @@ define([
       // bind refresh button
       var that = this;
       $('#refresh-topic').click ( function () { return that.refresh (); } );
+
+      // reset popovers
+      PopoverHelper.reset ();
     },
 
 
