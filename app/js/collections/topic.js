@@ -108,7 +108,7 @@ define([
       options.dataType = 'html';
 
       // if order is DESC, getting last page number
-      // last page number is out first page in this collection
+      // we will use last page number as first page in this collection
       if (this.order == 1 && this.page == -1) {
         var response = $.ajax ({
           type: 'GET',
