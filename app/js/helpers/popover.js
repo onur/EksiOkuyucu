@@ -3,8 +3,7 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
-  'router'
-], function($, _, Backbone, TopicCollection, Router){
+], function($, _, Backbone, TopicCollection) {
   return {
 
     parseYoutubeUrl: function (url) {
@@ -39,7 +38,7 @@ define([
       if (this.currentPopover == ev.currentTarget) {
         console.log ("CLICKED TWICE");
         if ($(ev.currentTarget).attr ('data-content-url')) {
-          Router.navigate ($(ev.currentTarget).attr ('href'));
+          location.href = $(ev.currentTarget).attr ('href');
           return true;
         } else {
           return false;
