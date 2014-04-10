@@ -6,7 +6,8 @@ define([
   'collections/topic',
   'text!templates/topic.html',
   'text!templates/topic_nav.html',
-  'helpers/popover'
+  'helpers/popover',
+  'bootstrap'
 ], function ($, _, Backbone, TopicCollection,
              TopicTemplate, TopicNavTemplate, PopoverHelper) {
 
@@ -80,7 +81,8 @@ define([
 
     events: {
       'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover'
+      'click div.entry p.content a': 'popover',
+      'click div.entry': 'click'
     },
 
 
@@ -109,6 +111,14 @@ define([
 
     popover: function (ev) {
       return PopoverHelper.popover (ev);
+    },
+
+
+    click: function (ev) {
+      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-/, '');
+      $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50).css ('top', ev.offsetY);
+      $('#entry-drop-' + entry).dropdown ('toggle');
+      return false;
     }
 
   });
