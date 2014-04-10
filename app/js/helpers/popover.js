@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
-], function($, _, Backbone, TopicCollection){
+  'router'
+], function($, _, Backbone, TopicCollection, Router){
   return {
 
     parseYoutubeUrl: function (url) {
@@ -36,7 +37,13 @@ define([
       }
 
       if (this.currentPopover == ev.currentTarget) {
-        return false;
+        console.log ("CLICKED TWICE");
+        if ($(ev.currentTarget).attr ('data-content-url')) {
+          Router.navigate ($(ev.currentTarget).attr ('href'));
+          return true;
+        } else {
+          return false;
+        }
       }
 
       this.hidePopover ();
@@ -130,6 +137,9 @@ define([
           $(ev.currentTarget).popover ({ placement: position,
                                          trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
+
+          $(ev.currentTarget).attr ('data-content-url', 'true');
+          $(ev.currentTarget).attr ('href', "#t/0/" + topicCollection.external_url);
 
           that.isLoading = false;
 
