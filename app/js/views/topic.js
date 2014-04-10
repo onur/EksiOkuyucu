@@ -22,6 +22,9 @@ define([
       // FIXME: need better solution for this
       $(this.el).unbind ('scroll');
       $(this.el).unbind ('click');
+
+      // reset popovers
+      PopoverHelper.reset ();
     },
 
     render: function (order, external_url) {
