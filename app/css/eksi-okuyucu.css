@@ -386,6 +386,11 @@ body.theme-dark .navbar a:focus {
 }
 
 
+body.theme-dark .popover {
+  background-color: #333;
+  border-color: #222;
+}
+
 body.theme-dark .dropdown-menu {
   background-color: #333;
 }
