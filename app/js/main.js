@@ -7,6 +7,13 @@ require.config ({
     underscore: 'libs/underscore-min',
     backbone: 'libs/backbone-min',
     text: 'libs/text',
+    bootstrap: 'libs/bootstrap.min'
+  },
+
+  shim: {
+    'bootstrap': {
+       deps: ["jquery"]
+    }
   }
 });
 
