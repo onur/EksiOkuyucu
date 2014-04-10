@@ -69,7 +69,7 @@ define([
           var matches = $(this).attr ('href')
                                .match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
           var domain = matches && matches[1];
-          domain = domain.replace (/^[^.]+\./g, '');
+          domain = domain.replace (/^[^.]*\.(?=\w+\.\w+$)/, '');
           $(this).html ('<span class="glyphicon glyphicon-globe"></span> ' +
                         domain);
 
