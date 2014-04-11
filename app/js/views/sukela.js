@@ -81,7 +81,7 @@ define([
     events: {
       'scroll': 'checkScroll',
       'click div.entry p.content a': 'popover',
-      'click div.entry': 'click'
+      'click div.entry p.content': 'click'
     },
 
 

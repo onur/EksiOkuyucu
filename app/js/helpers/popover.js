@@ -175,7 +175,7 @@ define([
 
       this.hideDropdown ();
 
-      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-/, '');
+      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-content-/, '');
 
       $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50)
                                    .css ('top', ev.offsetY);
