@@ -255,7 +255,13 @@ ul.dropdown-menu li a {
 }
 
 .inset {
-  padding: 15px;
+  padding: 0;
+}
+
+div.entry {
+  margin-bottom: 3px;
+  border: none;
+  border-radius: 0;
 }
 
 }
