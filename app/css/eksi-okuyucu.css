@@ -65,8 +65,10 @@ ul, li {
 
 div.entry {
   padding: 15px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 div.entry p.meta {
@@ -356,6 +358,14 @@ body.theme-default #sidebar ul.sidebar-items li a {
   color: #333;
 }
 
+body.theme-default #main {
+  background-color: #f3f3f3;
+}
+
+body.theme-default div.entry {
+  background-color: #fff;
+}
+
 
 /* DARK THEME */
 
@@ -447,4 +457,13 @@ body.theme-dark div.entry p.meta {
 
 body.theme-dark div.entry span.time {
   color: #333;
+}
+
+
+body.theme-dark #main {
+  background-color: #000;
+}
+
+body.theme-dark div.entry {
+  background-color: #111;
 }
