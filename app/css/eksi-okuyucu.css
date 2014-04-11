@@ -63,6 +63,14 @@ ul, li {
   clear: both;
 }
 
+.entry-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
 div.entry {
   padding: 15px;
   border-style: solid;
