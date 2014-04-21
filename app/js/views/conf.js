@@ -35,7 +35,8 @@ define([
 
 
     events: {
-      'click ul.theme a': 'changeTheme'
+      'click ul.theme a': 'changeTheme',
+      'change input': 'changeOption'
     },
 
 
@@ -48,6 +49,14 @@ define([
 
       return false;
     },
+
+
+    changeOption: function (ev) {
+      var option = $(ev.currentTarget).attr ('value');
+      var val = $(ev.currentTarget).is (':checked');
+
+      ConfHelper.setOption (option, val);
+    }
 
   });
 
