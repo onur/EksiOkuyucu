@@ -3,9 +3,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'helpers/conf',
   'text!templates/basic_nav.html',
   'text!templates/conf.html'
-], function($, _, Backbone, BasicNavTemplate, ConfTemplate){
+], function($, _, Backbone, ConfHelper, BasicNavTemplate, ConfTemplate){
 
 
   var ConfView = Backbone.View.extend ({
@@ -39,7 +40,11 @@ define([
 
     changeTheme: function (ev) {
       var theme = $(ev.currentTarget).attr ('href').replace (/^#/, '');
-      $('body').attr ('class', 'theme-' + theme);
+
+      ConfHelper.options.theme = theme;
+      ConfHelper.switchTheme ();
+      ConfHelper.saveConf ();
+
       return false;
     },
 
