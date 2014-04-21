@@ -4,7 +4,8 @@ define([
   'backbone',
   'router',
   'views/sidebar',
-  'bootstrap'
+  'bootstrap',
+  'jquery_cookie'
 ], function ($, _, Backbone, Router, SidebarView) {
   var initialize = function () {
 
