@@ -21,7 +21,7 @@ define([
     },
 
 
-    // cokie name
+    // cookie name
     name: 'eksi_okuyucu_options',
   
 
