@@ -31,11 +31,11 @@ define([
       var user_options = $.cookie (this.name);
       if (!user_options) return;
 
-      if (user_options.theme)
+      if (typeof (user_options.theme) != 'undefined')
         this.options.theme = user_options.theme;
-      if (user_options.readability)
+      if (typeof (user_options.readability) != 'undefined')
         this.options.readability = user_options.readability;
-      if (user_options.youtube)
+      if (typeof (user_options.youtube) != 'undefined')
         this.options.youtube = user_options.youtube;
 
       if (this.options.theme != 'default')
@@ -51,7 +51,25 @@ define([
 
     switchTheme: function () {
       $('body').attr ('class', 'theme-' + this.options.theme);
-    }
+    },
+
+
+    setOption: function (option, val) {
+
+      var somethingChanged = false;
+
+      if (option == 'readability' && this.options.readability != val) {
+        this.options.readability = val;
+        somethingChanged = true;
+      } else if (option == 'youtube' && this.options.youtube != val) {
+        this.options.youtube = val;
+        somethingChanged = true;
+      }
+
+      if (somethingChanged)
+        this.saveConf ();
+
+    },
 
   };
   
