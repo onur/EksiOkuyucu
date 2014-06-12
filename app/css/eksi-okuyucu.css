@@ -75,7 +75,6 @@ div.entry {
   border-style: solid;
   border-width: 1px;
   margin-bottom: 10px;
-  box-shadow: 2px 3px 3px rgba(0,0,0,0.2);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -369,7 +368,7 @@ body.theme-default h6 {
 
 
 body.theme-default * {
-  border-color: #eee;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
 
 
@@ -378,7 +377,7 @@ body.theme-default #sidebar ul.sidebar-items li a {
 }
 
 body.theme-default #main {
-  background-color: #f3f3f3;
+  background-color: #e9eaed;
 }
 
 body.theme-default div.entry {
