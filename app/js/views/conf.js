@@ -26,8 +26,6 @@ define([
 
     render: function () {
 
-      $('#right-navbar').html (_.template (BasicNavTemplate,
-                                           { title: 'Ayarlar' }));
       $(this.el).append (_.template (ConfTemplate,
                                      { options: ConfHelper.options }));
 
