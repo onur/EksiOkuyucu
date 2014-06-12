@@ -269,11 +269,6 @@ div.entry {
 
 /* /SIDEBAR */
 
-.navbar-inner{
-  background-image: url('/img/twit_bg.png');
-  background-repeat: repeat-x;
-}
-
 
 /* SCROLLBAR */
 
@@ -485,3 +480,25 @@ body.theme-dark #main {
 body.theme-dark div.entry {
   background-color: #111;
 }
+
+.navbar-eksi {
+  position: absolute;
+  left: 255px;
+}
+
+.menu-title {
+  display: none;
+}
+
+@media (max-width:767px) {
+.navbar-eksi {
+  position: relative;
+  float: none;
+  left: 0;
+}
+
+.menu-title {
+  display: inline;
+}
+}
+
