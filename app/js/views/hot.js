@@ -6,11 +6,12 @@ define([
   'collections/sidebar',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/hot_nav.html',
-  'helpers/popover'
+  'text!templates/topic_right_nav.html',
+  'helpers/popover',
+  'helpers/nav'
 ], function ($, _, Backbone, SidebarCollection,
-             TopicCollection, TopicTemplate, HotNavTemplate,
-             PopoverHelper) {
+             TopicCollection, TopicTemplate, TopicRightNavTemplate,
+             PopoverHelper, NavHelper) {
 
   var HotView = Backbone.View.extend ({
     el: '#main',
@@ -32,8 +33,7 @@ define([
       // clear page content
       $(this.el).html ('');
 
-      $('#right-navbar').html (_.template (HotNavTemplate,
-                                           { title: 'Gündem' }));
+      NavHelper.setTitle ('Gündem');
 
       // bind refresh button
       var that = this;
@@ -58,9 +58,11 @@ define([
         if (typeof (channel) != 'undefined') {
           this.sidebarCollection.channel = channel;
           if (channel == 'bugun')
-            $('#title').html ('Bugün ki başlıklar');
+            NavHelper.setTitle ('Bugün ki başlıklar',
+                                _.template (TopicRightNavTemplate));
           else if (channel != 'gundem')
-            $('#title').html ('#' + channel);
+            NavHelper.setTitle ('#' + channel,
+                                _.template (TopicRightNavTemplate));
         }
 
         this.sidebarCollection.fetch ({
