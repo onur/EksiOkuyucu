@@ -6,9 +6,10 @@ define([
   'collections/topic',
   'text!templates/topic.html',
   'text!templates/hot_nav.html',
-  'helpers/popover'
+  'helpers/popover',
+  'helpers/nav'
 ], function ($, _, Backbone, TopicCollection, TopicTemplate,
-             HotNavTemplate, PopoverHelper) {
+             HotNavTemplate, PopoverHelper, NavHelper) {
 
   var SukelaView = Backbone.View.extend ({
     el: '#main',
@@ -29,8 +30,7 @@ define([
       // clear page content
       $(this.el).html ('');
 
-      $('#right-navbar').html (_.template (HotNavTemplate,
-                                           { title: '$ükela' }));
+      NavHelper.setTitle ('$ükela');
 
       // bind refresh button
       var that = this;
