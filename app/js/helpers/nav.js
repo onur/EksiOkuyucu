@@ -12,6 +12,8 @@ define([
 
       if (typeof (rightNavBar) != 'undefined')
         this.setRightNavbar (rightNavBar);
+      else
+        this.setRightNavbar ('');
     },
 
     setRightNavbar: function (content) {
