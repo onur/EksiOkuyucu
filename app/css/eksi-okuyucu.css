@@ -273,6 +273,16 @@ div.entry {
   border-radius: 0;
 }
 
+.navbar-collapse {
+  max-height: none;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
 }
 
 
