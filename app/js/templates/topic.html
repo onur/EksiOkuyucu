@@ -15,12 +15,6 @@
   </ul>
 </div>
 
-  <% if (typeof (entry_title) != 'undefined') { %>
-
-  <h4 class="entry-title"><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h4>
-
-  <% } %>
-
   <p class="meta">
 
     <span class="author">
@@ -33,6 +27,12 @@
     </span>
   
   </p>
+
+  <% if (typeof (entry_title) != 'undefined') { %>
+
+  <h4 class="entry-title"><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h4>
+
+  <% } %>
 
   <p id="entry-content-<%= entry.id %>" class="content">
     <%= entry.content %>
