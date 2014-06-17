@@ -4,30 +4,6 @@
 
 <div class="entry border-color-1" id="entry-<%= entry.id %>">
 
-
-<div class="dropdown">
-  <a href="#" id="entry-drop-<%= entry.id %>" role="button" class="dropdown-toggle" data-toggle="dropdown" title="Kanallar"></a>
-  <ul id="entry-dropdown-<%= entry.id %>" class="dropdown-menu" data-toggle="dropdown" role="menu" aria-labelledby="order-drop">
-   <li class="dropdown-header">#<%= entry.id %></li>
-   <li><a href="#favori"><span class="glyphicon glyphicon-star"></span> Favori</a></li>
-   <li><a href="#sukela"><span class="glyphicon glyphicon-heart"></span> Şükela</a></li>
-   <li><a href="https://eksisozluk.com/entry/<%= entry.id %>" target="_blank"><span class="glyphicon glyphicon-tint"></span> Ekşisözlükte aç</a></li>
-  </ul>
-</div>
-
-  <p class="meta">
-
-    <span class="author">
-      <span class="glyphicon glyphicon-user"></span> <%= entry.author %>
-    </span>
-
-    <span class="time">
-      -
-      <%= entry.creationTime %>
-    </span>
-  
-  </p>
-
   <% if (typeof (entry_title) != 'undefined') { %>
 
   <h4 class="entry-title"><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h4>
@@ -37,6 +13,33 @@
   <p id="entry-content-<%= entry.id %>" class="content">
     <%= entry.content %>
   </p>
+
+  <div class="meta">
+
+    <div class="row">
+      <div class="col-xs-6 col-md-6 meta-left">
+        <span class="author">
+          <span class="glyphicon glyphicon-user"></span> <%= entry.author %>
+        </span>
+
+        <span class="time">
+          -
+          <%= entry.creationTime %>
+        </span>
+        
+      </div>
+      <div class="col-xs-6 col-md-6 text-right meta-right">
+
+        <div class="btn-group btn-group-xs">
+          <a href="#favori" class="btn btn-default" title="Favori"><span class="glyphicon glyphicon-star"></span></a>
+          <a href="#sukela" class="btn btn-default" title="Şükela"><span class="glyphicon glyphicon-heart"></span></a>
+          <a href="https://eksisozluk.com/entry/<%= entry.id %>button" class="btn btn-default" title="Ekşisözlükte aç"><span class="glyphicon glyphicon-tint"></span></a>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
 
 </div>
 
