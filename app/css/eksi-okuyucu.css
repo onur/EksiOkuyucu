@@ -409,6 +409,10 @@ body.theme-default div.entry div.meta div.meta-right a.btn {
   color: #999;
 }
 
+body.theme-default div.entry:hover div.meta div.meta-right a.btn {
+  color: #333;
+}
+
 
 /* DARK THEME */
 
