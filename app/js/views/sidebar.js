@@ -21,11 +21,17 @@ define([
       // register channels event
       var that = this;
       $("#channels a").click (function () { that.click (this); });
+
+      $("#sidebar-wrapper").on ('scroll', function () {
+        that.checkScroll (this);
+      });
     },
 
     render: function () {
 
       var that = this;
+
+      this.isLoading = true;
 
       this.sidebarCollection.fetch ({
 
@@ -33,6 +39,8 @@ define([
 
           $(that.el).append (_.template (SidebarTemplate,
                                          {entries: entries.toJSON ()}));
+
+          that.isLoading = false;
 
         }
 
@@ -47,9 +55,22 @@ define([
         channel = 'gundem';
 
       this.sidebarCollection.channel = channel;
+      this.sidebarCollection.page = 1;
       this.sidebarCollection.reset ();
       $(this.el).html ('');
       this.render ();
+    },
+
+    checkScroll: function () {
+      if (!this.isLoading &&
+          !this.sidebarCollection.lastPage () &&
+          $('#sidebar-wrapper').scrollTop () +
+              $('#sidebar-wrapper').height () + 200 >
+              this.el.scrollHeight) {
+        this.sidebarCollection.page++;
+        this.render ();
+      }
+
     }
 
   });
