@@ -45,7 +45,6 @@ define([
       }
 
       this.hidePopover ();
-      this.hideDropdown ();
 
       // TODO: expand this
       var position = function (context, source) {
@@ -175,7 +174,6 @@ define([
 
     reset: function () {
       this.currentPopover = false;
-      this.currentDropdown = false;
     }
   
   };
