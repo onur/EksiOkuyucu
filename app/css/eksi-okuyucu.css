@@ -65,11 +65,10 @@ ul, li {
 
 .entry-title {
   margin-top: 0;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  padding-left: 15px;
+  margin-bottom: 0;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  padding: 8px 15px 8px 15px;
 }
 
 div.entry {
@@ -85,11 +84,12 @@ div.entry p.meta {
   border-bottom: 1px solid;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  margin-bottom: 0;
 }
 
 div.entry .content {
-  padding: 15px;
-  padding: 5px 15px 5px 15px;
+  padding: 12px 15px 12px 15px;
+  margin-bottom: 0;
 }
 
 div.entry span.time {
