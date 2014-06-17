@@ -71,6 +71,13 @@ define([
                                                      return false; });
           }
 
+          // redirect to DESC order if there is no entry to dipslay
+          if (order == 2 &&
+              entries.length == 0) {
+            location.href = '#t/1/' + that.topicCollection.external_url;
+            return;
+          }
+
           $(that.el).append (_.template (TopicTemplate,
                                          {entries: entries.toJSON ()}));
 
