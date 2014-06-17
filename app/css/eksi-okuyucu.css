@@ -105,6 +105,7 @@ div.entry span.glyphicon-button {
 
 .popover-content {
   max-height: 200px;
+  min-width: 200px;
   overflow-y: auto;
 }
 
