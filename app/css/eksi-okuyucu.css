@@ -78,13 +78,14 @@ div.entry {
   border-radius: 5px;
 }
 
-div.entry p.meta {
+div.entry div.meta {
   font-size: 0.8em;
   padding: 8px 15px 8px 15px;
-  border-bottom: 1px solid;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
   margin-bottom: 0;
+}
+
+div.entry div.meta div.meta-left {
+  padding-top: 5px;
 }
 
 div.entry .content {
@@ -130,6 +131,10 @@ div.entry span.glyphicon-button {
 
 ul.dropdown-menu li a {
   padding: 3px 20px;
+}
+
+div.entry-dropdown {
+  margin-left: 5px;
 }
 
 
@@ -394,9 +399,13 @@ body.theme-default div.entry {
   background-color: #fff;
 }
 
-body.theme-default div.entry p.meta {
+body.theme-default div.entry div.meta {
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
-  border-color: #ccc;
+  border-color: #eee;
+}
+
+body.theme-default div.entry div.meta div.meta-right a.btn {
+  color: #999;
 }
 
 
@@ -488,7 +497,7 @@ body.theme-dark ::-webkit-scrollbar-track {
   border-width: 0 0 0 4px;
 }
 
-body.theme-dark div.entry p.meta {
+body.theme-dark div.entry div.meta {
   color: #666;
 }
 
@@ -505,9 +514,13 @@ body.theme-dark div.entry {
   background-color: #111;
 }
 
-body.theme-dark div.entry p.meta {
-  background: -webkit-linear-gradient(top, rgba(14,14,14,1) 0%,rgba(30,30,30,1) 100%);
+body.theme-dark div.entry div.meta {
   border-color: #222;
+}
+
+body.theme-dark div.entry div.meta div.meta-right a.btn {
+  color: #ccc;
+  background-color: #000;
 }
 
 .navbar-eksi {
