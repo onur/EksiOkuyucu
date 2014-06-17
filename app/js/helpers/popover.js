@@ -163,37 +163,10 @@ define([
     },
 
 
-    hideDropdown: function () {
-      if (this.currentDropdown) {
-        $('#entry-drop-' + this.currentDropdown).dropdown ('toggle');
-        this.currentDropdown = false;
-      }
-    },
-
-
-    dropdown: function (ev) {
-
-      this.hideDropdown ();
-
-      var entry = $(ev.currentTarget).attr ('id').replace (/^entry-content-/, '');
-
-      $('#entry-dropdown-' + entry).css ('left', ev.offsetX - 50)
-                                   .css ('top', ev.offsetY);
-      $('#entry-drop-' + entry).dropdown ('toggle');
-      this.currentDropdown = entry;
-
-      return false;
-    },
-
-
     trigger: function (ev) {
 
       if (this.currentPopover) {
         this.hidePopover ();
-      } else if (this.currentDropdown) {
-        this.hideDropdown ();
-      } else {
-        this.dropdown (ev);
       }
 
       return false;
