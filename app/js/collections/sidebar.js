@@ -34,6 +34,11 @@ define([
     },
 
 
+    lastPage: function () {
+      return this.page >= this.pageCount;
+    },
+
+
     fetch: function (options) {
       options = options || {};
       options.dataType = 'html';
