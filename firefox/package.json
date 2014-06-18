@@ -1,0 +1,15 @@
+{
+  "name": "eksi-okuyucu",
+  "title": "Ekşi Okuyucu",
+  "id": "jid1-gEC3w3STOEcdFg",
+  "description": "Modern HTML5 ekşisözlük okuyucusu",
+  "author": "",
+  "license": "MIT",
+  "version": "0.1",
+  "permissions": {
+    "cross-domain-content": [
+      "https://eksisozluk.com",
+      "https://readability.com/"
+    ]
+  }
+}
