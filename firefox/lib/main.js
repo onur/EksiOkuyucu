@@ -4,8 +4,12 @@ var tabs = require ("sdk/tabs");
 var data = require ("sdk/self").data;
 
 var EksiPanel = require ("sdk/panel").Panel ({
-  width: 800,
-  height: 600,
+  position: {
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0
+  },
   contentURL: data.url ("index.html"),
   contentScriptFile: [
     data.url ('require.js'),
