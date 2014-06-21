@@ -4,9 +4,9 @@ define([
   'underscore',
   'backbone',
   'helpers/conf',
-  'text!templates/basic_nav.html',
-  'text!templates/conf.html'
-], function($, _, Backbone, ConfHelper, BasicNavTemplate, ConfTemplate){
+  'text!templates/conf.html',
+  'helpers/nav'
+], function($, _, Backbone, ConfHelper, ConfTemplate, NavHelper){
 
 
   var ConfView = Backbone.View.extend ({
@@ -22,6 +22,7 @@ define([
       // clear page content
       $(this.el).html ('');
 
+      NavHelper.setTitle ('Ayarlar');
     },
 
     render: function () {
