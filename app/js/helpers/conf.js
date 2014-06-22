@@ -38,8 +38,7 @@ define([
       if (typeof (user_options.youtube) != 'undefined')
         this.options.youtube = user_options.youtube;
 
-      if (this.options.theme != 'default')
-        this.switchTheme ();
+      this.switchTheme ();
 
     },
 
