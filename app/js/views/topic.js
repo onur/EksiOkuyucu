@@ -38,6 +38,7 @@ define([
       var that = this;
 
 
+      // FIXME: need to check loading state
       this.isLoading = true;
 
 
