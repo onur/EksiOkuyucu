@@ -4,11 +4,12 @@ define([
   'backbone',
   'views/sidebar',
   'views/topic',
+  'views/topiclist',
   'views/hot',
   'views/sukela',
   'views/conf'
 ], function ($, _, Backbone, SidebarView, TopicView,
-             HotView, SukelaView, ConfView) {
+             TopicListView, HotView, SukelaView, ConfView) {
   var AppRouter = Backbone.Router.extend ({
     routes: {
       '': 'defaultAction',
@@ -27,6 +28,12 @@ define([
     router.on ('route:topic', function (order, topic) {
       var topicView = new TopicView ();
       topicView.render (order, topic);
+    });
+    // FIXME: need to use all route definitions in AppRouter
+    router.route (/^tl\/(.*?)$/, "topiclist");
+    router.on ('route:topiclist', function (external_url) {
+      var topicListView = new TopicListView ();
+      topicListView.render (external_url);
     });
     router.on ('route:hot', function () {
       var hotView = new HotView ();
