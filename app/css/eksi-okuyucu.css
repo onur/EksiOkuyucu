@@ -90,13 +90,13 @@ div.entry div.meta div.meta-left {
   padding-top: 5px;
 }
 
+div.entry div.meta div.meta-left a.author {
+  text-decoration: none;
+}
+
 div.entry .content {
   padding: 12px 15px 12px 15px;
   margin-bottom: 0;
-}
-
-div.entry span.time {
-  color: #aaa;
 }
 
 div.entry span.glyphicon-button {
@@ -404,6 +404,10 @@ body.theme-default div.entry {
 body.theme-default div.entry div.meta {
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
   border-color: #eee;
+}
+
+body.theme-default div.entry div.meta span.time {
+  color: #aaa;
 }
 
 body.theme-default div.entry div.meta div.meta-right a.btn {
