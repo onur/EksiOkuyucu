@@ -8,7 +8,8 @@ require.config ({
     backbone: 'libs/backbone-min',
     text: 'libs/text',
     bootstrap: 'libs/bootstrap.min',
-    jquery_cookie: 'libs/jquery.cookie'
+    jquery_cookie: 'libs/jquery.cookie',
+    select2: 'libs/select2.min'
   },
 
   shim: {
@@ -16,6 +17,9 @@ require.config ({
        deps: ["jquery"]
     },
     'jquery_cookie': {
+       deps: ["jquery"]
+    },
+    'select2': {
        deps: ["jquery"]
     }
   }
