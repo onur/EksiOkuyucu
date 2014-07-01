@@ -105,6 +105,28 @@ div.entry span.glyphicon-button {
 }
 
 
+/* SELECT2 */
+.search-select {
+  width: 100%;
+}
+
+.select2-container .select2-choice,
+.select2-container .select2-choice > .select2-chosen {
+  border: none;
+  background-color: #f8f8f8;
+  background-image: none;
+  box-shadow: none;
+  line-height: 20px;
+}
+
+.select2-container .select2-choice .select2-arrow {
+  display: none;
+}
+
+.select2-drop {
+  margin-left: 20px;
+}
+
 .popover-content {
   max-height: 200px;
   min-width: 200px;
@@ -540,6 +562,7 @@ body.theme-dark div.entry div.meta div.meta-right a.btn {
 .navbar-eksi {
   position: absolute;
   left: 255px;
+  right: 80px;
 }
 
 .menu-title {
