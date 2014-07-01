@@ -62,7 +62,8 @@ define([
     openEntry: function (val) {
       var that = this;
       this.topicCollection.reset ();
-      this.topicCollection.external_url = escape (val);
+      // FIXME: topicCollection needs to deal with this, not this view
+      this.topicCollection.external_url = '?q=' + escape (val);
       this.topicCollection.fetch ({
         success: function () {
           location.href = '#t/0/' + that.topicCollection.external_url;
