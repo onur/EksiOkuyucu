@@ -7,7 +7,7 @@ define([
   return {
 
     setTitle: function (title, rightNavBar) {
-      $('#title').text (title);
+      $('#select2-chosen-1').text (title);
       $('title').text (title);
 
       if (typeof (rightNavBar) != 'undefined')
