@@ -113,7 +113,7 @@ div.entry span.glyphicon-button {
 .select2-container .select2-choice,
 .select2-container .select2-choice > .select2-chosen {
   border: none;
-  background-color: #f8f8f8;
+  background-color: inherit;
   background-image: none;
   box-shadow: none;
   line-height: 20px;
