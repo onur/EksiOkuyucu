@@ -312,6 +312,11 @@ div.entry {
   margin-right: 5px;
 }
 
+/* SELECT2 */
+.search-select {
+  width: auto;
+}
+
 }
 
 
