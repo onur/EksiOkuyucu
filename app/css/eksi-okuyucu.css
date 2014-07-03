@@ -125,7 +125,15 @@ div.entry span.glyphicon-button {
 
 .select2-drop {
   margin-left: 20px;
+  background-color: inherit;
 }
+
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-selection-limit {
+  background-color: inherit;
+}
+
 
 .popover-content {
   max-height: 200px;
@@ -406,7 +414,8 @@ body.theme-default h2,
 body.theme-default h3,
 body.theme-default h4,
 body.theme-default h5,
-body.theme-default h6 {
+body.theme-default h6,
+body.theme-default .select2-results {
   color: #333;
 }
 
@@ -458,7 +467,8 @@ body.theme-dark h2,
 body.theme-dark h3,
 body.theme-dark h4,
 body.theme-dark h5,
-body.theme-dark h6 {
+body.theme-dark h6,
+body.theme-dark .select2-results {
   color: #aaa;
 }
 
