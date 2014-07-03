@@ -57,6 +57,8 @@ define([
                           ]
                }));
 
+          new EntryView ();
+
           that.current_item++;
           that.checkScroll ();
 
