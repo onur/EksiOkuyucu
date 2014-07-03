@@ -8,10 +8,11 @@ define([
   'text!templates/topic_right_nav.html',
   'helpers/popover',
   'helpers/nav',
+  'views/entry',
   'bootstrap'
 ], function ($, _, Backbone, TopicCollection,
              TopicTemplate, TopicRightNavTemplate,
-             PopoverHelper, NavHelper) {
+             PopoverHelper, NavHelper, EntryView) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -31,6 +32,7 @@ define([
 
     render: function (order, external_url) {
       this.loadResults (order, external_url);
+      new EntryView ();
     },
 
     loadResults: function (order, external_url) {
@@ -93,9 +95,7 @@ define([
     },
 
     events: {
-      'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover',
-      'click div.entry p.content': 'click'
+      'scroll': 'checkScroll'
     },
 
 
@@ -121,15 +121,6 @@ define([
       return false;
     },
 
-
-    popover: function (ev) {
-      return PopoverHelper.popover (ev);
-    },
-
-
-    click: function (ev) {
-      return PopoverHelper.trigger (ev);
-    }
 
   });
 

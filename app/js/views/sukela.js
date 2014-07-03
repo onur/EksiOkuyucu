@@ -7,9 +7,10 @@ define([
   'text!templates/topic.html',
   'text!templates/hot_nav.html',
   'helpers/popover',
-  'helpers/nav'
+  'helpers/nav',
+  'views/entry'
 ], function ($, _, Backbone, TopicCollection, TopicTemplate,
-             HotNavTemplate, PopoverHelper, NavHelper) {
+             HotNavTemplate, PopoverHelper, NavHelper, EntryView) {
 
   var SukelaView = Backbone.View.extend ({
     el: '#main',
@@ -75,13 +76,13 @@ define([
 
       });
 
+      new EntryView ();
+
     },
 
 
     events: {
-      'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover',
-      'click div.entry p.content': 'click'
+      'scroll': 'checkScroll'
     },
 
 
@@ -99,16 +100,6 @@ define([
       this.render ();
       return false;
     },
-
-
-    popover: function (ev) {
-      return PopoverHelper.popover (ev);
-    },
-
-
-    click: function (ev) {
-      return PopoverHelper.trigger (ev);
-    }
 
   });
 

@@ -8,10 +8,11 @@ define([
   'text!templates/topic.html',
   'text!templates/topic_right_nav.html',
   'helpers/popover',
-  'helpers/nav'
+  'helpers/nav',
+  'views/entry'
 ], function ($, _, Backbone, SidebarCollection,
              TopicCollection, TopicTemplate, TopicRightNavTemplate,
-             PopoverHelper, NavHelper) {
+             PopoverHelper, NavHelper, EntryView) {
 
   var HotView = Backbone.View.extend ({
     el: '#main',
@@ -109,13 +110,13 @@ define([
 
       });
 
+      new EntryView ();
+
     },
 
 
     events: {
-      'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover',
-      'click div.entry p.content': 'click'
+      'scroll': 'checkScroll'
     },
 
 
@@ -138,16 +139,6 @@ define([
       this.render ();
       return false;
     },
-
-
-    popover: function (ev) {
-      return PopoverHelper.popover (ev);
-    },
-
-
-    click: function (ev) {
-      return PopoverHelper.trigger (ev);
-    }
 
   });
 
