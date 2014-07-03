@@ -52,7 +52,7 @@ define([
       var channel = $(ev).attr ('href').match (/^#(hot)*(\/)*(.*?)$/, '')[3];
 
       if (channel == '')
-        channel = 'gundem';
+        channel = 'populer';
 
       this.sidebarCollection.channel = channel;
       this.sidebarCollection.page = 1;
