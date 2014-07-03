@@ -7,9 +7,10 @@ define([
   'views/topiclist',
   'views/hot',
   'views/sukela',
+  'views/debe',
   'views/conf'
 ], function ($, _, Backbone, SidebarView, TopicView,
-             TopicListView, HotView, SukelaView, ConfView) {
+             TopicListView, HotView, SukelaView, DebeView, ConfView) {
   var AppRouter = Backbone.Router.extend ({
     routes: {
       '': 'defaultAction',
@@ -17,6 +18,7 @@ define([
       'hot/:channel': 'hotchannel',
       'hot': 'hot',
       'sukela': 'sukela',
+      'debe': 'debe',
       'conf': 'conf'
     },
   });
@@ -46,6 +48,10 @@ define([
     router.on ('route:sukela', function () {
       var sukelaView = new SukelaView ();
       sukelaView.render ();
+    });
+    router.on ('route:debe', function () {
+      var debeView = new DebeView ();
+      debeView.render ();
     });
     router.on ('route:conf', function () {
       var confView = new ConfView ();
