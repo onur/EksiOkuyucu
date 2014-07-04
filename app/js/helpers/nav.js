@@ -31,6 +31,13 @@ define([
     setRightNavbar: function (content) {
       $('ul.navbar-right').html (content);
     },
+
+    bindRefresh: function (view) {
+      $('#refresh-topic').click (function () {
+        view.refresh ();
+        return false;
+      });
+    }
   
   };
 });
