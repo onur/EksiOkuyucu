@@ -82,7 +82,6 @@ define([
     refresh: function () {
       $(this.el).html ('');
       this.render ();
-      return false;
     },
 
   });

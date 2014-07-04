@@ -117,7 +117,6 @@ define([
       this.current_topics = false;
       this.current_item = 0;
       this.render (this.topicListCollection.external_url);
-      return false;
     },
 
 

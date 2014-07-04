@@ -122,7 +122,6 @@ define([
       this.current_topics = false;
       this.current_item = 0;
       this.render ();
-      return false;
     },
 
   });

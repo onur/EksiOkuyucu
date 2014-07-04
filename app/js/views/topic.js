@@ -108,7 +108,6 @@ define([
       this.topicCollection.reset ();
       this.topicCollection.firstPage ();
       this.loadResults (order, external_url);
-      return false;
     },
 
 
