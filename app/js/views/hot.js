@@ -26,10 +26,7 @@ define([
       this.isLoading = false;
       
       NavHelper.initialize ('Gündem');
-
-      // bind refresh button
-      var that = this;
-      $('#refresh-topic').click ( function () { return that.refresh (); } );
+      NavHelper.bindRefresh (this);
     },
 
 

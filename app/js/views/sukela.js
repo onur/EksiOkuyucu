@@ -22,10 +22,7 @@ define([
       this.isLoading = false;
       
       NavHelper.initialize ('$ükela');
-
-      // bind refresh button
-      var that = this;
-      $('#refresh-topic').click ( function () { return that.refresh (); } );
+      NavHelper.bindRefresh (this);
     },
 
 

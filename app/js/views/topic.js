@@ -61,8 +61,7 @@ define([
                                 });
 
             // bind refresh button
-            $('#refresh-topic').click (function () { that.refresh ();
-                                                     return false; });
+            NavHelper.bindRefresh (that);
           }
 
           // redirect to DESC order if there is no entry to dipslay

@@ -25,6 +25,7 @@ define([
       this.isLoading = false;
       
       NavHelper.initialize ('');
+      NavHelper.bindRefresh (this);
     },
 
     render: function (external_url) {
