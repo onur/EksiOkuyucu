@@ -15,7 +15,9 @@
 <% } %>
 
 <li><a href="#" id="refresh-topic"><span class="glyphicon glyphicon-refresh"></span><span class="menu-title"> Yenile</span></a></li>
+
 <% if (typeof (external_url) != 'undefined') { %>
+
 <li class="dropdown">
  <a href="#" id="order-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-sort"></span> <span class="menu-title"> Sıralama</span></a>
  <ul class="dropdown-menu" role="menu" aria-labelledby="order-drop">
@@ -26,4 +28,5 @@
    <li><a href="#t/3/<%= external_url %>"><span class="glyphicon glyphicon-heart"></span> $ükela</a></li>
  </ul>
 </li>
+
 <% } %>
