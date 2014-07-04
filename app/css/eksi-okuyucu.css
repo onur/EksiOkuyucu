@@ -1,4 +1,8 @@
 
+@import url('bootstrap.min.css');
+@import url('select2.css');
+@import url('select2-bootstrap.css');
+
 body { 
   padding-top: 50px;
   transition: all 0.8s ease 0s;
