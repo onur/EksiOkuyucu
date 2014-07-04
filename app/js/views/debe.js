@@ -23,15 +23,7 @@ define([
       this.topicCollection = new TopicCollection ();
       this.isLoading = false;
       
-      // unbind previous events
-      // FIXME: need better solution for this
-      $(this.el).unbind ('scroll');
-      $(this.el).unbind ('click');
-
-      // clear page content
-      $(this.el).html ('');
-
-      NavHelper.setTitle ('Dünün en beğenilen entryleri');
+      NavHelper.initialize ('Dünün en beğenilen entryleri');
     },
 
     getEntry: function (entry_id) {

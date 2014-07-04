@@ -25,15 +25,7 @@ define([
       this.topicCollection = new TopicCollection ();
       this.isLoading = false;
       
-      // unbind previous events
-      // FIXME: need better solution for this
-      $(this.el).unbind ('scroll');
-      $(this.el).unbind ('click');
-
-      // clear page content
-      $(this.el).html ('');
-
-      NavHelper.setTitle ('Gündem');
+      NavHelper.initialize ('Gündem');
 
       // bind refresh button
       var that = this;

@@ -13,16 +13,7 @@ define([
     el: '#main',
 
     initialize: function () {
-
-      // unbind previous events
-      // FIXME: need better solution for this
-      $(this.el).unbind ('scroll');
-      $(this.el).unbind ('click');
-
-      // clear page content
-      $(this.el).html ('');
-
-      NavHelper.setTitle ('Ayarlar');
+      NavHelper.initialize ('Ayarlar');
     },
 
     render: function () {
