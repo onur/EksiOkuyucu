@@ -6,11 +6,10 @@ define([
   'collections/topiclist',
   'collections/topic',
   'text!templates/topic.html',
-  'helpers/popover',
   'helpers/nav',
   'views/entry'
 ], function ($, _, Backbone, TopicListCollection,
-             TopicCollection, TopicTemplate, PopoverHelper, NavHelper,
+             TopicCollection, TopicTemplate, NavHelper,
              EntryView) {
 
   var TopicListView = Backbone.View.extend ({
@@ -32,9 +31,6 @@ define([
 
       // clear page content
       $(this.el).html ('');
-
-      // reset popovers
-      PopoverHelper.reset ();
     },
 
     render: function (external_url) {

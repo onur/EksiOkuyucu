@@ -6,12 +6,11 @@ define([
   'collections/debe',
   'collections/topic',
   'text!templates/topic.html',
-  'helpers/popover',
   'helpers/nav',
   'views/entry'
 ], function ($, _, Backbone, DebeCollection,
              TopicCollection, TopicTemplate,
-             PopoverHelper, NavHelper, EntryView) {
+             NavHelper, EntryView) {
 
   var DebeView = Backbone.View.extend ({
     el: '#main',

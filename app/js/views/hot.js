@@ -7,12 +7,11 @@ define([
   'collections/topic',
   'text!templates/topic.html',
   'text!templates/topic_right_nav.html',
-  'helpers/popover',
   'helpers/nav',
   'views/entry'
 ], function ($, _, Backbone, SidebarCollection,
              TopicCollection, TopicTemplate, TopicRightNavTemplate,
-             PopoverHelper, NavHelper, EntryView) {
+             NavHelper, EntryView) {
 
   var HotView = Backbone.View.extend ({
     el: '#main',
@@ -39,9 +38,6 @@ define([
       // bind refresh button
       var that = this;
       $('#refresh-topic').click ( function () { return that.refresh (); } );
-
-      // reset popovers
-      PopoverHelper.reset ();
     },
 
 

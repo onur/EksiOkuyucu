@@ -6,13 +6,12 @@ define([
   'collections/topic',
   'text!templates/topic.html',
   'text!templates/topic_right_nav.html',
-  'helpers/popover',
   'helpers/nav',
   'views/entry',
   'bootstrap'
 ], function ($, _, Backbone, TopicCollection,
              TopicTemplate, TopicRightNavTemplate,
-             PopoverHelper, NavHelper, EntryView) {
+             NavHelper, EntryView) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -25,9 +24,6 @@ define([
       // FIXME: need better solution for this
       $(this.el).unbind ('scroll');
       $(this.el).unbind ('click');
-
-      // reset popovers
-      PopoverHelper.reset ();
     },
 
     render: function (order, external_url) {
