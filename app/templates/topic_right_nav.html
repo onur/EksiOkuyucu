@@ -1,3 +1,19 @@
+<% if (typeof (title) != 'undefined') { %>
+
+<li class="dropdown">
+ <a href="#" id="search-title-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> <span class="menu-title">Arama Linkleri</span></a>
+ <ul class="dropdown-menu" role="menu" aria-labelledby="search-title-drop">
+   <li><a href="https://www.google.com/search?q=<%= title %>" target="_blank">Google'da ara</a></li>
+   <li><a href="https://www.youtube.com/results?search_query=<%= title %>" target="_blank">Youtube'da ara</a></li>
+   <li><a href="https://tr.wikipedia.org/w/index.php?search=<%= title %>" target="_blank">Wikipedia'da ara</a></li>
+   <li><a href="https://www.metacritic.com/search/all/<%= title %>/results" target="_blank">Metacritic'de ara</a></li>
+   <li><a href="https://www.imdb.com/find?q=<%= title %>&s=all" target="_blank">IMDB'de ara</a></li>
+   <li><a href="https://kickass.to/usearch/<%= title %>/" target="_blank">Kickass Torrents'de ara</a></li>
+ </ul>
+</li>
+
+<% } %>
+
 <li><a href="#" id="refresh-topic"><span class="glyphicon glyphicon-refresh"></span><span class="menu-title"> Yenile</span></a></li>
 <% if (typeof (external_url) != 'undefined') { %>
 <li class="dropdown">
