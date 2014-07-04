@@ -5,13 +5,11 @@ define([
   'backbone',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/topic_right_nav.html',
   'helpers/nav',
   'views/entry',
   'bootstrap'
 ], function ($, _, Backbone, TopicCollection,
-             TopicTemplate, TopicRightNavTemplate,
-             NavHelper, EntryView) {
+             TopicTemplate, NavHelper, EntryView) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#main',
@@ -57,10 +55,9 @@ define([
             $(that.el).html ('');
             $(that.el).scrollTop ();
 
-            NavHelper.setTitle (that.topicCollection.title,
-                                _.template (TopicRightNavTemplate, {
-                                              external_url: external_url
-                                            }));
+            NavHelper.setTitle (that.topicCollection.title, {
+                                  external_url: external_url
+                                });
 
             // bind refresh button
             $('#refresh-topic').click (function () { that.refresh ();

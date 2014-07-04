@@ -2,8 +2,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'text!templates/topic_right_nav.html',
+], function ($, _, Backbone, TopicRightNavTemplate) {
   return {
 
     initialize: function (title) {
@@ -19,14 +20,12 @@ define([
       }
     },
 
-    setTitle: function (title, rightNavBar) {
+    setTitle: function (title, rightNavOptions) {
       $('#select2-chosen-1').text (title);
       $('title').text (title);
 
-      if (typeof (rightNavBar) != 'undefined')
-        this.setRightNavbar (rightNavBar);
-      else
-        this.setRightNavbar ('');
+      this.setRightNavbar (
+        _.template (TopicRightNavTemplate, rightNavOptions));
     },
 
     setRightNavbar: function (content) {
