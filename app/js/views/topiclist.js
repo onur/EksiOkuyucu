@@ -59,10 +59,8 @@ define([
 
       this.topicCollection.reset ();
 
-      if (!this.topicListCollection.at (this.current_item)) {
-        console.log ("ZZZZZZZ");
+      if (!this.topicListCollection.at (this.current_item))
         return;
-      }
 
       this.topicCollection.external_url =
           this.topicListCollection.at (this.current_item).get ('url');
