@@ -5,11 +5,10 @@ define([
   'backbone',
   'collections/topic',
   'text!templates/topic.html',
-  'text!templates/hot_nav.html',
   'helpers/nav',
   'views/entry'
 ], function ($, _, Backbone, TopicCollection, TopicTemplate,
-             HotNavTemplate, NavHelper, EntryView) {
+             NavHelper, EntryView) {
 
   var SukelaView = Backbone.View.extend ({
     el: '#main',
