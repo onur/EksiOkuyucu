@@ -330,6 +330,16 @@ div.entry {
   width: auto;
 }
 
+.navbar-eksi {
+  position: relative;
+  float: none;
+  left: 0;
+}
+
+.menu-title {
+  display: inline;
+}
+
 }
 
 
@@ -415,16 +425,3 @@ div.eksi-okuyucu-conf ul.theme li a.theme-antik{
 .menu-title {
   display: none;
 }
-
-@media (max-width:767px) {
-.navbar-eksi {
-  position: relative;
-  float: none;
-  left: 0;
-}
-
-.menu-title {
-  display: inline;
-}
-}
-
