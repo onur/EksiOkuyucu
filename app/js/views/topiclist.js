@@ -7,9 +7,11 @@ define([
   'collections/topic',
   'text!templates/topic.html',
   'helpers/popover',
-  'helpers/nav'
+  'helpers/nav',
+  'views/entry'
 ], function ($, _, Backbone, TopicListCollection,
-             TopicCollection, TopicTemplate, PopoverHelper, NavHelper) {
+             TopicCollection, TopicTemplate, PopoverHelper, NavHelper,
+             EntryView) {
 
   var TopicListView = Backbone.View.extend ({
     el: '#main',
@@ -91,6 +93,8 @@ define([
                           ]
                }));
 
+          new EntryView ();
+
           that.current_item++;
 
           that.checkScroll ();
@@ -103,9 +107,7 @@ define([
 
 
     events: {
-      'scroll': 'checkScroll',
-      'click div.entry p.content a': 'popover',
-      'click div.entry p.content': 'click'
+      'scroll': 'checkScroll'
     },
 
 
@@ -129,15 +131,6 @@ define([
       return false;
     },
 
-
-    popover: function (ev) {
-      return PopoverHelper.popover (ev);
-    },
-
-
-    click: function (ev) {
-      return PopoverHelper.trigger (ev);
-    }
 
   });
 
