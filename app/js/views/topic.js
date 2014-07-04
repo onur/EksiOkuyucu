@@ -56,6 +56,7 @@ define([
             $(that.el).scrollTop ();
 
             NavHelper.setTitle (that.topicCollection.title, {
+                                  title: that.topicCollection.title,
                                   external_url: external_url
                                 });
 
