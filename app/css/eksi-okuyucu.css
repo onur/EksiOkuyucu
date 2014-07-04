@@ -19,9 +19,6 @@ ul, li {
   margin: 0; padding: 0;
 }
 
-#sidebar {
-}
-
 #sidebar ul.sidebar-items li {
   border-bottom-style: solid;
   border-bottom-width: 1px;
