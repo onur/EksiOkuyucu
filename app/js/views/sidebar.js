@@ -35,6 +35,9 @@ define([
         if ($(window).width () < 767 && $(this).attr ('href') != '#')
           $('#navbar-toggle').click ();
       });
+
+      // TODO: add swipe events for sidebar
+      // http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
     },
 
     render: function () {
