@@ -333,7 +333,14 @@ div.entry {
 
 /* SELECT2 */
 .search-select {
-  width: auto;
+  position: absolute;
+  left: 95px;
+  right: 0;
+  padding-left: 0;
+}
+
+.select2-drop {
+  margin-left: -95px;
 }
 
 .navbar-eksi {
