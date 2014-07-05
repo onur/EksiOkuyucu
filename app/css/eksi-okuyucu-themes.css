@@ -22,7 +22,7 @@ body.theme-default * {
 
 body.theme-default #sidebar-wrapper {
   background-color: #fff;
-  box-shadow: 5px 0px 5px 0px rgba(50, 50, 50, 0.25);
+  box-shadow: 5px 0px 20px 0px rgba(50, 50, 50, 0.25);
 }
 
 body.theme-default #sidebar ul.sidebar-items li a {
@@ -78,7 +78,7 @@ body.theme-dark {
 
 body.theme-dark #sidebar-wrapper {
   background-color: #111;
-  box-shadow: 5px 0px 5px 0px rgba(50, 50, 50, 0.25);
+  box-shadow: 5px 0px 20px 0px rgba(50, 50, 50, 0.25);
 }
 
 body.theme-dark .navbar {
