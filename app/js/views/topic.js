@@ -30,10 +30,7 @@ define([
 
       var that = this;
 
-
-      // FIXME: need to check loading state
       this.isLoading = true;
-
 
       // external_url used for new pages
       if (external_url) {
