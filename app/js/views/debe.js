@@ -48,7 +48,7 @@ define([
                           ]
                }));
 
-          new EntryView ();
+          if (!that.entryview) { new EntryView (); that.entryview = true; }
 
           that.current_item++;
           that.checkScroll ();

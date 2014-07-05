@@ -23,7 +23,7 @@ define([
 
     render: function (order, external_url) {
       this.loadResults (order, external_url);
-      new EntryView ();
+      if (!this.entryview) { new EntryView (); this.entryview = true; }
     },
 
     loadResults: function (order, external_url) {

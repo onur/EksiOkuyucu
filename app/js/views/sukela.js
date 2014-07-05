@@ -60,7 +60,7 @@ define([
 
       });
 
-      new EntryView ();
+      if (!this.entryview) { new EntryView (); this.entryview = true; }
 
     },
 
