@@ -76,7 +76,7 @@ define([
       } else if (option == 'youtube' && this.options.youtube != val) {
         this.options.youtube = val;
         somethingChanged = true;
-      } else if (option == 'images' && this.options.youtube != val) {
+      } else if (option == 'images' && this.options.images != val) {
         this.options.images = val;
         somethingChanged = true;
       }
