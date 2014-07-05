@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
-], function($, _, Backbone, TopicCollection) {
+  'helpers/conf'
+], function($, _, Backbone, TopicCollection, ConfHelper) {
   return {
 
     parseYoutubeUrl: function (url) {
@@ -72,31 +73,45 @@ define([
 
       if (link.match (/^http(s)*:\/\//)) {
 
-        // do nothing if we already show content
+        // do nothing if content is already loaded
         if ($(ev.currentTarget).attr ('data-loaded')) {
           return false;
         }
 
 
         if ((youtube_id = this.parseYoutubeUrl (link)) != false) {
-          $(ev.currentTarget).after ('<div><blockquote><iframe width="560" height="315" ' +
-                 'src="https://www.youtube.com/embed/' + youtube_id +
-                 '" frameborder="0" allowfullscreen></blockquote></div>');
-          $(ev.currentTarget).attr ('data-loaded', 'true');
+          if (!ConfHelper.getOption ('youtube')) {
+            $(ev.currentTarget).after ('<div><blockquote><iframe width="560" height="315" ' +
+                   'src="https://www.youtube.com/embed/' + youtube_id +
+                   '" frameborder="0" allowfullscreen></blockquote></div>');
+            $(ev.currentTarget).attr ('data-loaded', 'true');
+          } else {
+            window.open (link);
+          }
           return false;
         }
 
         // check if its image
         // FIXME: 80+
         if (link.match(/(?:([^:\/?#]+):)?(?:\/\/([^\/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?/i)) {
+
+          if (ConfHelper.getOption ('images')) {
             
-          $(ev.currentTarget).after ('<div><blockquote><img src="' + 
-                                     link +
-                                     '" alt="" /></blockquote></div>');
-          $(ev.currentTarget).attr ('data-loaded', 'true');
+            $(ev.currentTarget).after ('<div><blockquote><img src="' + 
+                                       link +
+                                       '" alt="" /></blockquote></div>');
+            $(ev.currentTarget).attr ('data-loaded', 'true');
+          } else {
+            window.open (link);
+          }
 
           return false;
 
+        }
+
+        if (!ConfHelper.getOption ('readability')) {
+          window.open (link);
+          return false;
         }
 
         // get content from readability if external url is not an image
