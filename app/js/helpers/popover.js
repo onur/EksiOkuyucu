@@ -26,6 +26,7 @@ define([
       }
     },
   
+    // FIXME: this is a complete mess. needs serious refactoring
     popover: function (ev) {
 
       var that = this;
