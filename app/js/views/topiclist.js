@@ -22,7 +22,6 @@ define([
     initialize: function () {
       this.topicListCollection = new TopicListCollection ();
       this.topicCollection = new TopicCollection ();
-      this.isLoading = false;
       
       NavHelper.initialize ('');
       NavHelper.bindRefresh (this);

@@ -21,7 +21,6 @@ define([
     initialize: function () {
       this.debeCollection = new DebeCollection ();
       this.topicCollection = new TopicCollection ();
-      this.isLoading = false;
       
       NavHelper.initialize ('Dünün en beğenilen entryleri');
     },

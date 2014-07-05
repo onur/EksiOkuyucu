@@ -23,7 +23,6 @@ define([
     initialize: function () {
       this.sidebarCollection = new SidebarCollection ();
       this.topicCollection = new TopicCollection ();
-      this.isLoading = false;
       
       NavHelper.initialize ('Gündem');
       NavHelper.bindRefresh (this);

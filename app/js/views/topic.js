@@ -16,7 +16,6 @@ define([
 
     initialize: function () {
       this.topicCollection = new TopicCollection ();
-      this.isLoading = false;
 
       NavHelper.initialize ();
     },
