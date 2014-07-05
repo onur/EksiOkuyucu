@@ -18,6 +18,9 @@ define([
       // show youtube videos in application
       youtube: true,
 
+      // show images in application
+      images: true
+
     },
 
 
@@ -37,6 +40,8 @@ define([
         this.options.readability = user_options.readability;
       if (typeof (user_options.youtube) != 'undefined')
         this.options.youtube = user_options.youtube;
+      if (typeof (user_options.images) != 'undefined')
+        this.options.images = user_options.images;
 
       this.switchTheme ();
 
@@ -63,12 +68,26 @@ define([
       } else if (option == 'youtube' && this.options.youtube != val) {
         this.options.youtube = val;
         somethingChanged = true;
+      } else if (option == 'images' && this.options.youtube != val) {
+        this.options.images = val;
+        somethingChanged = true;
       }
 
       if (somethingChanged)
         this.saveConf ();
 
     },
+
+    getOption: function (option) {
+      if (option == 'readability')
+        return this.options.readability;
+      else if (option == 'youtube')
+        return this.options.youtube;
+      else if (option == 'images')
+        return this.options.images;
+      else
+        return false;
+    }
 
   };
   
