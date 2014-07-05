@@ -127,6 +127,8 @@ define([
                                              '</blockquote></div>');
                   $(ev.currentTarget).attr ('data-loaded', 'true');
 
+               }).error (function () {
+                 window.open (link);
                });
 
         return false;
