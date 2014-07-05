@@ -19,6 +19,16 @@ ul, li {
   margin: 0; padding: 0;
 }
 
+.navbar-eksi {
+  position: absolute;
+  left: 255px;
+  right: 80px;
+}
+
+.menu-title {
+  display: none;
+}
+
 #sidebar ul.sidebar-items li {
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -411,14 +421,4 @@ div.eksi-okuyucu-conf ul.theme li a.theme-twitter {
 
 div.eksi-okuyucu-conf ul.theme li a.theme-antik{
   background-color: #660066;
-}
-
-.navbar-eksi {
-  position: absolute;
-  left: 255px;
-  right: 80px;
-}
-
-.menu-title {
-  display: none;
 }
