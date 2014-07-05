@@ -326,9 +326,12 @@ div.entry {
   max-height: none;
 }
 
+.navbar-toggle:first-child {
+  margin-left: 15px;
+}
+
 .navbar-toggle {
   float: left;
-  margin-left: 15px;
   margin-right: 5px;
 }
 
