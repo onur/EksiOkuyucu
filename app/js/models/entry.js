@@ -77,6 +77,13 @@ define([
 
       });
 
+      // remove sups
+      // sups causes problem with popovers
+      $(contentObj).find ('sup').each (function () {
+        $(this).after ($(this).html ());
+        $(this).remove ();
+      });
+
       return $(contentObj).html ();
 
     },
