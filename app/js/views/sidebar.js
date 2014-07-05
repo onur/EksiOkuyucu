@@ -92,11 +92,15 @@ define([
 
 
     showLeftFrame: function () {
+      if ($(window).width () > 767)
+        return;
       $('#sidebar-wrapper').css ('margin-left', '0');
       this.leftFrameVisible = true;
     },
      
     hideLeftFrame: function () {
+      if ($(window).width () > 767)
+        return;
       $('#sidebar-wrapper').css ('margin-left', '-250px');
       this.leftFrameVisible = false;
     },
