@@ -322,10 +322,6 @@ div.entry {
   border-radius: 0;
 }
 
-.navbar-collapse {
-  max-height: none;
-}
-
 .navbar-toggle:first-child {
   margin-left: 15px;
 }
