@@ -32,7 +32,7 @@ define([
 
       // bind navbar toggle button
       $('.nav a').click (function () {
-        if ($(this).attr ('href') != '#')
+        if ($(window).width () < 767 && $(this).attr ('href') != '#')
           $('#navbar-toggle').click ();
       });
     },
