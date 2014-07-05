@@ -12,6 +12,9 @@ define([
 
       theme: 'default',
 
+      // popovers for internal links
+      popover: true,
+
       // use readability for external url
       readability: true,
 
@@ -34,6 +37,8 @@ define([
       var user_options = $.cookie (this.name);
       if (!user_options) return;
 
+      if (typeof (user_options.popover) != 'undefined')
+        this.options.popover = user_options.popover;
       if (typeof (user_options.theme) != 'undefined')
         this.options.theme = user_options.theme;
       if (typeof (user_options.readability) != 'undefined')
@@ -62,7 +67,10 @@ define([
 
       var somethingChanged = false;
 
-      if (option == 'readability' && this.options.readability != val) {
+      if (option == 'popover' && this.options.popover != val) {
+        this.options.popover = val;
+        somethingChanged = true;
+      } else if (option == 'readability' && this.options.readability != val) {
         this.options.readability = val;
         somethingChanged = true;
       } else if (option == 'youtube' && this.options.youtube != val) {
@@ -79,7 +87,9 @@ define([
     },
 
     getOption: function (option) {
-      if (option == 'readability')
+      if (option == 'popover')
+        return this.options.popover;
+      else if (option == 'readability')
         return this.options.readability;
       else if (option == 'youtube')
         return this.options.youtube;
