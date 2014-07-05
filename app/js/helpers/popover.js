@@ -145,6 +145,14 @@ define([
       topicCollection.order = 0;
       topicCollection.fetch ({
         success: function (entries) {
+
+          that.isLoading = false;
+
+          if (!ConfHelper.getOption ('popover')) {
+            location.href = '#t/0/' + topicCollection.external_url;
+            return;
+          }
+
           $(ev.currentTarget).attr ('data-content',
                    $('<p>' + entries.at (0).get ('content') + '</p>').text ());
           $(ev.currentTarget).popover ({ placement: position,
@@ -153,8 +161,6 @@ define([
 
           $(ev.currentTarget).attr ('data-content-url', 'true');
           $(ev.currentTarget).attr ('href', "#t/0/" + topicCollection.external_url);
-
-          that.isLoading = false;
 
           that.currentPopover = ev.currentTarget;
         },
