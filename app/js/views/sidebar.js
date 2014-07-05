@@ -52,6 +52,11 @@ define([
 
           that.isLoading = false;
 
+          // hide left frame when user clicks a item
+          $('#sidebar ul.sidebar-items a').click (function () {
+            that.hideLeftFrame ();
+          });
+
         }
 
       });
@@ -69,6 +74,8 @@ define([
       this.sidebarCollection.reset ();
       $(this.el).html ('');
       this.render ();
+
+      this.showLeftFrame ();
     },
 
     checkScroll: function () {
