@@ -178,3 +178,11 @@ body.theme-dark div.entry div.meta div.meta-right a.btn {
   color: #ccc;
   background-color: #000;
 }
+
+body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #ccc;
+}
+
+body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+  color: #999;
+}
