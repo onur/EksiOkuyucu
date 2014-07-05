@@ -81,7 +81,7 @@ define([
 
 
         if ((youtube_id = this.parseYoutubeUrl (link)) != false) {
-          if (!ConfHelper.getOption ('youtube')) {
+          if (ConfHelper.getOption ('youtube')) {
             $(ev.currentTarget).after ('<div><blockquote><iframe width="560" height="315" ' +
                    'src="https://www.youtube.com/embed/' + youtube_id +
                    '" frameborder="0" allowfullscreen></blockquote></div>');
