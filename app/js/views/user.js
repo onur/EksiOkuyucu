@@ -92,8 +92,10 @@ define([
         success: function (data) {
           var htmlDoc = $.parseHTML (data);
           that.loggedIn = $(htmlDoc).find ('nav[class="loggedin"]').length > 0;
-          that.userName = that.findUserName (htmlDoc);
-          that.getSubscribtions ();
+          if (that.loggedIn) {
+            that.userName = that.findUserName (htmlDoc);
+            that.getSubscribtions ();
+          }
         }
       });
 
