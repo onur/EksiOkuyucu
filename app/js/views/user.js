@@ -167,6 +167,7 @@ define([
       $.get ('https://eksisozluk.com/terk');
       this.loggedIn = false;
       this.userName = '';
+      $('#user-drop span.unread-count').hide ();
       $('#ben-items').html (
         $('<li>').html (
           $('<a>').attr ('id', 'ben-login')
