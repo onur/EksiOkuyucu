@@ -6,11 +6,12 @@ define([
   'helpers/conf',
   'views/sidebar',
   'views/search',
+  'views/user',
   'text!templates/body.html',
   'bootstrap',
   'jquery_cookie'
 ], function ($, _, Backbone, Router, ConfHelper,
-             SidebarView, SearchView, BodyTemplate) {
+             SidebarView, SearchView, UserView, BodyTemplate) {
   var initialize = function () {
 
     ConfHelper.loadConf ();
@@ -21,6 +22,7 @@ define([
     sidebarView.render ();
 
     var searchView = new SearchView ();
+    var userView = new UserView ();
 
     Router.initialize ();
   }
