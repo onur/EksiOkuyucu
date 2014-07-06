@@ -99,6 +99,8 @@ define([
 
 
     showLeftFrame: function () {
+      if ($(window).width () > 767)
+        return;
       $('#sidebar-wrapper').css ('margin-left', '0');
       this.leftFrameVisible = true;
     },
