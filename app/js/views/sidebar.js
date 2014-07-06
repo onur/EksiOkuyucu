@@ -36,6 +36,10 @@ define([
           $('#navbar-toggle').click ();
       });
 
+      $(window).on ('resize', function () {
+        that.hideLeftFrame ();
+      });
+
       // TODO: add swipe events for sidebar
       // http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
     },
@@ -95,15 +99,11 @@ define([
 
 
     showLeftFrame: function () {
-      if ($(window).width () > 767)
-        return;
       $('#sidebar-wrapper').css ('margin-left', '0');
       this.leftFrameVisible = true;
     },
      
     hideLeftFrame: function () {
-      if ($(window).width () > 767)
-        return;
       $('#sidebar-wrapper').css ('margin-left', '-250px');
       this.leftFrameVisible = false;
     },
