@@ -6,7 +6,9 @@ define([
   'helpers/conf',
   'collections/olay',
   'text!templates/login_modal.html',
-], function($, _, Backbone, ConfHelper, OlayCollection, LoginModalTemplate) {
+  'text!templates/user_items.html'
+], function($, _, Backbone, ConfHelper, OlayCollection, LoginModalTemplate,
+            UserItemsTemplate) {
 
   var UserView = Backbone.View.extend ({
 
@@ -15,6 +17,7 @@ define([
     token: '',
     loggedIn: false,
     unreadCount: 0,
+    userName: '',
 
     initialize: function () {
       this.olayCollection = new OlayCollection ();
@@ -38,16 +41,13 @@ define([
       this.olayCollection.fetch ({
         success: function (entries) {
           that.unreadCount = 0;
-          $('#ben-items').html ('');
-          _.each (entries.toJSON (), function (entry) {
-            // good old times
-            $('#ben-items').append (
-              $('<li>').html (
-                $('<a>').attr ('href', '#/t/' + entry.snapshot + '' + entry.url)
-                        .text (entry.title)
-              )
-            );
-            that.unreadCount += entry.count;
+          $('#ben-items').html (_.template (UserItemsTemplate, {
+            user: that.userName,
+            entries: entries.toJSON ()
+          }));
+
+          entries.each (function (entry) {
+            that.unreadCount += parseInt (entry.get ('count'));
           });
 
           // show unread count
@@ -60,6 +60,22 @@ define([
         }
       });
     },
+
+
+    findUserName: function (htmlDoc) {
+
+      var username;
+      var c = 0;
+
+      $(htmlDoc).find ('#top-navigation ul li a').each (function () {
+        if (++c != 3)
+          return;
+        username = $(this).attr ('title');
+      });
+
+      return username;
+    },
+
 
     checkLoggedIn: function () {
 
@@ -74,8 +90,9 @@ define([
           'X-Requested-With': ''
         },
         success: function (data) {
-          that.loggedIn = $($.parseHTML (data)).
-                  find ('nav[class="loggedin"]').length > 0;
+          var htmlDoc = $.parseHTML (data);
+          that.loggedIn = $(htmlDoc).find ('nav[class="loggedin"]').length > 0;
+          that.userName = that.findUserName (htmlDoc);
           that.getSubscribtions ();
         }
       });
@@ -129,9 +146,11 @@ define([
           __RequestVerificationToken: that.token
         },
         success: function (data, textStatus, request) {
-          that.loggedIn = $($.parseHTML (data)).
-                  find ('nav[class="loggedin"]').length > 0;
+          var htmlDoc = $.parseHTML (data);
+          that.loggedIn = $(htmlDoc).find ('nav[class="loggedin"]').length > 0;
           if (that.loggedIn) {
+            that.userName = that.findUserName (htmlDoc);
+
             $('#login-modal').modal ('hide');
             that.getSubscribtions ();
           }
