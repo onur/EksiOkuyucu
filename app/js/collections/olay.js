@@ -5,7 +5,7 @@ define([
   'backbone'
 ], function ($, _, Backbone) {
   
-  var DebeList = Backbone.Collection.extend ({
+  var OlayList = Backbone.Collection.extend ({
 
     url: 'https://eksisozluk.com/olay',
 
@@ -42,6 +42,6 @@ define([
   });
 
 
-  return DebeList;
+  return OlayList;
 
 });
