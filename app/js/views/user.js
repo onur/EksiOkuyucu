@@ -31,7 +31,7 @@ define([
     },
 
 
-    getSubscribtions: function () {
+    getSubscriptions: function () {
       if (!this.loggedIn)
         return;
 
@@ -94,7 +94,7 @@ define([
           that.loggedIn = $(htmlDoc).find ('nav[class="loggedin"]').length > 0;
           if (that.loggedIn) {
             that.userName = that.findUserName (htmlDoc);
-            that.getSubscribtions ();
+            that.getSubscriptions ();
           }
         }
       });
@@ -154,7 +154,7 @@ define([
             that.userName = that.findUserName (htmlDoc);
 
             $('#login-modal').modal ('hide');
-            that.getSubscribtions ();
+            that.getSubscriptions ();
           }
         },
       });
