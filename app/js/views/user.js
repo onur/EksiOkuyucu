@@ -27,7 +27,8 @@ define([
 
     events: {
       'click #ben-login': 'loginForm',
-      'click #login-button': 'login'
+      'click #login-button': 'login',
+      'click #logout-button': 'logout'
     },
 
 
@@ -159,6 +160,23 @@ define([
         },
       });
 
+    },
+
+
+    logout: function () {
+      $.get ('https://eksisozluk.com/terk');
+      this.loggedIn = false;
+      this.userName = '';
+      $('#ben-items').html (
+        $('<li>').html (
+          $('<a>').attr ('id', 'ben-login')
+                  .attr ('href', '#')
+                  .html (
+                    $('<span>').attr ('class', 'glyphicon glyphicon-log-in')
+                  )
+                  .append (' Giriş')
+        )
+      );
     }
 
   });
