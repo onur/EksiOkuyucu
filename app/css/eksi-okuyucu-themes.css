@@ -46,11 +46,15 @@ body.theme-default div.entry div.meta span.time {
   color: #aaa;
 }
 
-body.theme-default div.entry div.meta div.meta-right a.btn {
+body.theme-default div.entry div.meta div.meta-right a.isfavorite {
+  color: #ff9900;
+}
+
+body.theme-default div.entry div.meta div.meta-right a.default {
   color: #999;
 }
 
-body.theme-default div.entry:hover div.meta div.meta-right a.btn {
+body.theme-default div.entry:hover div.meta div.meta-right a.default {
   color: #333;
 }
 
@@ -175,8 +179,20 @@ body.theme-dark div.entry div.meta {
 }
 
 body.theme-dark div.entry div.meta div.meta-right a.btn {
+  background-color: #111;
+}
+
+body.theme-dark div.entry:hover div.meta div.meta-right a.btn {
+  background-color: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+body.theme-dark div.entry div.meta div.meta-right a.isfavorite {
+  color: #ff9900;
+}
+
+body.theme-dark div.entry div.meta div.meta-right a.default {
   color: #ccc;
-  background-color: #000;
 }
 
 body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a {
