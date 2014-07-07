@@ -13,6 +13,8 @@ define([
       creationTime: '',
       modifyTime: '',
       author: '',
+      isFavorite: false,
+      favoriteCount: 0,
     },
 
     
@@ -102,6 +104,13 @@ define([
                   $(htmlDoc).find ('time[itemprop="commentTime"]')
                             .attr ('datetime')));
       this.set ('id', $(htmlDoc).find ('footer').attr ('data-id'));
+      this.set ('isFavorite',
+                $(htmlDoc).find ('footer').attr ('data-isfavorite') == 'true'
+                    ? true : false );
+      this.set ('favoriteCount',
+                parseInt (
+                  $(htmlDoc).find ('footer').attr ('data-favorite-count'))
+                );
       this.set ('author', $(htmlDoc).find ('address a').text ());
 
     }
