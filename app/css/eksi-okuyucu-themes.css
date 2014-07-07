@@ -206,3 +206,7 @@ body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a {
 body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
   color: #999;
 }
+
+body.theme-dark .dropdown-menu .divider {
+  background-color: #777;
+}
