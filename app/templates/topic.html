@@ -44,9 +44,9 @@
       <div class="col-xs-6 col-md-6 text-right meta-right">
 
         <div class="btn-group btn-group-xs">
-          <a href="#favori" class="btn btn-default" title="Favori"><span class="glyphicon glyphicon-star"></span></a>
-          <a href="#sukela" class="btn btn-default" title="Şükela"><span class="glyphicon glyphicon-heart"></span></a>
-          <a href="https://eksisozluk.com/entry/<%= entry.id %>" class="btn btn-default" title="Ekşisözlükte aç"><span class="glyphicon glyphicon-tint"></span></a>
+          <a href="#favori" class="btn btn-default <%= entry.isFavorite ? 'isfavorite' : 'default' %>" title="Favori"><span class="glyphicon glyphicon-star"></span><%= entry.favoriteCount ? ' ' + entry.favoriteCount : '' %></a>
+          <a href="#sukela" class="btn btn-default default" title="Şükela"><span class="glyphicon glyphicon-heart"></span></a>
+          <a href="https://eksisozluk.com/entry/<%= entry.id %>" class="btn btn-default default" title="Ekşisözlükte aç"><span class="glyphicon glyphicon-tint"></span></a>
         </div>
         
       </div>
