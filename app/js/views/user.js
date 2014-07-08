@@ -58,6 +58,9 @@ define([
           } else {
             $('#user-drop span.unread-count').hide ();
           }
+
+          // check subscriptions every min
+          setTimeout (function () { that.getSubscriptions (); }, 60000);
         }
       });
     },
