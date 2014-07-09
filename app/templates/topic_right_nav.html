@@ -1,7 +1,10 @@
 <% if (typeof (title) != 'undefined') { %>
 
+<li><a href="#" id="reply-topic"><span class="glyphicon glyphicon-pencil"></span><span class="menu-title"> Entry yaz</span></a></li>
+<li><a href="#" id="follow-topic"><span class="glyphicon glyphicon-eye-open"></span><span class="menu-title"> Takip et</span></a></li>
+
 <li class="dropdown">
- <a href="#" id="search-title-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> <span class="menu-title">Arama Linkleri</span></a>
+ <a href="#" id="search-title-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> <span class="menu-title">Arama Linkleri</span></a>
  <ul class="dropdown-menu" role="menu" aria-labelledby="search-title-drop">
    <li><a href="https://www.google.com/search?q=<%= title %>" target="_blank">Google'da ara</a></li>
    <li><a href="https://www.youtube.com/results?search_query=<%= title %>" target="_blank">Youtube'da ara</a></li>
