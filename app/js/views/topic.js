@@ -95,6 +95,17 @@ define([
         this.loadResults (); 
       }
 
+      if (!this.isLoading &&
+          this.topicCollection.lastPage &&
+          this.topicCollection.order == 2) {
+        $('#main').append (
+          $('<a>').attr ('class', 'btn btn-default btn-lg btn-block')
+                  .attr ('href', '#t/0/' + this.topicCollection.external_url)
+                  .text ('Tüm entryleri göster')
+
+        );
+     }
+
     },
 
 
