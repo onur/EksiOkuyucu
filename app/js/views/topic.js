@@ -97,7 +97,9 @@ define([
 
       if (!this.isLoading &&
           this.topicCollection.lastPage &&
-          this.topicCollection.order == 2) {
+          this.topicCollection.order == 2 &&
+          !this.showAllEntries) {
+        this.showAllEntries = true;
         $('#main').append (
           $('<a>').attr ('class', 'btn btn-default btn-lg btn-block')
                   .attr ('href', '#t/0/' + this.topicCollection.external_url)
