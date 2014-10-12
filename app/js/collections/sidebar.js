@@ -9,7 +9,7 @@ define([
 
     page: 1,
     pageCount: 1,
-    channel: 'populer',
+    channel: 'basliklar/populer',
 
     url: function () {
       return 'https://eksisozluk.com/' + this.channel +
