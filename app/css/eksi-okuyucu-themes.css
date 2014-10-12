@@ -210,3 +210,8 @@ body.theme-dark .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
 body.theme-dark .dropdown-menu .divider {
   background-color: #777;
 }
+
+body.theme-dark .btn-default {
+  color: #aaa;
+  background-color: #111;
+}
