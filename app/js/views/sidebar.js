@@ -75,6 +75,8 @@ define([
 
       if (channel == '')
         channel = 'basliklar/populer';
+      else
+        channel = 'basliklar/kanal/' + channel;
 
       this.sidebarCollection.channel = channel;
       this.sidebarCollection.page = 1;
