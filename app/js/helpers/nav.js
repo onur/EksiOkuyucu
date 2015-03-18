@@ -10,6 +10,10 @@ define([
     initialize: function (title) {
       // unbind previous events
       $('#main').off();
+
+      // remove binding of refresh button and hide by default
+      $('#refresh-topic-container').off();
+
       // clear page content
       if (typeof (title) != undefined) {
         $('#main').html ('');
@@ -23,6 +27,8 @@ define([
 
       this.setRightNavbar (
         _.template (TopicRightNavTemplate, rightNavOptions));
+
+      $('#refresh-topic').hide();
     },
 
     setRightNavbar: function (content) {
@@ -30,6 +36,7 @@ define([
     },
 
     bindRefresh: function (view) {
+      $('#refresh-topic').show();
       $('#refresh-topic').click (function () {
         view.refresh ();
         return false;
