@@ -1,7 +1,10 @@
 
 define([
+  'jquery',
   'collections/sidebar',
-], function(SidebarCollection) {
+  'views/sidebar',
+  'jasmine-jquery'
+], function($, SidebarCollection, SidebarView) {
 
   describe("SidebarCollection", function() {
 
@@ -67,6 +70,40 @@ define([
 
     });
 
+  });
+
+
+
+  // sidebar view
+  describe("SidebarView", function() {
+    // disable async for this
+    $.ajaxSetup({async: false});
+
+    new SidebarView().render();
+
+    it("must generate sidebar items list", function() {
+      expect($('#sidebar ul.sidebar-items')).toExist();
+    });
+
+    it("must generate sidebar list items", function() {
+      expect($('#sidebar ul.sidebar-items li')).toExist();
+    });
+
+    describe("SidebarItems", function() {
+      it("must be a link", function() {
+        expect($('#sidebar ul.sidebar-items li a')).toExist();
+        expect($('#sidebar ul.sidebar-items li a')).toHaveAttr('href');
+      });
+      it("must have a valid url", function() {
+        expect($('#sidebar ul.sidebar-items li a').attr('href')).toMatch(/^#t\/\d+\/.*?--\d+/);
+      });
+      it("must have a title", function() {
+        expect($('#sidebar ul.sidebar-items li a div.title')).toExist();
+      });
+      it("must have unread count by default", function() {
+        expect($('#sidebar ul.sidebar-items li a div.count')).toExist();
+      });
+    });
   });
 
 });
