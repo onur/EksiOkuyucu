@@ -15,6 +15,43 @@
 
   </div>
 
+  <div class="entry">
+
+    <div class="content">
+
+      <h4>Ana Sayfa</h4>
+
+      <p><em>Uygulamayı başlattığınızda ana sayfada görmek istedikleriniz</em></p>
+
+      <div>
+        <select id="index-page" class="form-control">
+
+          <option <% if (options.index == 'Gündem') { %>selected<% } %>>Gündem</option>
+          <option <% if (options.index == 'Bugün') { %>selected<% } %>>Bugün</option>
+          <option <% if (options.index == 'Debe') { %>selected<% } %>>Debe</option>
+          <option <% if (options.index == '$ükela') { %>selected<% } %>>$ükela</option>
+          <option <% if (options.index == '#anket') { %>selected<% } %>>#anket</option>
+          <option <% if (options.index == '#bilim') { %>selected<% } %>>#bilim</option>
+          <option <% if (options.index == '#edebiyat') { %>selected<% } %>>#edebiyat</option>
+          <option <% if (options.index == '#ilişkiler') { %>selected<% } %>>#ilişkiler</option>
+          <option <% if (options.index == '#meta') { %>selected<% } %>>#meta</option>
+          <option <% if (options.index == '#müzik') { %>selected<% } %>>#müzik</option>
+          <option <% if (options.index == '#oyun') { %>selected<% } %>>#oyun</option>
+          <option <% if (options.index == '#programlama') { %>selected<% } %>>#programlama</option>
+          <option <% if (options.index == '#sanat') { %>selected<% } %>>#sanat</option>
+          <option <% if (options.index == '#sinema') { %>selected<% } %>>#sinema</option>
+          <option <% if (options.index == '#siyaset') { %>selected<% } %>>#siyaset</option>
+          <option <% if (options.index == '#spor') { %>selected<% } %>>#spor</option>
+          <option <% if (options.index == '#tarih') { %>selected<% } %>>#tarih</option>
+          <option <% if (options.index == '#teknoloji') { %>selected<% } %>>#teknoloji</option>
+          <option <% if (options.index == '#tv') { %>selected<% } %>>#tv</option>
+
+        </select>
+      </div>
+
+    </div>
+
+  </div>
 
   <div class="entry">
 
