@@ -8,9 +8,11 @@ define([
   'views/hot',
   'views/sukela',
   'views/debe',
-  'views/conf'
+  'views/conf',
+  'helpers/conf'
 ], function ($, _, Backbone, SidebarView, TopicView,
-             TopicListView, HotView, SukelaView, DebeView, ConfView) {
+             TopicListView, HotView, SukelaView, DebeView, ConfView,
+             ConfHelper) {
   var AppRouter = Backbone.Router.extend ({
     routes: {
       '': 'defaultAction',
@@ -23,9 +25,31 @@ define([
     },
   });
 
+  var indexPage = function () {
+    var index = ConfHelper.options.index;
+
+    if (index == 'Gündem') {
+      var hotView = new HotView ();
+      hotView.render ();
+    } else if (index == 'Bugün') {
+      var hotView = new HotView ();
+      hotView.render ('bugun');
+    } else if (index == 'Debe') {
+      var debeView = new DebeView ();
+      debeView.render ();
+    } else if (index == '$ükela') {
+      var sukelaView = new SukelaView ();
+      sukelaView.render ();
+    } else if (index.charAt(0) == '#') {
+      var hotView = new HotView ();
+      hotView.render (index.substr(1));
+    }
+  };
+
   var initialize = function () {
     var router = new AppRouter;
     router.on ('route:defaultAction', function () {
+      indexPage();
     });
     router.on ('route:topic', function (order, topic) {
       var topicView = new TopicView ();
