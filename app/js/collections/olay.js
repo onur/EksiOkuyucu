@@ -23,6 +23,11 @@ define([
         var entry_title = $(this).text ();
         var entry_count = parseInt ($(this).find ('small').text ());
 
+        if (entry_count) {
+          var re = new RegExp(entry_count + '$');
+          entry_title = entry_title.replace(re, '');
+        }
+
         entries.push ({ url: entry_url,
                         title: entry_title,
                         count: entry_count ? entry_count : 0,
