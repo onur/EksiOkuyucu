@@ -12,12 +12,16 @@ require.config ({
     templates: '../templates',
     jasmine: '../../tests/lib/jasmine-2.2.0/jasmine',
     'jasmine-html': '../../tests/lib/jasmine-2.2.0/jasmine-html',
-    'jasmine-boot': '../../tests/lib/jasmine-2.2.0/boot'
+    'jasmine-boot': '../../tests/lib/jasmine-2.2.0/boot',
+    'jasmine-jquery': '../../tests/lib/jasmine-jquery'
   },
 
   shim: {
     'bootstrap': {
        deps: ["jquery"]
+    },
+    'jquery': {
+       exports: '$'
     },
     'jquery_cookie': {
        deps: ["jquery"]
@@ -25,10 +29,11 @@ require.config ({
     'select2': {
        deps: ["jquery"]
     },
-    jasmine: {
-    },
     'jasmine-html': {
        deps: ['jasmine'],
+    },
+    'jasmine-jquery': {
+       deps: ['jquery', 'jasmine'],
     },
     'jasmine-boot': {
        deps: ['jasmine', 'jasmine-html'],
@@ -44,7 +49,7 @@ var specs = [
 
 require([
   'jasmine-boot'
-], function () {
+], function ($) {
 
   // Load the specs
   require(specs, function () {
