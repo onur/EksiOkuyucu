@@ -26,7 +26,8 @@ define([
 
     events: {
       'click ul.theme a': 'changeTheme',
-      'change input': 'changeOption'
+      'change input': 'changeOption',
+      'change #index-page': 'changeIndex'
     },
 
 
@@ -46,6 +47,16 @@ define([
       var val = $(ev.currentTarget).is (':checked');
 
       ConfHelper.setOption (option, val);
+    },
+
+    changeIndex: function (ev) {
+
+      var newIndex = $(ev.currentTarget).find('option:selected').text();
+
+      if (ConfHelper.options.index != newIndex) {
+        ConfHelper.options.index = newIndex;
+        ConfHelper.saveConf();
+      }
     }
 
   });
