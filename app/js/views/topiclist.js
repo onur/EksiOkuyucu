@@ -37,7 +37,7 @@ define([
         NavHelper.setTitle (user[1] + '\'in en beğenilen entryleri');
       } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/favorilenen-entryleri/)) {
         NavHelper.setTitle (user[1] + '\'in en çok favorilenen entryleri');
-      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/son-oylalanlari/)) {
+      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/son-oylananlari/)) {
         NavHelper.setTitle (user[1] + '\'in son oylanan entryleri');
       }
 
