@@ -76,10 +76,14 @@ define([
 
   // sidebar view
   describe("SidebarView", function() {
-    // disable async for this
-    $.ajaxSetup({async: false});
+    var sidebarView = new SidebarView()
+    sidebarView.render();
+    var wait = function () {
+      if (sidebarView.isLoading)
+        setTimeout(wait, 1000);
+    };
+    wait();
 
-    new SidebarView().render();
 
     it("must generate sidebar items list", function() {
       expect($('#sidebar ul.sidebar-items')).toExist();
