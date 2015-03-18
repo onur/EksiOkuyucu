@@ -70,6 +70,45 @@ define([
 
     });
 
+
+    // this test is a good example of bad design of SidebarCollection
+    describe("channels", function () {
+
+      var channel_urls = {
+        'Gündem': 'basliklar/populer',
+        'Bugün': 'basliklar/bugun',
+        '#anket': 'basliklar/kanal/anket',
+        '#bilim': 'basliklar/kanal/bilim',
+        '#edebiyat': 'basliklar/kanal/edebiyat',
+        '#ekşi-sözlük': 'basliklar/kanal/ekşi-sözlük',
+        '#ilişkiler': 'basliklar/kanal/ilişkiler',
+        '#müzik': 'basliklar/kanal/müzik',
+        '#oyun': 'basliklar/kanal/oyun',
+        '#programlama': 'basliklar/kanal/programlama',
+        '#sanat': 'basliklar/kanal/sanat',
+        '#sinema': 'basliklar/kanal/sinema',
+        '#siyaset': 'basliklar/kanal/siyaset',
+        '#spor': 'basliklar/kanal/spor',
+        '#tarih': 'basliklar/kanal/tarih',
+        '#teknoloji': 'basliklar/kanal/teknoloji',
+        '#tv': 'basliklar/kanal/tv'
+      };
+
+
+      var keys = $.map(channel_urls, function(url, title) {
+        it("must fetch " + title, function(done) {
+          this.collection.channel = url;
+          this.collection.fetch({
+            success: function(entries_) {
+              expect(entries_.length).toBeGreaterThan(0);
+              done();
+            }
+          });
+        });
+      });
+
+    });
+
   });
 
 
