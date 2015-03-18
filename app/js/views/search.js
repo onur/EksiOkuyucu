@@ -73,7 +73,7 @@ define([
 
 
     openUser: function (val) {
-      location.href = '#tl/biri/' + escape (val.substr (1)) + '/son-entryleri';
+      location.href = '#tl/basliklar/istatistik/' + escape (val.substr (1)) + '/son-entryleri';
     },
 
     change: function (ev) {
