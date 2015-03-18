@@ -25,13 +25,13 @@ define([
 
         if (entry_count) {
           var re = new RegExp(entry_count + '$');
-          entry_title = entry_title.replace(re, '');
-        }
+          entry_title = entry_title.replace(re, '(' + entry_count + ')');
 
-        entries.push ({ url: entry_url,
-                        title: entry_title,
-                        count: entry_count ? entry_count : 0,
-                        snapshot: entry_snapshot });
+          entries.push ({ url: entry_url,
+                          title: entry_title,
+                          count: entry_count ? entry_count : 0,
+                          snapshot: entry_snapshot });
+        }
       });
 
       return entries;
