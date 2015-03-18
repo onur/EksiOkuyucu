@@ -41,13 +41,17 @@ define([
       if (!this.current_topics) {
 
         if (typeof (channel) != 'undefined') {
-          if (channel == 'bugun')
+          if (channel == 'bugun') {
             NavHelper.setTitle ('Bugün ki başlıklar',
                                 _.template (TopicRightNavTemplate));
+            this.sidebarCollection.channel = 'basliklar/' + channel;
+          }
           else if (channel != 'gundem')
             NavHelper.setTitle ('#' + channel,
                                 _.template (TopicRightNavTemplate));
-          this.sidebarCollection.channel = 'basliklar/kanal/' + channel;
+
+         if (channel != 'bugun')
+            this.sidebarCollection.channel = 'basliklar/kanal/' + channel;
         }
 
         this.sidebarCollection.fetch ({

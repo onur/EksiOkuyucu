@@ -75,6 +75,8 @@ define([
 
       if (channel == '')
         channel = 'basliklar/populer';
+      else if (channel == 'bugun')
+        channel = 'basliklar/bugun';
       else
         channel = 'basliklar/kanal/' + channel;
 
