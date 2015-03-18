@@ -96,7 +96,7 @@ define([
       }
 
       if (!this.isLoading &&
-          this.topicCollection.lastPage &&
+          this.topicCollection.lastPage () &&
           this.topicCollection.order == 2 &&
           !this.showAllEntries) {
         this.showAllEntries = true;
