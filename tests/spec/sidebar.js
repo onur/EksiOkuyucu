@@ -76,13 +76,17 @@ define([
 
   // sidebar view
   describe("SidebarView", function() {
-    var sidebarView = new SidebarView()
-    sidebarView.render();
-    var wait = function () {
-      if (sidebarView.isLoading)
-        setTimeout(wait, 1000);
-    };
-    wait();
+    beforeEach(function (done) {
+      var sidebarView = new SidebarView()
+      sidebarView.render();
+      var wait = function () {
+        if (!sidebarView.isLoading)
+          done();
+        else
+          setTimeout(wait, 1000);
+      };
+      wait();
+    });
 
 
     it("must generate sidebar items list", function() {
