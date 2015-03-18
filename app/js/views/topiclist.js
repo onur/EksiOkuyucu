@@ -30,15 +30,20 @@ define([
 
     setTitle: function (external_url) {
       var user;
-      if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/son-entryleri/)) {
+      if (user = external_url
+          .match (/basliklar\/istatistik\/(.*?)\/son-entryleri/)) {
         NavHelper.setTitle (user[1] + '\'in son entryleri');
-      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/favori-entryleri/)) {
+      } else if (user = external_url
+          .match (/basliklar\/istatistik\/(.*?)\/favori-entryleri/)) {
         NavHelper.setTitle (user[1] + '\'in favori entryleri');
-      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/en-begenilenleri/)) {
+      } else if (user = external_url
+          .match (/basliklar\/istatistik\/(.*?)\/en-begenilenleri/)) {
         NavHelper.setTitle (user[1] + '\'in en beğenilen entryleri');
-      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/favorilenen-entryleri/)) {
+      } else if (user = external_url
+          .match (/basliklar\/istatistik\/(.*?)\/favorilenen-entryleri/)) {
         NavHelper.setTitle (user[1] + '\'in en çok favorilenen entryleri');
-      } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/son-oylananlari/)) {
+      } else if (user = external_url
+          .match (/basliklar\/istatistik\/(.*?)\/son-oylananlari/)) {
         NavHelper.setTitle (user[1] + '\'in son oylanan entryleri');
       }
 
