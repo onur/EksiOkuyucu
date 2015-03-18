@@ -4,10 +4,9 @@ define([
   'underscore',
   'backbone',
   'collections/sidebar',
-  'text!templates/sidebar.html',
-  'text!templates/sidebar_nav.html'
+  'text!templates/sidebar.html'
 ], function ($, _, Backbone, SidebarCollection,
-             SidebarTemplate, SidebarNavTemplate) {
+             SidebarTemplate) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#sidebar',
@@ -15,9 +14,6 @@ define([
 
     initialize: function () {
       this.sidebarCollection = new SidebarCollection ();
-
-      $("#left-navbar").html (_.template (SidebarNavTemplate));
-
 
       // register channels event
       var that = this;
