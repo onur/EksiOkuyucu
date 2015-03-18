@@ -25,7 +25,7 @@ define([
 
         entries.push ({ url: entry_url,
                         title: entry_title,
-                        count: entry_count,
+                        count: entry_count ? entry_count : 0,
                         snapshot: entry_snapshot });
       });
 
