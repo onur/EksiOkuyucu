@@ -22,7 +22,10 @@ define([
       youtube: true,
 
       // show images in application
-      images: true
+      images: true,
+
+      // index page
+      index: 'Gündem'
 
     },
 
@@ -47,6 +50,8 @@ define([
         this.options.youtube = user_options.youtube;
       if (typeof (user_options.images) != 'undefined')
         this.options.images = user_options.images;
+      if (typeof (user_options.index) != 'undefined')
+        this.options.index = user_options.index;
 
       this.switchTheme ();
 
