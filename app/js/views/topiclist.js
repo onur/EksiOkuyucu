@@ -29,7 +29,6 @@ define([
 
     setTitle: function (external_url) {
       var user;
-      console.log("EXTERNAL URL: " + external_url);
       if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/son-entryleri/)) {
         NavHelper.setTitle (user[1] + '\'in son entryleri');
       } else if (user = external_url.match (/basliklar\/istatistik\/(.*?)\/favori-entryleri/)) {
