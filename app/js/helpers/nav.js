@@ -9,10 +9,7 @@ define([
 
     initialize: function (title) {
       // unbind previous events
-      // FIXME: this is not right place for this
-      //        it's just a temporary workaround
-      $('#main').unbind ('scroll');
-      $('#main').unbind ('click');
+      $('#main').off();
       // clear page content
       if (typeof (title) != undefined) {
         $('#main').html ('');
