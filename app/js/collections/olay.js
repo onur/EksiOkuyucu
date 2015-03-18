@@ -7,7 +7,7 @@ define([
   
   var OlayList = Backbone.Collection.extend ({
 
-    url: 'https://eksisozluk.com/olay',
+    url: 'https://eksisozluk.com/basliklar/olay',
 
     parse: function (resp) {
       var entries = [];
