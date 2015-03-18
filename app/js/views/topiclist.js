@@ -24,6 +24,7 @@ define([
       this.topicCollection = new TopicCollection ();
       
       NavHelper.initialize ('');
+      // FIXME: refresh is binding but button is not showing, no idea why
       NavHelper.bindRefresh (this);
     },
 
