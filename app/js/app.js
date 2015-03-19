@@ -15,6 +15,7 @@ define([
   var initialize = function () {
 
     ConfHelper.loadConf ();
+    ConfHelper.switchTheme ();
 
     $('body').html (_.template (BodyTemplate));
 
