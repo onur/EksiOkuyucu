@@ -53,8 +53,6 @@ define([
       if (typeof (user_options.index) != 'undefined')
         this.options.index = user_options.index;
 
-      this.switchTheme ();
-
     },
 
 
