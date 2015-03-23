@@ -56,7 +56,7 @@ define([
       if (typeof (user_options.index) != 'undefined')
         this.options.index = user_options.index;
       if (typeof (user_options.font) != 'undefined')
-        this.options.index = user_options.font;
+        this.options.font = user_options.font;
 
     },
 
