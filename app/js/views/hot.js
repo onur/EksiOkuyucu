@@ -97,6 +97,7 @@ define([
         },
 
         error: function () {
+          that.isLoading = false;
           that.current_item++;
           that.checkScroll ();
         }
