@@ -26,6 +26,7 @@ define([
 
     events: {
       'click ul.theme a': 'changeTheme',
+      'click ul.font a': 'changeFont',
       'change input': 'changeOption',
       'change #index-page': 'changeIndex'
     },
@@ -37,6 +38,22 @@ define([
       ConfHelper.options.theme = theme;
       ConfHelper.switchTheme ();
       ConfHelper.saveConf ();
+
+      return false;
+    },
+
+
+    changeFont: function (ev) {
+      var font = $(ev.currentTarget).attr ('href').replace (/^#/, '');
+
+      ConfHelper.options.font = font;
+      ConfHelper.switchFont ();
+      ConfHelper.saveConf ();
+
+      $(this.el).find('ul.font a').each(function() {
+        $(this).removeClass('active');
+      });
+      $(ev.currentTarget).addClass('active');
 
       return false;
     },
