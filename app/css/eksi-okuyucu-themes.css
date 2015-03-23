@@ -61,6 +61,14 @@ body.theme-default .entry-title {
   border-color: #e5e6e9;
 }
 
+body.theme-default div.eksi-okuyucu-conf ul.font a {
+  color: #333;
+}
+
+body.theme-default div.eksi-okuyucu-conf ul.font a.active {
+  color: #fff;
+}
+
 
 /* DARK THEME */
 
@@ -213,4 +221,16 @@ body.theme-dark .dropdown-menu .divider {
 body.theme-dark .btn-default {
   color: #aaa;
   background-color: #111;
+}
+
+body.theme-dark div.eksi-okuyucu-conf ul.font a {
+  color: #ccc;
+  background-color: #222;
+  border-color: #111;
+}
+
+body.theme-dark div.eksi-okuyucu-conf ul.font a.active {
+  color: #000;
+  background-color: #ccc;
+  border-color: #111;
 }
