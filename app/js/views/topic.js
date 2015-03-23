@@ -60,12 +60,6 @@ define([
             NavHelper.bindRefresh (that);
           }
 
-          // redirect to DESC order if there is no entry to dipslay
-          if (order == 2 &&
-              entries.length == 0) {
-            location.href = '#t/1/' + that.topicCollection.external_url;
-            return;
-          }
 
           $(that.el).append (_.template (TopicTemplate,
                                          {entries: entries.toJSON ()}));
@@ -75,6 +69,15 @@ define([
           that.checkScroll ();
 
         },
+
+
+        error: function () {
+
+          // redirect to DESC order if there is no entry to dipslay
+          if (order == 2)
+            location.href = '#t/1/' + that.topicCollection.external_url;
+
+        }
 
       });
 
