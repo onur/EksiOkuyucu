@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ekşi Okuyucu Geliştirici Sürümü",
+  "description": "Modern HTML5 ekşisözlük okuyucusu geliştirici sürümü",
+  "version": "0.1",
+
+  "permissions": [
+    "tabs",
+    "https://eksisozluk.com/",
+    "https://readability.com/"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [ "chrome/chrome.js" ]
+  },
+  "browser_action": {
+    "default_icon": "app/img/icon.png",
+    "default_title": "Ekşi Okuyucu Geliştirici Sürümü"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://*.bootstrapcdn.com; object-src 'self'"
+}
