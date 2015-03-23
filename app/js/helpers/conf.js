@@ -25,7 +25,10 @@ define([
       images: true,
 
       // index page
-      index: 'Gündem'
+      index: 'Gündem',
+
+      // font
+      font: 'default'
 
     },
 
@@ -52,6 +55,8 @@ define([
         this.options.images = user_options.images;
       if (typeof (user_options.index) != 'undefined')
         this.options.index = user_options.index;
+      if (typeof (user_options.font) != 'undefined')
+        this.options.index = user_options.font;
 
     },
 
@@ -63,6 +68,47 @@ define([
 
     switchTheme: function () {
       $('body').attr ('class', 'theme-' + this.options.theme);
+    },
+
+
+    switchFont: function () {
+
+      var font_urls = {
+        source_sans_pro: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext',
+        fira_sans: 'https://fonts.googleapis.com/css?family=Fira+Sans&subset=latin,latin-ext',
+        libre_baskervile: 'https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=latin,latin-ext'
+      };
+
+      var font_url, font_family;
+
+
+      $('head').find('link[data-id="font"]').remove();
+      $('body').css('font-family', '');
+
+      if (this.options.font == 'default') {
+        return;
+      }
+
+      else if (this.options.font == 'source_sans_pro') {
+        font_url = font_urls.source_sans_pro;
+        font_name = "'Source Sans Pro', sans-serif";
+      }
+
+      else if (this.options.font == 'fira_sans') {
+        font_url = font_urls.fira_sans;
+        font_name = "'Fira Sans', sans-serif";
+      }
+
+      else if (this.options.font == 'libre_baskerville') {
+        font_url = font_urls.libre_baskerwille;
+        font_name = "'Libre Baskerville', serif";
+      }
+
+      $('head').append($('<link>').attr('rel', 'stylesheet')
+                                  .attr('href', font_url)
+                                  .attr('data-id', 'font'));
+      $('body').css('font-family', font_name);
+
     },
 
 
