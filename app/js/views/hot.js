@@ -94,6 +94,11 @@ define([
 
           that.checkScroll ();
 
+        },
+
+        error: function () {
+          that.current_item++;
+          that.checkScroll ();
         }
 
       });
