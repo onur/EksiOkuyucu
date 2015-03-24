@@ -16,6 +16,7 @@ define([
 
     ConfHelper.loadConf ();
     ConfHelper.switchTheme ();
+    ConfHelper.switchFont ();
 
     $('body').html (_.template (BodyTemplate));
 
