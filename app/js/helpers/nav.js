@@ -19,6 +19,8 @@ define([
         $('#main').html ('');
         this.setTitle (title);
       }
+
+      this.loader(false);
     },
 
     setTitle: function (title, rightNavOptions) {
@@ -41,6 +43,14 @@ define([
         view.refresh ();
         return false;
       });
+    },
+
+    loader: function (state) {
+      if (state == true) {
+        $('#loader').show();
+      } else {
+        $('#loader').hide();
+      }
     }
   
   };
