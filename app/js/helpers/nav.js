@@ -45,11 +45,32 @@ define([
       });
     },
 
+
+    // loading animation
+    // state is true if its loading, false if its not
+    // need to wait before hiding animation
+    loader_current_state: false,
+    loader_current_interval: -1,
+    loader_show: function () {
+      $('#loader').show();
+    },
+    loader_hide: function () {
+      $('#loader').hide();
+    },
     loader: function (state) {
-      if (state == true) {
-        $('#loader').show();
-      } else {
-        $('#loader').hide();
+      if (state == true && this.loader_current_state == false) {
+        this.loader_show();
+        this.loader_current_state = true;
+      } else if (this.loader_current_state == true) {
+        var that = this;
+        if (this.loader_current_interval != -1) {
+          clearInterval(this.loader_current_interval);
+        }
+
+        this.loader_current_interval = setInterval(function () {
+          that.loader_hide();
+          that.loader_current_state = false;
+        }, 1000);
       }
     }
   
