@@ -530,3 +530,107 @@ div.eksi-okuyucu-conf ul.theme li a.theme-antik{
   display: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .4);
 }
+
+
+
+/* loading animation
+ * http://codepen.io/Akiletour/pen/emGOgd */
+
+
+.loader-walk {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+.loader-walk > div {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #2196F3;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+.loader-walk > div:nth-of-type(1) {
+  -webkit-animation-delay: -.4s;
+          animation-delay: -.4s;
+}
+.loader-walk > div:nth-of-type(2) {
+  -webkit-animation-delay: -.8s;
+          animation-delay: -.8s;
+}
+.loader-walk > div:nth-of-type(3) {
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.loader-walk > div:nth-of-type(4) {
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: 50px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  90% {
+    width: 20px;
+    height: 5px;
+  }
+  95% {
+    left: 50px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: 50px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  90% {
+    width: 20px;
+    height: 5px;
+  }
+  95% {
+    left: 50px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}
+
+/* loading animation ends here */
