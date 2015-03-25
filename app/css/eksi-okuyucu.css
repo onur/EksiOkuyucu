@@ -81,6 +81,10 @@ ul, li {
   clear: both;
 }
 
+div.entry {
+  margin-bottom: 15px;
+}
+
 div.entry div.meta {
   font-size: 0.8em;
   padding-top: 5px;
