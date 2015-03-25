@@ -2,19 +2,23 @@
 
 <% _.each(entries, function (entry) { %>
 
-<div class="entry border-color-1" id="entry-<%= entry.id %>">
+<div class="panel panel-default border-color-1 entry" id="entry-<%= entry.id %>">
 
   <% if (typeof (entry_title) != 'undefined') { %>
 
-  <h4 class="entry-title"><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h4>
+  <div class="panel-heading"><h4 class="panel-title"><a href="#t/2/<%= external_url %>"><%= entry_title %></a></h4></div>
 
   <% } %>
 
-  <p id="entry-content-<%= entry.id %>" class="content">
-    <%= entry.content %>
-  </p>
+  <div class="panel-body">
 
-  <div class="meta">
+    <p id="entry-content-<%= entry.id %>" class="content">
+      <%= entry.content %>
+    </p>
+
+  </div>
+
+  <div class="panel-footer meta">
 
     <div class="row">
       <div class="col-xs-9 col-md-9 meta-left">
