@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
-  'helpers/conf'
-], function($, _, Backbone, TopicCollection, ConfHelper) {
+  'helpers/conf',
+  'helpers/nav'
+], function($, _, Backbone, TopicCollection, ConfHelper, NavHelper) {
   return {
 
     parseYoutubeUrl: function (url) {
@@ -140,7 +141,7 @@ define([
         return false;
       }
 
-      this.isLoading = true;
+      NavHelper.loader(this.isLoading = true);
 
       var topicCollection = new TopicCollection ();
       topicCollection.external_url = link;
@@ -148,7 +149,7 @@ define([
       topicCollection.fetch ({
         success: function (entries) {
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           if (!ConfHelper.getOption ('popover')) {
             location.href = '#t/0/' + topicCollection.external_url;
@@ -174,7 +175,7 @@ define([
                                          trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           that.currentPopover = ev.currentTarget;
         }
