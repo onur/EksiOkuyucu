@@ -69,7 +69,7 @@ ul, li {
 #main {
   position: fixed;
   overflow-y: auto;
-  overflow-x: hide;
+  overflow-x: hidden;
   right: 0;
   top: 51px;
   bottom: 0;
@@ -81,25 +81,11 @@ ul, li {
   clear: both;
 }
 
-.entry-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  padding: 8px 15px 8px 15px;
-}
-
-div.entry {
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
 div.entry div.meta {
   font-size: 0.8em;
-  padding: 8px 15px 8px 15px;
-  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
 }
 
 div.entry div.meta div.meta-right a.btn {
@@ -115,8 +101,6 @@ div.entry div.meta div.meta-left a.author {
 }
 
 div.entry .content {
-  padding: 12px 15px 12px 15px;
-  margin-bottom: 0;
 }
 
 div.entry span.glyphicon-button {
@@ -324,12 +308,6 @@ div.entry-dropdown {
   padding: 0;
 }
 
-div.entry {
-  margin-bottom: 3px;
-  border: none;
-  border-radius: 0;
-}
-
 .navbar-toggle:first-child {
   margin-left: 15px;
   margin-right: 0;
@@ -367,6 +345,15 @@ div.entry {
 
 .menu-title {
   display: inline;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+div.entry {
+  margin-bottom: 5px;
+  border-radius: 0;
 }
 
 }
