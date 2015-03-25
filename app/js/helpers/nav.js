@@ -50,7 +50,7 @@ define([
     // state is true if its loading, false if its not
     // need to wait before hiding animation
     loader_current_state: false,
-    loader_current_interval: -1,
+    loader_current_timeout: -1,
     loader_show: function () {
       $('#loader').show();
     },
@@ -63,13 +63,14 @@ define([
         this.loader_current_state = true;
       } else if (this.loader_current_state == true) {
         var that = this;
-        if (this.loader_current_interval != -1) {
-          clearInterval(this.loader_current_interval);
+        if (this.loader_current_timeout != -1) {
+          clearTimeout(this.loader_current_timeout);
         }
 
-        this.loader_current_interval = setInterval(function () {
+        this.loader_current_timeout = setTimeout(function () {
           that.loader_hide();
           that.loader_current_state = false;
+          that.loader_current_timeout = -1;
         }, 1000);
       }
     }
