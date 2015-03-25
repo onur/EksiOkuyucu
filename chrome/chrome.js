@@ -7,4 +7,5 @@
 // open index.html when user click extension icon
 chrome.browserAction.onClicked.addListener (function (tab) {
   chrome.tabs.create ({'url': chrome.extension.getURL ('app/index.html')});
+  //window.open(chrome.extension.getURL("app/index.html"),"eksi-okuyucu-window","width=640,height=480")
 });
