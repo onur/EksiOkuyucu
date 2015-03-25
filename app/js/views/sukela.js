@@ -32,7 +32,7 @@ define([
       if (this.isLoading)
         return;
 
-      this.isLoading = true;
+      NavHelper.loader(this.isLoading = true);
 
       this.topicCollection.reset ();
       this.topicCollection.external_url = '';
@@ -41,7 +41,7 @@ define([
 
         success: function (entries) {
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           $(that.el).append (_.template (TopicTemplate,
                {

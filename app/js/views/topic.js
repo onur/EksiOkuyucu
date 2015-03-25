@@ -29,7 +29,7 @@ define([
 
       var that = this;
 
-      this.isLoading = true;
+      NavHelper.loader(this.isLoading = true);
 
       // external_url used for new pages
       if (external_url) {
@@ -64,7 +64,7 @@ define([
           $(that.el).append (_.template (TopicTemplate,
                                          {entries: entries.toJSON ()}));
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           that.checkScroll ();
 

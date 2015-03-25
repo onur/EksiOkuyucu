@@ -56,7 +56,7 @@ define([
       if (this.isLoading)
         return;
 
-      this.isLoading = true;
+      NavHelper.loader(this.isLoading = true);
 
       if (!this.current_topics) {
 
@@ -68,7 +68,7 @@ define([
 
           success: function (entries) {
 
-            that.isLoading = false;
+            NavHelper.loader(that.isLoading = false);
             that.render ();
 
           }
@@ -93,7 +93,7 @@ define([
 
         success: function (entries) {
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           $(that.el).append (_.template (TopicTemplate,
                {

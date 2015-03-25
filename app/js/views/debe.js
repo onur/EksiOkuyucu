@@ -35,7 +35,7 @@ define([
       this.topicCollection.fetch ({
         success: function (entries) {
 
-          that.isLoading = false;
+          NavHelper.loader(that.isLoading = false);
 
           $(that.el).append (_.template (TopicTemplate,
                {
@@ -62,13 +62,13 @@ define([
 
       var that = this;
 
-      this.isLoading = true;
+      NavHelper.loader(this.isLoading = true);
 
       if (!this.current_topics) {
 
         this.debeCollection.fetch ({
           success: function (entries) {
-            that.isLoading = false;
+            NavHelper.loader(that.isLoading = false);
             that.current_topics = true;
             that.render ();
           }
