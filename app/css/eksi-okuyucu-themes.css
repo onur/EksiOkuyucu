@@ -10,12 +10,11 @@ body.theme-default h4,
 body.theme-default h5,
 body.theme-default h6,
 body.theme-default .select2-results {
-  color: #333;
 }
 
 
 body.theme-default * {
-  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-color: rgb(221, 221, 221);
 }
 
 
@@ -25,7 +24,7 @@ body.theme-default #sidebar-wrapper {
 }
 
 body.theme-default #sidebar ul.sidebar-items li a {
-  color: #333;
+  color: #222;
 }
 
 body.theme-default #main {
@@ -57,14 +56,17 @@ body.theme-default div.entry:hover div.meta div.meta-right a.default {
 }
 
 body.theme-default .entry-title {
-  border-color: #e5e6e9;
 }
 
 body.theme-default div.eksi-okuyucu-conf ul.font a {
-  color: #333;
+  color: #222;
 }
 
 body.theme-default div.eksi-okuyucu-conf ul.font a.active {
+  color: #fff;
+}
+
+body.theme-default .navbar a {
   color: #fff;
 }
 

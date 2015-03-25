@@ -71,7 +71,7 @@ ul, li {
   overflow-y: auto;
   overflow-x: hidden;
   right: 0;
-  top: 51px;
+  top: 45px;
   bottom: 0;
   left: 250px;
   transition: all 0.4s ease 0s;
@@ -188,7 +188,7 @@ div.entry-dropdown {
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  top: 51px;
+  top: 45px;
   bottom: 0;
   transition: all 0.4s ease 0s;
 }
@@ -441,10 +441,8 @@ div.eksi-okuyucu-conf ul.theme li a.theme-antik{
   
 }
 .open > .dropdown-menu li a {
-  color: #000;  
 }
 .dropdown-menu li a{
-  color: #fff;
 }
 .dropdown-menu {
   -webkit-transform-origin: top;
