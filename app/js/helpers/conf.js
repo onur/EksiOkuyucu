@@ -67,6 +67,8 @@ define([
 
 
     switchTheme: function () {
+      $('#theme-css-file').attr('href',
+          'css/bootstrap-' + this.options.theme + '.min.css');
       $('body').attr ('class', 'theme-' + this.options.theme);
     },
 
