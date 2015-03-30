@@ -1,44 +1,21 @@
 /* THEMES */
-
 /* DEFAULT THEME */
-
 body.theme-default #sidebar-wrapper {
   background-color: #fff;
-  box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
-}
-
+  box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
 body.theme-default #sidebar ul.sidebar-items li {
-  border-color: rgb(221, 221, 221);
-}
-
-body.theme-default #sidebar ul.sidebar-items li a {
-  color: #222;
-}
-
+  border-color: #dddddd; }
+  body.theme-default #sidebar ul.sidebar-items li a {
+    color: #222; }
 body.theme-default #main {
-  background-color: #e9eaed;
-}
-
+  background-color: #e9eaed; }
 body.theme-default .navbar a {
-  color: #fff;
-}
-
+  color: #fff; }
 body.theme-default div.entry div.meta span.time {
-  color: #aaa;
-}
-
+  color: #aaa; }
 body.theme-default div.entry div.meta div.meta-right a.isfavorite {
-  color: #ff9900;
-}
-
+  color: #ff9900; }
 body.theme-default div.entry div.meta div.meta-right a.default {
-  color: #999;
-}
-
-body.theme-default div.entry:hover div.meta div.meta-right a.default {
-  color: #333;
-}
-
-
-/* DARK THEME */
-
+  color: #999; }
+body.theme-default div.entry:hover div.meta-right a.default {
+  color: #333; }

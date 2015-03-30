@@ -1,0 +1,39 @@
+
+/* THEMES */
+
+/* DEFAULT THEME */
+
+body.theme-default {
+  #sidebar-wrapper {
+    background-color: #fff;
+    box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
+  }
+
+  #sidebar {   
+    ul.sidebar-items {
+      li {
+        border-color: rgb(221, 221, 221);
+        a { color: #222; }
+      }
+    }
+
+  }
+
+  #main { background-color: #e9eaed; }
+
+  .navbar a { color: #fff; }
+
+  div.entry div.meta {
+    span.time      { color: #aaa; }
+
+    div.meta-right  {
+      a.isfavorite { color: #ff9900; }
+      a.default    { color: #999;    }
+    }
+  }
+  div.entry:hover {
+    div.meta-right  {
+      a.default    { color: #333;    }
+    }
+  }
+}
