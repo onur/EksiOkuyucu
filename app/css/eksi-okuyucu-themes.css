@@ -1,16 +1,18 @@
 /* THEMES */
 /* DEFAULT THEME */
+body #sidebar ul.sidebar-items li a {
+  color: inherit; }
+
+.navbar a {
+  color: inherit; }
+
 body.theme-default #sidebar-wrapper {
   background-color: #fff;
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
 body.theme-default #sidebar ul.sidebar-items li {
   border-color: #dddddd; }
-  body.theme-default #sidebar ul.sidebar-items li a {
-    color: #222; }
 body.theme-default #main {
   background-color: #e9eaed; }
-body.theme-default .navbar a {
-  color: #fff; }
 body.theme-default div.entry div.meta span.time {
   color: #aaa; }
 body.theme-default div.entry div.meta div.meta-right a.isfavorite {
@@ -19,3 +21,53 @@ body.theme-default div.entry div.meta div.meta-right a.default {
   color: #999; }
 body.theme-default div.entry:hover div.meta-right a.default {
   color: #333; }
+
+/* Cyborg */
+body.theme-cyborg #main {
+  top: 55px;
+  background-color: #111; }
+body.theme-cyborg #sidebar-wrapper {
+  top: 55px; }
+body.theme-cyborg #sidebar ul.sidebar-items li {
+  border-color: #222; }
+
+/* Darkly */
+body.theme-darkly #main {
+  top: 60px;
+  background-color: #111; }
+body.theme-darkly #sidebar-wrapper {
+  top: 60px; }
+body.theme-darkly #sidebar ul.sidebar-items li {
+  border-color: #333; }
+
+/* Flatly */
+body.theme-flatly #main {
+  top: 60px;
+  background-color: #eee; }
+body.theme-flatly #sidebar-wrapper {
+  top: 60px; }
+body.theme-flatly #sidebar ul.sidebar-items li {
+  border-color: #ccc; }
+body.theme-flatly #sidebar-wrapper {
+  box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
+
+body.theme-spacelab #main {
+  top: 52px;
+  background-color: #eee; }
+body.theme-spacelab #sidebar-wrapper {
+  top: 52px; }
+body.theme-spacelab #sidebar ul.sidebar-items li {
+  border-color: #eee; }
+body.theme-spacelab #sidebar-wrapper {
+  box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
+
+/* Paper */
+body.theme-paper #main {
+  top: 65px;
+  background-color: #eee; }
+body.theme-paper #sidebar-wrapper {
+  top: 65px; }
+body.theme-paper #sidebar ul.sidebar-items li {
+  border-color: #eee; }
+body.theme-paper #sidebar-wrapper {
+  box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
