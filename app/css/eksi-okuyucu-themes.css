@@ -62,12 +62,12 @@ body.theme-spacelab #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
 
 /* Paper */
-body.theme-paper #main {
-  top: 65px;
+body.theme-lumen #main {
+  top: 54px;
   background-color: #eee; }
-body.theme-paper #sidebar-wrapper {
-  top: 65px; }
-body.theme-paper #sidebar ul.sidebar-items li {
+body.theme-lumen #sidebar-wrapper {
+  top: 54px; }
+body.theme-lumen #sidebar ul.sidebar-items li {
   border-color: #eee; }
-body.theme-paper #sidebar-wrapper {
+body.theme-lumen #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
