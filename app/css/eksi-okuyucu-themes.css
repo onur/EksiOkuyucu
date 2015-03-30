@@ -23,6 +23,22 @@ body.theme-default .navbar a {
   color: #fff;
 }
 
+body.theme-default div.entry div.meta span.time {
+  color: #aaa;
+}
+
+body.theme-default div.entry div.meta div.meta-right a.isfavorite {
+  color: #ff9900;
+}
+
+body.theme-default div.entry div.meta div.meta-right a.default {
+  color: #999;
+}
+
+body.theme-default div.entry:hover div.meta div.meta-right a.default {
+  color: #333;
+}
+
 
 /* DARK THEME */
 
