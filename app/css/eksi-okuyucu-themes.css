@@ -27,6 +27,7 @@ body.theme-cyborg #main {
   top: 55px;
   background-color: #111; }
 body.theme-cyborg #sidebar-wrapper {
+  background-color: #060606;
   top: 55px; }
 body.theme-cyborg #sidebar ul.sidebar-items li {
   border-color: #222; }
@@ -36,6 +37,7 @@ body.theme-darkly #main {
   top: 60px;
   background-color: #111; }
 body.theme-darkly #sidebar-wrapper {
+  background-color: #222222;
   top: 60px; }
 body.theme-darkly #sidebar ul.sidebar-items li {
   border-color: #333; }
@@ -45,6 +47,7 @@ body.theme-flatly #main {
   top: 60px;
   background-color: #eee; }
 body.theme-flatly #sidebar-wrapper {
+  background-color: #ffffff;
   top: 60px; }
 body.theme-flatly #sidebar ul.sidebar-items li {
   border-color: #ccc; }
@@ -55,6 +58,7 @@ body.theme-spacelab #main {
   top: 52px;
   background-color: #eee; }
 body.theme-spacelab #sidebar-wrapper {
+  background-color: #ffffff;
   top: 52px; }
 body.theme-spacelab #sidebar ul.sidebar-items li {
   border-color: #eee; }
@@ -66,7 +70,8 @@ body.theme-lumen #main {
   top: 54px;
   background-color: #eee; }
 body.theme-lumen #sidebar-wrapper {
-  top: 54px; }
+  top: 54px;
+  background-color: #ffffff; }
 body.theme-lumen #sidebar ul.sidebar-items li {
   border-color: #eee; }
 body.theme-lumen #sidebar-wrapper {
