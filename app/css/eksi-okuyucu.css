@@ -413,25 +413,28 @@ div.eksi-okuyucu-conf ul.theme li a {
 
 
 div.eksi-okuyucu-conf ul.theme li a.theme-default {
-  background-color: #40a6ff;
+  background-color: #008cba;
+}
+
+div.eksi-okuyucu-conf ul.theme li a.theme-cyborg {
+  background-color: #000;
+}
+
+div.eksi-okuyucu-conf ul.theme li a.theme-darkly {
+  background-color: #00bc8c;
+}
+
+div.eksi-okuyucu-conf ul.theme li a.theme-flatly {
+  background-color: #2c3e50;
 }
 
 
-div.eksi-okuyucu-conf ul.theme li a.theme-dark {
-  background-color: #333;
+div.eksi-okuyucu-conf ul.theme li a.theme-spacelab {
+  background-color: #446e9b;
 }
 
-div.eksi-okuyucu-conf ul.theme li a.theme-fb {
-  background-color: #3B5998;
-}
-
-
-div.eksi-okuyucu-conf ul.theme li a.theme-twitter {
-  background-color: #4099FF;
-}
-
-div.eksi-okuyucu-conf ul.theme li a.theme-antik{
-  background-color: #660066;
+div.eksi-okuyucu-conf ul.theme li a.theme-paper {
+  background-color: #2196f3;
 }
 
 
