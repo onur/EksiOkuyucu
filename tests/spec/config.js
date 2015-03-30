@@ -43,7 +43,8 @@ require.config ({
 
 
 var specs = [
-  '../../tests/spec/sidebar'
+  '../../tests/spec/sidebar',
+  '../../tests/spec/debe'
 ];
 
 
