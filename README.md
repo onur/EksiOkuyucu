@@ -38,6 +38,10 @@ yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
   sağlayan dış bağlantıları sunar.
 * Dış bağlantıları domainadi.com haline getirir. Her zaman linke
   tıkladığınızda hangi domaine gideceğinizi bilirsiniz.
+* [Readablity](https://readability.com/) ile dış bağlantıların içerinin
+  yalın halde entry içerisinde görebilme. Readability Türk standartlarına
+  göre hazırlanmış web siteleriyle pek uyumlu çalışmıyor, varsayılan olarak
+  aktif değil.
 
 Hepsi bu kadar değil! Tüm özellikleri görmek için eklentiyi test etmenizi
 öneririm.
@@ -57,6 +61,13 @@ Her türlü pull request, görüş ve önerilerinizi eklentinin github
 sayfasına gönderebilirsiniz.
 
 
+### Temalar
+
+Uygulama bootstrap kullanılarak geliştirildiğinden bootstrapwatch.com da
+yer alan temalar kullanılmıştır. Siz de bootstrap magic gibi araçlar
+kullanarak kendi temanızı yapabilir ve projeye gönderebilirsiniz.
+
+
 ### Testler
 
 Ekşi Okuyucu BDD (behaviour driven development) prensibi ile
@@ -72,19 +83,53 @@ Testler aynı zamanda ileride ekşi sözlük url yapılarını veya HTML
 yaptığınız değişikliklerin ardından, uygulamanın testleri geçtiğinden emin
 olun.
 
+Testlerin tamamlanması uzun sürebilir, sabırlı olun.
+
+
+### Bilinen Sorunlar
+
+Bilinen sorunların bir listesi, aşağıda listelenmiş sorunlar için yeni bir
+hata kaydı oluşturmanıza gerek yok. Listelenmiş sorunlar dışında bir hata
+ile karşılaşırsanız yeni bir hata kaydı oluşturun.
+
+* Bir view yüklenirken, sidebar veya navbardan farklı bir linke tıklanırsa,
+  mevcut view yüklenmeye devam ediyor ve 2 view aynı anda renderlenmeye
+  çalışıyor.
+* Sondan başa sıralama bazen sonsuza bağlayıp eklentinin çalıştığı sayfanın
+  yanıt veremez duruma gelmesine yol açıyor.
+
+
+### Planlanan Özellikler
+
+İleride uygulamaya eklemeyi düşündüğüm özellikler:
+
+* Başlık içerisinde cevap yazmayı kolaylaştıracak bir form.
+* Başlıkları listelerken başlık adını google images üzerinde arayıp ilk
+  sonucu gösterme. Bunun için 3. parti bir sunucu kullanmayı planlıyorum.
+
 
 ### Derleme
 
 Eksi Okuyucu r.js (requirejs optimizer) kullanılarak derlenmektedir. GNU
-Make dosyaları ile derleme işlemi kolaylaştırılmıştır. Tam derleme işlemini
+make dosyaları ile derleme işlemi kolaylaştırılmıştır. Tam derleme işlemini
 gerçekleştirebilmeniz için gerekenler:
 
-* gnu make
+* GNU make
 * nodejs
 * r.js
 * chromium
 * scss
 * firefox-addon-sdk
+
+
+### Kodlama Stili
+
+Kısaca: vim:ts=4:sw=2:et
+
+Uygulamayı geliştirmeye ilk başladığımda, GNU stilinde olduğu gibi
+fonksiyonları fonksiyon adından sonra ve parantezlerden önce bir boşluk
+kullanıyordum (örn: `foo ();`). Fakat bu alışkanlığımdan bir süredir
+vazgeçtim, coğu fonksiyondan sonra boşluk bulunsa da, olmaması sorun değil.
 
 
 ### Lisans
