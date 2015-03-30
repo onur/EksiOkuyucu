@@ -8,11 +8,23 @@
   <link rel="stylesheet" href="lib/jasmine-2.2.0/jasmine.css">
 
   <script data-main="spec/config" src="../app/js/libs/require.js"></script>
+
+  <style>
+
+    #main {
+      min-height: 100px;
+      max-height: 100px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+
+  </style>
 </head>
 
 <body>
   <!-- test containers -->
-  <div style="display: none;">
+  <div id="wrapper">
     <div id="main"></div>
     <div id="sidebar"></div>
   </div>
