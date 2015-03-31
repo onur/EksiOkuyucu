@@ -27,8 +27,8 @@ body.theme-cyborg #main {
   top: 55px;
   background-color: #111; }
 body.theme-cyborg #sidebar-wrapper {
-  background-color: #060606;
-  top: 55px; }
+  top: 55px;
+  background-color: #060606; }
 body.theme-cyborg #sidebar ul.sidebar-items li {
   border-color: #222; }
 
@@ -37,8 +37,8 @@ body.theme-darkly #main {
   top: 60px;
   background-color: #111; }
 body.theme-darkly #sidebar-wrapper {
-  background-color: #222222;
-  top: 60px; }
+  top: 60px;
+  background-color: #222222; }
 body.theme-darkly #sidebar ul.sidebar-items li {
   border-color: #333; }
 
@@ -47,19 +47,21 @@ body.theme-flatly #main {
   top: 60px;
   background-color: #eee; }
 body.theme-flatly #sidebar-wrapper {
-  background-color: #ffffff;
-  top: 60px; }
+  top: 60px;
+  background-color: #ffffff; }
 body.theme-flatly #sidebar ul.sidebar-items li {
   border-color: #ccc; }
 body.theme-flatly #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
+body.theme-flatly div.panel {
+  box-shadow: 0px 0px 15px #ccc; }
 
 body.theme-spacelab #main {
   top: 52px;
   background-color: #eee; }
 body.theme-spacelab #sidebar-wrapper {
-  background-color: #ffffff;
-  top: 52px; }
+  top: 52px;
+  background-color: #ffffff; }
 body.theme-spacelab #sidebar ul.sidebar-items li {
   border-color: #eee; }
 body.theme-spacelab #sidebar-wrapper {
