@@ -97,7 +97,7 @@ define([
         return true;
 
       if (this.order == 1) {
-        return this.pageCount <= 1;
+        return this.page <= 1;
       } else {
         return this.page >= this.pageCount;
       }
