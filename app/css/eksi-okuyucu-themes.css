@@ -15,12 +15,6 @@ body.theme-default #main {
   background-color: #e9eaed; }
 body.theme-default div.entry div.meta span.time {
   color: #aaa; }
-body.theme-default div.entry div.meta div.meta-right a.isfavorite {
-  color: #ff9900; }
-body.theme-default div.entry div.meta div.meta-right a.default {
-  color: #999; }
-body.theme-default div.entry:hover div.meta-right a.default {
-  color: #333; }
 
 /* Cyborg */
 body.theme-cyborg #main {
