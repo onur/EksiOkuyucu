@@ -60,6 +60,22 @@ define([
 
     sukela: function (ev) {
 
+      var rate = $(ev.currentTarget).hasClass('btn-primary') ? -1 : 1;
+
+      $.ajax ({
+          url: 'https://eksisozluk.com/entry/vote',
+          type: 'POST',
+          data:    { id: $(ev.currentTarget).attr('data-id'),
+                     rate: rate },
+          headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      });
+
+      if (rate > 0) {
+        $(ev.currentTarget).removeClass('btn-default').addClass('btn-primary');
+      } else {
+        $(ev.currentTarget).removeClass('btn-primary').addClass('btn-default');
+      }
+
       return false;
     }
 
