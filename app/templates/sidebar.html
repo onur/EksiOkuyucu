@@ -1,28 +1,11 @@
-<ul class="sidebar-items">
+<div class="list-group">
   <% _.each(entries, function (entry) { %>
-  <li>
-
-    <a href="#t/2<%= entry.url %>">
-
-      <div class="title">
-        
-          <%= entry.title %>
-
-      </div>
-
-
+  <a class="list-group-item" href="#t/2<%= entry.url %>">
       <% if (entry.count) { %>
-      <div class="count">
-
-        <%= entry.count%>
-
-      </div>
+      <span class="label label-default"><%= entry.count%></span>
       <% } %>
 
-      <div class="clear"></div>
-
-    </a>
-  
-  </li>
+      <%= entry.title %>
+  </a>
   <% }); %>
-</ul>
+</div>
