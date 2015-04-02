@@ -4,8 +4,6 @@ SCSS_FILES=$(wildcard app/css/*.scss)
 CSS_FILES=$(SCSS_FILES:.scss=.css)
 
 
-.PHONY: all check scss build/app clean
-
 all: check build/app
 
 check:
@@ -24,4 +22,6 @@ build/app: css
 
 clean:
 	$(RM) -rv build
+
+clean-css:
 	$(RM) -rv $(CSS_FILES)
