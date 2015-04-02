@@ -1,7 +1,7 @@
 ({
   appDir: "../",
   baseUrl: "js",
-  dir: "../../build",
+  dir: "../../build/app",
   mainConfigFile: 'main.js',
   optimizeCss: 'standard',
   modules: [
