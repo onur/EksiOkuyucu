@@ -195,6 +195,14 @@ div.entry-dropdown {
   padding: 10px 10px 10px 15px;
 }
 
+#sidebar .list-group {
+  margin-bottom: 0;
+}
+
+#sidebar .list-group .list-group-item:last-child {
+  border-bottom: none;
+}
+
 @media (max-width:767px) {
 
 #wrapper {
