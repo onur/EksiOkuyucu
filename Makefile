@@ -14,11 +14,14 @@ check:
 
 css: $(CSS_FILES)
 
+r.js:
+	wget https://raw.githubusercontent.com/jrburke/r.js/2.1.14/dist/r.js
+
 %.css: %.scss
 	scss $< > $@
 
-build/app: css
-	nodejs app/js/libs/r.js -o app/js/build.js
+build/app: r.js css
+	nodejs r.js -o app/js/build.js
 
 clean:
 	$(RM) -rv build
