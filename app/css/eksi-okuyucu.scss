@@ -1,0 +1,537 @@
+
+@import url('select2.css');
+@import url('select2-bootstrap.css');
+@import url('eksi-okuyucu-themes.css');
+
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=latin,latin-ext);
+
+
+body { 
+  padding-top: 50px;
+  transition: all 0.8s ease 0s;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0; padding: 0;
+}
+
+.navbar-eksi {
+  position: absolute;
+  left: 255px;
+  right: 132px;
+}
+
+.menu-title {
+  display: none;
+}
+
+#main {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  right: 0;
+  top: 45px;
+  bottom: 0;
+  left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+.clear {
+  clear: both;
+}
+
+div.entry {
+  margin-bottom: 15px;
+
+  div.meta {
+    font-size: 0.8em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+    div.meta-right a.btn {
+      transition: all 0.4s ease 0s;
+    }
+
+    div.meta-left {
+      padding-top: 5px;
+
+      a.author {
+        text-decoration: none;
+      }
+    }
+  }
+
+  span.glyphicon-button {
+    /*padding: 8px 22px 0 8px*/
+    margin: 8px 8px 0 8px;
+  }
+
+}
+
+
+/* SELECT2 */
+.search-select {
+  width: 100%;
+}
+
+.select2-container .select2-choice,
+.select2-container .select2-choice > .select2-chosen {
+  border: none;
+  background-color: inherit;
+  background-image: none;
+  box-shadow: none;
+}
+
+.select2-container .select2-choice .select2-arrow {
+  display: none;
+}
+
+.select2-drop {
+  margin-left: 20px;
+  background-color: inherit;
+}
+
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-selection-limit {
+  background-color: inherit;
+}
+
+
+.popover-content {
+  max-height: 200px;
+  min-width: 200px;
+  overflow-y: auto;
+}
+
+
+.eksi-nav {
+  position: fixed;
+  margin-left: 250px;
+
+  ul li a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+}
+
+.page-nav {
+  width: 250px;
+  border-right: 1px dashed #e7e7e7;
+
+  ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+ul.dropdown-menu li a {
+  padding: 3px 20px;
+}
+
+div.entry-dropdown {
+  margin-left: 5px;
+}
+
+
+/* SIDEBAR */
+
+#wrapper {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 45px;
+  bottom: 0;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content-wrapper {
+  position: absolute;
+  display: block;
+  left: 250px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.inset {
+  padding: 10px 10px 10px 15px;
+}
+
+#sidebar .list-group {
+  margin-bottom: 0;
+}
+
+#sidebar .list-group .list-group-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width:767px) {
+
+#wrapper {
+  padding-left: 0;
+}
+
+#sidebar-wrapper {
+  left: 0;
+}
+
+#main {
+  left: 0;
+  transition: all 0.4s ease 0s;
+}
+
+.page-nav {
+  display: none;
+}
+
+.eksi-nav {
+  margin-left: 0;
+  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  position: relative;
+  left: 250px;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#menu-toggle {
+  display: inline-block;
+}
+
+.inset {
+  padding: 0;
+}
+
+.navbar-toggle:first-child {
+  margin-left: 15px;
+  margin-right: 0;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.navbar-toggle {
+  float: left;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* SELECT2 */
+.search-select {
+  position: absolute;
+  left: 90px;
+  right: 0;
+  padding-left: 0;
+}
+
+.select2-drop {
+  margin-left: -95px;
+}
+
+.navbar-eksi {
+  position: relative;
+  float: none;
+  left: 0;
+  letter-spacing: -2px;
+}
+
+.menu-title {
+  display: inline;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+div.entry {
+  margin-bottom: 5px;
+  border-radius: 0;
+}
+
+}
+
+
+/* /SIDEBAR */
+
+
+/* SCROLLBAR */
+
+
+
+
+/* CONF */
+
+div.eksi-okuyucu-conf {
+  ul.theme {
+    display: inline;
+  }
+
+  ul.theme li {
+    display: inline;
+  }
+
+  ul.theme li a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  ul.theme li a.theme-default {
+    background-color: #008cba;
+  }
+
+  ul.theme li a.theme-cyborg {
+    background-color: #000;
+  }
+
+  ul.theme li a.theme-darkly {
+    background-color: #00bc8c;
+  }
+
+  ul.theme li a.theme-flatly {
+    background-color: #2c3e50;
+  }
+
+  ul.theme li a.theme-spacelab {
+    background-color: #446e9b;
+  }
+
+  ul.theme li a.theme-lumen {
+    background-color: #158cba;
+  }
+
+
+}
+
+
+/* Dropdown transition */
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  
+}
+.open > .dropdown-menu li a {
+}
+.dropdown-menu {
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+  -webkit-transform: scale(1, 0);
+  display: block;
+  
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+.dropup .dropdown-menu {
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;  
+}
+ 
+.navbar .nav > li > .dropdown-menu:after {
+ 
+}
+.dropup > .dropdown-menu:after {
+  border-bottom: 0;
+  border-top: 6px solid rgba(39, 45, 51, 0.9);
+  top: auto;
+  display: inline-block;
+  bottom: -6px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+
+/* giris formu */
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#user-drop span.unread-count {
+  font-size: 0.8em;
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  background-color: #428bca;
+  color: white;
+  font-weight: normal;
+  padding: 0 1px 0 1px;
+  line-height: 15px;
+  border-radius: 4px;
+  display: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+
+
+/* loading animation
+ * http://codepen.io/Akiletour/pen/emGOgd */
+
+
+.loader-walk {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+.loader-walk > div {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #2196F3;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+.loader-walk > div:nth-of-type(1) {
+  -webkit-animation-delay: -.4s;
+          animation-delay: -.4s;
+}
+.loader-walk > div:nth-of-type(2) {
+  -webkit-animation-delay: -.8s;
+          animation-delay: -.8s;
+}
+.loader-walk > div:nth-of-type(3) {
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.loader-walk > div:nth-of-type(4) {
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: 50px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  90% {
+    width: 20px;
+    height: 5px;
+  }
+  95% {
+    left: 50px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: 50px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  90% {
+    width: 20px;
+    height: 5px;
+  }
+  95% {
+    left: 50px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}
+
+/* loading animation ends here */
