@@ -1,3 +1,3 @@
 
 all:
-	nodejs r.js -o build.js
+	nodejs libs/r.js -o build.js
