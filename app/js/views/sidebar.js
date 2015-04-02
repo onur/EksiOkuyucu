@@ -56,7 +56,7 @@ define([
           that.isLoading = false;
 
           // hide left frame when user clicks a item
-          $('#sidebar ul.sidebar-items a').click (function () {
+          $('#sidebar a').click (function () {
             that.hideLeftFrame ();
           });
 
