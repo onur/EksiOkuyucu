@@ -1,16 +1,10 @@
 /* THEMES */
 /* DEFAULT THEME */
-body #sidebar ul.sidebar-items li a {
-  color: inherit; }
-
 .navbar a {
   color: inherit; }
 
 body.theme-default #sidebar-wrapper {
-  background-color: #fff;
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
-body.theme-default #sidebar ul.sidebar-items li {
-  border-color: #dddddd; }
 body.theme-default #main {
   background-color: #e9eaed; }
 body.theme-default div.entry div.meta span.time {
@@ -18,33 +12,24 @@ body.theme-default div.entry div.meta span.time {
 
 /* Cyborg */
 body.theme-cyborg #main {
-  top: 55px;
+  top: 51px;
   background-color: #111; }
 body.theme-cyborg #sidebar-wrapper {
-  top: 55px;
-  background-color: #060606; }
-body.theme-cyborg #sidebar ul.sidebar-items li {
-  border-color: #222; }
+  top: 51px; }
 
 /* Darkly */
 body.theme-darkly #main {
-  top: 60px;
+  top: 61px;
   background-color: #111; }
 body.theme-darkly #sidebar-wrapper {
-  top: 60px;
-  background-color: #222222; }
-body.theme-darkly #sidebar ul.sidebar-items li {
-  border-color: #333; }
+  top: 61px; }
 
 /* Flatly */
 body.theme-flatly #main {
   top: 60px;
   background-color: #eee; }
 body.theme-flatly #sidebar-wrapper {
-  top: 60px;
-  background-color: #ffffff; }
-body.theme-flatly #sidebar ul.sidebar-items li {
-  border-color: #ccc; }
+  top: 60px; }
 body.theme-flatly #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
 body.theme-flatly div.panel {
@@ -54,10 +39,7 @@ body.theme-spacelab #main {
   top: 52px;
   background-color: #eee; }
 body.theme-spacelab #sidebar-wrapper {
-  top: 52px;
-  background-color: #ffffff; }
-body.theme-spacelab #sidebar ul.sidebar-items li {
-  border-color: #eee; }
+  top: 52px; }
 body.theme-spacelab #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
 
@@ -66,9 +48,6 @@ body.theme-lumen #main {
   top: 54px;
   background-color: #eee; }
 body.theme-lumen #sidebar-wrapper {
-  top: 54px;
-  background-color: #ffffff; }
-body.theme-lumen #sidebar ul.sidebar-items li {
-  border-color: #eee; }
+  top: 54px; }
 body.theme-lumen #sidebar-wrapper {
   box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }

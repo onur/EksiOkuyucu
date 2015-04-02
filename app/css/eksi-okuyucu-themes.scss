@@ -3,22 +3,11 @@
 
 /* DEFAULT THEME */
 
-body #sidebar ul.sidebar-items li a { color: inherit; }
 .navbar a { color: inherit; }
 
 body.theme-default {
   #sidebar-wrapper {
-    background-color: #fff;
     box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
-  }
-
-  #sidebar {
-    ul.sidebar-items {
-      li {
-        border-color: rgb(221, 221, 221);
-      }
-    }
-
   }
 
   #main { background-color: #e9eaed; }
@@ -32,10 +21,8 @@ body.theme-default {
 
 body.theme-cyborg {
 
-  #main { top: 55px; background-color: #111; }
-  #sidebar-wrapper { top: 55px; background-color: #060606; }
-
-  #sidebar ul.sidebar-items li { border-color: #222; }
+  #main { top: 51px; background-color: #111; }
+  #sidebar-wrapper { top: 51px; }
 
 }
 
@@ -43,10 +30,8 @@ body.theme-cyborg {
 
 body.theme-darkly {
 
-  #main { top: 60px; background-color: #111; }
-  #sidebar-wrapper { top: 60px; background-color: #222222; }
-
-  #sidebar ul.sidebar-items li { border-color: #333; }
+  #main { top: 61px; background-color: #111; }
+  #sidebar-wrapper { top: 61px; }
 
 }
 
@@ -56,9 +41,7 @@ body.theme-darkly {
 body.theme-flatly {
 
   #main { top: 60px; background-color: #eee; }
-  #sidebar-wrapper { top: 60px; background-color: #ffffff; }
-
-  #sidebar ul.sidebar-items li { border-color: #ccc; }
+  #sidebar-wrapper { top: 60px; }
 
   #sidebar-wrapper {
     box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
@@ -71,9 +54,7 @@ body.theme-flatly {
 
 body.theme-spacelab {
   #main { top: 52px; background-color: #eee; }
-  #sidebar-wrapper { top: 52px; background-color: #ffffff; }
-
-  #sidebar ul.sidebar-items li { border-color: #eee; }
+  #sidebar-wrapper { top: 52px; }
 
   #sidebar-wrapper {
     box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
@@ -84,9 +65,7 @@ body.theme-spacelab {
 /* Paper */
 body.theme-lumen {
   #main { top: 54px; background-color: #eee; }
-  #sidebar-wrapper { top: 54px; background-color: #ffffff; }
-
-  #sidebar ul.sidebar-items li { border-color: #eee; }
+  #sidebar-wrapper { top: 54px; }
 
   #sidebar-wrapper {
     box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25);
