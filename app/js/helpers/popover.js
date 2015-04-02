@@ -83,9 +83,9 @@ define([
 
         if ((youtube_id = this.parseYoutubeUrl (link)) != false) {
           if (ConfHelper.getOption ('youtube')) {
-            $(ev.currentTarget).after ('<div><blockquote><iframe width="560" height="315" ' +
+            $(ev.currentTarget).after ('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" ' +
                    'src="https://www.youtube.com/embed/' + youtube_id +
-                   '" frameborder="0" allowfullscreen></blockquote></div>');
+                   '" frameborder="0" allowfullscreen></div>');
             $(ev.currentTarget).attr ('data-loaded', 'true');
           } else {
             window.open (link);
