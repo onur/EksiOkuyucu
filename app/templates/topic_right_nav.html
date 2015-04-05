@@ -1,9 +1,9 @@
 <% if (typeof (title) != 'undefined') { %>
 
-<li><a href="#" id="follow-topic"><span class="glyphicon glyphicon-eye-open"></span><span class="menu-title"> Takip et</span></a></li>
+<li><a href="#" id="follow-topic" title="Takip et"><span class="glyphicon glyphicon-eye-open"></span><span class="menu-title"> Takip et</span></a></li>
 
 <li class="dropdown">
- <a href="#" id="search-title-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> <span class="menu-title">Web'de <%= title %></span></a>
+ <a href="#" id="search-title-drop" role="button" class="dropdown-toggle" data-toggle="dropdown" title="Web'de <%= title %>"><span class="glyphicon glyphicon-globe"></span> <span class="menu-title">Web'de <%= title %></span></a>
  <ul class="dropdown-menu" role="menu" aria-labelledby="search-title-drop">
    <li><a href="https://eksisozluk.com/<%= external_url %>" target="_blank">Ekşi Sözlük'te aç</a></li>
    <li class="divider"></li>
@@ -18,12 +18,12 @@
 
 <% } %>
 
-<li><a href="#" id="refresh-topic"><span class="glyphicon glyphicon-refresh"></span><span class="menu-title"> Yenile</span></a></li>
+<li><a href="#" id="refresh-topic" title="Yenile"><span class="glyphicon glyphicon-refresh"></span><span class="menu-title"> Yenile</span></a></li>
 
 <% if (typeof (external_url) != 'undefined') { %>
 
 <li class="dropdown">
- <a href="#" id="order-drop" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-sort"></span> <span class="menu-title"> Sıralama</span></a>
+ <a href="#" id="order-drop" role="button" class="dropdown-toggle" data-toggle="dropdown" title="Sıralama"><span class="glyphicon glyphicon-sort"></span> <span class="menu-title"> Sıralama</span></a>
  <ul class="dropdown-menu" role="menu" aria-labelledby="order-drop">
    <li class="dropdown-header">Sıralama</li>
    <li><a href="#t/0/<%= external_url %>"><span class="glyphicon glyphicon-sort-by-order"></span> Baştan sona</a></li>
