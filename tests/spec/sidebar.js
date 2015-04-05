@@ -129,26 +129,27 @@ define([
 
 
     it("must generate sidebar items list", function() {
-      expect($('#sidebar ul.sidebar-items')).toExist();
+      expect($('#sidebar div.list-group')).toExist();
     });
 
     it("must generate sidebar list items", function() {
-      expect($('#sidebar ul.sidebar-items li')).toExist();
+      expect($('#sidebar div.list-group a')).toExist();
     });
 
     describe("SidebarItems", function() {
       it("must be a link", function() {
-        expect($('#sidebar ul.sidebar-items li a')).toExist();
-        expect($('#sidebar ul.sidebar-items li a')).toHaveAttr('href');
+        expect($('#sidebar div.list-group a')).toExist();
+        expect($('#sidebar div.list-group a')).toHaveAttr('href');
       });
       it("must have a valid url", function() {
-        expect($('#sidebar ul.sidebar-items li a').attr('href')).toMatch(/^#t\/\d+\/.*?--\d+/);
+        expect($('#sidebar div.list-group a').attr('href')).toMatch(/^#t\/\d+\/.*?--\d+/);
       });
       it("must have a title", function() {
-        expect($('#sidebar ul.sidebar-items li a div.title')).toExist();
+        // this is a very weak patter to test titles
+        expect($('#sidebar div.list-group a').text()).toMatch(/\w+/);
       });
       it("must have unread count by default", function() {
-        expect($('#sidebar ul.sidebar-items li a div.count')).toExist();
+        expect($('#sidebar div.list-group a span.label')).toExist();
       });
     });
   });
