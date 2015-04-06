@@ -53,7 +53,7 @@ require([
   'jasmine-boot'
 ], function (App) {
 
-  App.initialize ();
+  App.initialize (true);
 
   // Load the specs
   require(specs, function () {
