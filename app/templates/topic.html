@@ -28,6 +28,10 @@
             <span class="glyphicon glyphicon-user"></span> <%= entry.author %>
           </a>
 
+          <% _.each(entry.author_tags, function(author_tag) { %>
+          <span class="label label-default"><%= author_tag %></span>
+          <% }) %>
+
           <span class="time">
             -
             <%= entry.creationTime %>

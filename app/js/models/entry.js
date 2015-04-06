@@ -2,8 +2,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'helpers/usertag'
+], function ($, _, Backbone, UserTagHelper) {
 
   var Entry = Backbone.Model.extend ({
 
@@ -112,6 +113,7 @@ define([
                   $(htmlDoc).find ('footer').attr ('data-favorite-count'))
                 );
       this.set ('author', $(htmlDoc).find ('address a').text ());
+      this.set ('author_tags', UserTagHelper.getUserTags(this.get('author')));
 
     }
 

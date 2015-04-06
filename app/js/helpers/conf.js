@@ -28,7 +28,10 @@ define([
       index: 'Gündem',
 
       // font
-      font: 'default'
+      font: 'default',
+
+      // tag_ak_trolls
+      tag_ak_trolls: true
 
     },
 
@@ -57,6 +60,8 @@ define([
         this.options.index = user_options.index;
       if (typeof (user_options.font) != 'undefined')
         this.options.font = user_options.font;
+      if (typeof (user_options.tag_ak_trolls) != 'undefined')
+        this.options.tag_ak_trolls = user_options.tag_ak_trolls;
 
     },
 
@@ -115,6 +120,9 @@ define([
         somethingChanged = true;
       } else if (option == 'images' && this.options.images != val) {
         this.options.images = val;
+        somethingChanged = true;
+      } else if (option == 'tag_ak_trolls' && this.options.tag_ak_trolls != val) {
+        this.options.tag_ak_trolls = val;
         somethingChanged = true;
       }
 

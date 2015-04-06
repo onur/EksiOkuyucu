@@ -137,4 +137,36 @@
 
   </div>
 
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+
+      <h4 class="panel-title">Fişlemiş kullanıcılar</h4>
+
+      <em>Kullanıcı adının yanında etiketini de görmenizi sağlar.</em>
+
+    </div>
+
+    <div class="panel-body">
+
+      <div class="form-group">
+        <select multiple id="usertag-list" class="form-control"></select>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="tag_ak_trolls" <% if (options.tag_ak_trolls) { %>checked<% } %>>
+          Ak trolleri otomatikman fişle
+        </label>
+      </div>
+
+      <div class="btn-group">
+        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#add-usertag-modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ekle</a>
+        <a id="remove-usertag-button" class="btn btn-default" href="#"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Çıkar</a>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
