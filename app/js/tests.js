@@ -1,5 +1,4 @@
 require.config ({
-  baseUrl: '../app/js',
   paths: {
     requireLib: 'libs/require',
     jquery: 'libs/jquery-1.11.0.min',
@@ -10,10 +9,10 @@ require.config ({
     jquery_cookie: 'libs/jquery.cookie',
     select2: 'libs/select2.min',
     templates: '../templates',
-    jasmine: '../../tests/lib/jasmine-2.2.0/jasmine',
-    'jasmine-html': '../../tests/lib/jasmine-2.2.0/jasmine-html',
-    'jasmine-boot': '../../tests/lib/jasmine-2.2.0/boot',
-    'jasmine-jquery': '../../tests/lib/jasmine-jquery'
+    jasmine: 'libs/jasmine-2.2.0/jasmine',
+    'jasmine-html': 'libs/jasmine-2.2.0/jasmine-html',
+    'jasmine-boot': 'libs/jasmine-2.2.0/boot',
+    'jasmine-jquery': 'libs/jasmine-jquery'
   },
 
   shim: {
@@ -43,8 +42,8 @@ require.config ({
 
 
 var specs = [
-  '../../tests/spec/sidebar',
-  '../../tests/spec/debe'
+  'tests/sidebar',
+  'tests/debe'
 ];
 
 
