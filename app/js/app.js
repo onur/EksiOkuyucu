@@ -13,7 +13,7 @@ define([
   'jquery_cookie'
 ], function ($, _, Backbone, Router, ConfHelper, UserTagHelper,
              SidebarView, SearchView, UserView, BodyTemplate) {
-  var initialize = function () {
+  var initialize = function (tests) {
 
     ConfHelper.loadConf ();
     ConfHelper.switchTheme ();
@@ -24,12 +24,14 @@ define([
     $('body').html (_.template (BodyTemplate));
 
     var sidebarView = new SidebarView  ();
-    sidebarView.render ();
 
     var searchView = new SearchView ();
     var userView = new UserView ();
 
-    Router.initialize ();
+    if (!tests) {
+      sidebarView.render ();
+      Router.initialize ();
+    }
   }
 
   return {
