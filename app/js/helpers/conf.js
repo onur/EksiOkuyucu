@@ -16,7 +16,7 @@ define([
       popover: true,
 
       // use readability for external url
-      readability: true,
+      readability: false,
 
       // show youtube videos in application
       youtube: true,
