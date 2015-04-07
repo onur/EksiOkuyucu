@@ -2,8 +2,7 @@
 define([
   'jquery',
   'collections/sidebar',
-  'views/sidebar',
-  'jasmine-jquery'
+  'views/sidebar'
 ], function($, SidebarCollection, SidebarView) {
 
   describe("SidebarCollection", function() {

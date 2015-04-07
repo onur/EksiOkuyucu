@@ -2,8 +2,7 @@
 define([
   'jquery',
   'collections/debe',
-  'views/debe',
-  'jasmine-jquery'
+  'views/debe'
 ], function($, DebeCollection, DebeView) {
 
   describe("DebeCollection", function() {
