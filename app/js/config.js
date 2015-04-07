@@ -33,11 +33,11 @@ require.config ({
     'jasmine-html': {
        deps: ['jasmine'],
     },
-    'jasmine-jquery': {
-       deps: ['jquery', 'jasmine-boot', 'jasmine'],
-    },
     'jasmine-boot': {
        deps: ['jasmine', 'jasmine-html'],
+    },
+    'jasmine-jquery': {
+       deps: ['jquery', 'jasmine', 'jasmine-html'],
     }
   }
 });
