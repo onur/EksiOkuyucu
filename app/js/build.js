@@ -11,8 +11,15 @@
       include: [ 'requireLib' ]
     },
     {
+      // tests build is not working as expected
+      // it's better to use tests without build
       name: "tests",
-      include: [ 'requireLib', 'jasmine-boot', 'tests/sidebar', 'tests/debe' ]
+      include: [ 'requireLib',
+                 'jasmine',
+                 'jasmine-boot',
+                 'jasmine-jquery',
+                 'tests/sidebar',
+                 'tests/debe' ]
     }
   ]
 })
