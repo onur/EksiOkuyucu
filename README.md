@@ -95,8 +95,6 @@ ile karşılaşırsanız yeni bir hata kaydı oluşturun.
 * Bir view yüklenirken, sidebar veya navbardan farklı bir linke tıklanırsa,
   mevcut view yüklenmeye devam ediyor ve 2 view aynı anda renderlenmeye
   çalışıyor.
-* Sondan başa sıralama bazen sonsuza bağlayıp eklentinin çalıştığı sayfanın
-  yanıt veremez duruma gelmesine yol açıyor.
 
 
 ### Planlanan Özellikler
