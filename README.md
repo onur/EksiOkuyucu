@@ -34,6 +34,9 @@ yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
   ilk entrysi ile birlikte link üzerinde gösterir.
 * Resim linkleri tıklandıktan sonra direkt sayfa içerisinde gösterilir.
 * Youtube videolarını sayfa içerisinde oynatmanızı sağlar.
+* Kullanıcıları fişlemenizi sağlar. Ak-troller otomatikmen fişlenmiştir.
+  Aslında bu etiketleme ama fişleme kelimesi daha çok hoşuma gittiğinden
+  fişleme olarak adlandırdım.
 * Başlık içerisindeyken, çeşitli sitelerde başlık adını kolayca aramanızı
   sağlayan dış bağlantıları sunar.
 * Dış bağlantıları domainadi.com haline getirir. Her zaman linke
@@ -122,10 +125,10 @@ gerçekleştirebilmeniz için gerekenler:
 
 ### Kodlama Stili
 
-Kısaca: vim:ts=4:sw=2:et
+`vim:ts=4:sw=2:et`
 
 Uygulamayı geliştirmeye ilk başladığımda, GNU stilinde olduğu gibi
-fonksiyonları fonksiyon adından sonra ve parantezlerden önce bir boşluk
+fonksiyon adından sonra ve parantezlerden önce bir boşluk
 kullanıyordum (örn: `foo ();`). Fakat bu alışkanlığımdan bir süredir
 vazgeçtim, coğu fonksiyondan sonra boşluk bulunsa da, olmaması sorun değil.
 
