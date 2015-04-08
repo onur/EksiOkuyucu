@@ -59,3 +59,8 @@ firefox:
 	cp -v build/app/css/bootstrap-*.css build/firefox/data/css
 	cp -vr build/app/img build/firefox/data
 	cp -vr build/app/fonts build/firefox/data
+
+phonegap: chrome
+	test -e build/phonegap || cp -rv build/chrome build/phonegap
+	cp -v phonegap/config.xml build/phonegap
+	cd build/phonegap && zip -r ../phonegap.zip .
