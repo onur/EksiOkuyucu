@@ -215,9 +215,6 @@ div.entry-dropdown {
   .menu-title {
     display: inline; }
 
-  ::-webkit-scrollbar {
-    width: 0 !important; }
-
   div.entry {
     margin-bottom: 5px;
     border-radius: 0; } }
@@ -246,20 +243,6 @@ div.eksi-okuyucu-conf ul.theme li a.theme-spacelab {
   background-color: #446e9b; }
 div.eksi-okuyucu-conf ul.theme li a.theme-lumen {
   background-color: #158cba; }
-
-/* Dropdown transition */
-.open > .dropdown-menu {
-  opacity: 1;
-  visibility: visible; }
-
-.dropdown-menu {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 300ms ease, visibility 300ms ease;
-  -moz-transition: opacity 300ms ease, visibility 300ms ease;
-  -o-transition: opacity 300ms ease, visibility 300ms ease;
-  transition: opacity 300ms ease, visibility 300ms ease; }
 
 /* giris formu */
 .form-signin .form-control {
