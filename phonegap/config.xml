@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    version     = "0.1.0" >
+
+    <name>Ekşi Okuyucu</name>
+
+    <description>
+      Reader for popular Turkish website eksisozluk.com
+    </description>
+
+    <author href="http://onur.im/" email="onur@onur.im">
+      Onur Aslan
+    </author>
+
+    <access origin="*"  />
+</widget>
