@@ -8,9 +8,9 @@ CHROME_KEY=chrome/chrome.pem
 SCSS_FILES=$(wildcard app/css/*.scss)
 CSS_FILES=$(SCSS_FILES:.scss=.css)
 
-.PHONY: chrome firefox
+.PHONY: app chrome firefox
 
-all: check build/app
+all: check app
 
 check:
 	@echo 'Checking dependencies'
@@ -26,7 +26,7 @@ r.js:
 %.css: %.scss
 	$(SCSS) $< > $@
 
-build/app: r.js css
+app: r.js css
 	$(NODE) r.js -o app/js/build.js
 
 clean:
