@@ -71,11 +71,11 @@ kullanarak kendi temanızı yapabilir ve projeye gönderebilirsiniz.
 ### Testler
 
 Ekşi Okuyucu BDD (behaviour driven development) prensibi ile
-geliştirilmektedir. Eklentiyi geliştirici modunda kurduktan sonra eklendi
-URL'nizin souna `/tests/SpecRunner.html` koyarak testleri
+geliştirilmektedir. Eklentiyi geliştirici modunda kurduktan sonra
+`tests.html` sayfasını açarak testleri
 çalıştırabilirsiniz. Testler `jasmine` ile geliştirilmiştir. Ekşi
 Okuyucu'nun yeni sürümü, tüm tesler başarılı bir şekilde geçerse
-dağıtılmaktadır. Bir çok durum testlere dahil edilmiştir. `tests/spec`
+dağıtılmaktadır. Bir çok durum testlere dahil edilmiştir. `app/js/tests/`
 dizininde yapılan testleri görebilirsiniz.
 
 Testler aynı zamanda ileride ekşi sözlük url yapılarını veya HTML
