@@ -7,6 +7,7 @@ CHROME=chromium
 SCSS_FILES=$(wildcard app/css/*.scss)
 CSS_FILES=$(SCSS_FILES:.scss=.css)
 
+.PHONY: chrome firefox
 
 all: check build/app
 
@@ -32,3 +33,28 @@ clean:
 
 clean-css:
 	$(RM) -rv $(CSS_FILES)
+
+chrome:
+	test -e chrome/chrome.pem
+	mkdir -pv build/chrome/js build/chrome/css
+	cp -v chrome/chrome.js build/chrome 
+	cp -v chrome/index.html build/chrome 
+	cp -v chrome/manifest.json build/chrome 
+	cp -v build/app/js/main.js build/chrome/js
+	cp -v build/app/css/eksi-okuyucu.css build/chrome/css
+	cp -v build/app/css/bootstrap-*.css build/chrome/css
+	cp -vr build/app/img build/chrome
+	cp -vr build/app/fonts build/chrome
+	$(CHROME) --pack-extension=build/chrome --pack-extension-key=chrome/chrome.pem
+
+firefox:
+	mkdir -pv build/firefox/data build/firefox/lib
+	mkdir -pv build/firefox/data/js build/firefox/data/css
+	cp -v firefox/package.json build/firefox
+	cp -v firefox/lib/main.js build/firefox/lib
+	cp -v firefox/data/index.html build/firefox/data
+	cp -v build/app/js/main.js build/firefox/data/js
+	cp -v build/app/css/eksi-okuyucu.css build/firefox/data/css
+	cp -v build/app/css/bootstrap-*.css build/firefox/data/css
+	cp -vr build/app/img build/firefox/data
+	cp -vr build/app/fonts build/firefox/data
