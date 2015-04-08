@@ -12,7 +12,7 @@
   ],
   "background": {
     "persistent": false,
-    "scripts": [ "chrome/chrome.js" ]
+    "scripts": [ "chrome/chrome_dev.js" ]
   },
   "browser_action": {
     "default_icon": "app/img/icon.png",
