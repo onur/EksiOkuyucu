@@ -12,8 +12,7 @@ var EksiPanel = require ("sdk/panel").Panel ({
   },
   contentURL: data.url ("index.html"),
   contentScriptFile: [
-    data.url ('require.js'),
-    data.url ('main-built.js')
+    data.url ('js/main.js')
   ]
 });
 
