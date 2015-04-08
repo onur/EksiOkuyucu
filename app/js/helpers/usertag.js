@@ -173,7 +173,7 @@ define([
     ],
 
     loadUserTags: function() {
-      this.userTags = $.cookie('eksi_okuyucu_usertags') || [];
+      this.userTags = $.cookie('eksi_okuyucu_usertags') || {};
     },
 
 
