@@ -35,7 +35,7 @@ clean:
 clean-css:
 	$(RM) -rv $(CSS_FILES)
 
-chrome:
+chrome: app
 	test -e $(CHROME_KEY)
 	mkdir -pv build/chrome/js build/chrome/css
 	cp -v chrome/chrome.js build/chrome 
@@ -48,7 +48,7 @@ chrome:
 	cp -vr build/app/fonts build/chrome
 	$(CHROME) --pack-extension=build/chrome --pack-extension-key=$(CHROME_KEY)
 
-firefox:
+firefox: app
 	mkdir -pv build/firefox/data build/firefox/lib
 	mkdir -pv build/firefox/data/js build/firefox/data/css
 	cp -v firefox/package.json build/firefox
