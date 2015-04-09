@@ -271,7 +271,7 @@ div.eksi-okuyucu-conf ul.theme li a.theme-lumen {
 .loader-walk {
   width: 50px;
   height: 20px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 0px; }
 
