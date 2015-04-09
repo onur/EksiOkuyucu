@@ -11,6 +11,9 @@ define([
       // unbind previous events
       $('#main').off();
 
+      // unbind previous scroll event
+      $(window).off('scroll');
+
       // remove binding of refresh button and hide by default
       $('#refresh-topic-container').off();
 
@@ -43,6 +46,20 @@ define([
         view.refresh ();
         return false;
       });
+    },
+
+
+    bindScroll: function(view) {
+      var that = this;
+      $(window).scroll(function(ev) {
+        view.checkScroll();
+      });
+    },
+
+
+    checkScroll: function(view) {
+      return $(window).scrollTop () + $(window).height () >
+                 $("#main").height () - 200;
     },
 
 
