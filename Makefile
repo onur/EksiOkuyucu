@@ -12,7 +12,7 @@ CSS_FILES=$(SCSS_FILES:.scss=.css)
 
 .PHONY: app chrome firefox
 
-all: check app
+all: check app chrome firefox phonegap
 
 check:
 	@echo 'Checking dependencies'
