@@ -27,7 +27,7 @@ define([
     },
 
     setTitle: function (title, rightNavOptions) {
-      $('#select2-chosen-1').text (title);
+      $('#navbar-title').text (title);
       $('title').text (title);
 
       this.setRightNavbar (
