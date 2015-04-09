@@ -18,6 +18,7 @@ define([
       this.topicCollection = new TopicCollection ();
 
       NavHelper.initialize ();
+      NavHelper.bindScroll (this);
     },
 
     render: function (order, external_url) {
@@ -83,17 +84,12 @@ define([
 
     },
 
-    events: {
-      'scroll': 'checkScroll'
-    },
-
 
     checkScroll: function () {
 
       if (!this.isLoading &&
-          !this.topicCollection.lastPage () &&
-          this.el.scrollTop + this.el.clientHeight + 200 >
-          this.el.scrollHeight) {
+          NavHelper.checkScroll() &&
+          !this.topicCollection.lastPage ()) {
         this.topicCollection.nextPage ();
         this.loadResults (); 
       }

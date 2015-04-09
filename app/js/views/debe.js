@@ -23,6 +23,7 @@ define([
       this.topicCollection = new TopicCollection ();
       
       NavHelper.initialize ('Dünün en beğenilen entryleri');
+      NavHelper.bindScroll (this);
     },
 
     getEntry: function (entry_id) {
@@ -84,16 +85,10 @@ define([
     },
 
 
-    events: {
-      'scroll': 'checkScroll'
-    },
-
-
     checkScroll: function () {
       if (!this.isLoading &&
           this.current_item < this.debeCollection.length &&
-          this.el.scrollTop + this.el.clientHeight + 200 >
-          this.el.scrollHeight) {
+          NavHelper.checkScroll()) {
         this.render ();
       }
     },

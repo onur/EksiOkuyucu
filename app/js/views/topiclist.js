@@ -26,6 +26,7 @@ define([
       NavHelper.initialize ('');
       // FIXME: refresh is binding but button is not showing, no idea why
       NavHelper.bindRefresh (this);
+      NavHelper.bindScroll (this);
     },
 
     setTitle: function (external_url) {
@@ -118,16 +119,10 @@ define([
     },
 
 
-    events: {
-      'scroll': 'checkScroll'
-    },
-
-
     checkScroll: function () {
       if (!this.isLoading &&
           this.current_item < this.topicListCollection.length &&
-          this.el.scrollTop + this.el.clientHeight + 200 >
-          this.el.scrollHeight) {
+          NavHelper.checkScroll()) {
         this.render ();
       }
     },

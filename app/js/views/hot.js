@@ -26,6 +26,7 @@ define([
       
       NavHelper.initialize ('Gündem');
       NavHelper.bindRefresh (this);
+      NavHelper.bindScroll (this);
     },
 
 
@@ -110,16 +111,10 @@ define([
     },
 
 
-    events: {
-      'scroll': 'checkScroll'
-    },
-
-
     checkScroll: function () {
       if (!this.isLoading &&
           this.current_item < this.sidebarCollection.length &&
-          this.el.scrollTop + this.el.clientHeight + 200 >
-          this.el.scrollHeight) {
+          NavHelper.checkScroll()) {
         this.render ();
       }
     },
