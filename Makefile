@@ -5,6 +5,7 @@ SCSS=scss
 CHROME=chromium
 CHROME_KEY=chrome/chrome.pem
 CFX=cfx
+ZIP=zip
 
 SCSS_FILES=$(wildcard app/css/*.scss)
 CSS_FILES=$(SCSS_FILES:.scss=.css)
@@ -19,6 +20,7 @@ check:
 	@echo -n 'Checking scss: ' && which $(SCSS)
 	@echo -n 'Checking chrome: ' && which $(CHROME)
 	@echo -n 'Checking cfx: ' && which $(CFX)
+	@echo -n 'Checking zip: ' && which $(ZIP)
 
 css: $(CSS_FILES)
 
@@ -66,4 +68,4 @@ firefox: app
 phonegap: chrome
 	test -e build/phonegap || cp -rv build/chrome build/phonegap
 	cp -v phonegap/config.xml build/phonegap
-	cd build/phonegap && zip -r ../phonegap.zip .
+	cd build/phonegap && $(ZIP) -r ../phonegap.zip .
