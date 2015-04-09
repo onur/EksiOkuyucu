@@ -9,8 +9,7 @@ define([
   'views/search',
   'views/user',
   'text!templates/body.html',
-  'bootstrap',
-  'jquery_cookie'
+  'bootstrap'
 ], function ($, _, Backbone, Router, ConfHelper, UserTagHelper,
              SidebarView, SearchView, UserView, BodyTemplate) {
   var initialize = function (tests) {

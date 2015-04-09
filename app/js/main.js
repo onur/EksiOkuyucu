@@ -15,16 +15,12 @@ require.config ({
     backbone: 'libs/backbone-min',
     text: 'libs/text',
     bootstrap: 'libs/bootstrap.min',
-    jquery_cookie: 'libs/jquery.cookie',
     select2: 'libs/select2.min',
     templates: '../templates'
   },
 
   shim: {
     'bootstrap': {
-       deps: ["jquery"]
-    },
-    'jquery_cookie': {
        deps: ["jquery"]
     },
     'select2': {
