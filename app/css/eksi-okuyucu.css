@@ -105,7 +105,6 @@ div.entry-dropdown {
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  top: 45px;
   bottom: 0;
   transition: all 0.4s ease 0s; }
 
@@ -166,7 +165,7 @@ div.entry-dropdown {
     display: inline-block; }
 
   .inset {
-    padding: 0; }
+    margin-left: -250px; }
 
   .navbar-toggle:first-child {
     margin-left: 15px;
