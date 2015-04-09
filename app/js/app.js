@@ -6,12 +6,11 @@ define([
   'helpers/conf',
   'helpers/usertag',
   'views/sidebar',
-  'views/search',
   'views/user',
   'text!templates/body.html',
   'bootstrap'
 ], function ($, _, Backbone, Router, ConfHelper, UserTagHelper,
-             SidebarView, SearchView, UserView, BodyTemplate) {
+             SidebarView, UserView, BodyTemplate) {
   var initialize = function (tests) {
 
     ConfHelper.loadConf ();
@@ -24,7 +23,6 @@ define([
 
     var sidebarView = new SidebarView  ();
 
-    var searchView = new SearchView ();
     var userView = new UserView ();
 
     if (!tests) {
