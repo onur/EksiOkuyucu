@@ -31,8 +31,6 @@ define([
         url += '&a=popular';
       } else if (this.order == 3) {
         url += '&a=nice';
-      } else if (this.order != 1) {
-        url += '&a=tracked&snapshot=' + this.order;
       }
 
       return url;
