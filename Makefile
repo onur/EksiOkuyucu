@@ -4,6 +4,7 @@ NODE=nodejs
 SCSS=scss
 CHROME=chromium
 CHROME_KEY=chrome/chrome.pem
+CFX=cfx
 
 SCSS_FILES=$(wildcard app/css/*.scss)
 CSS_FILES=$(SCSS_FILES:.scss=.css)
@@ -17,6 +18,7 @@ check:
 	@echo -n 'Checking nodejs: ' && which $(NODE)
 	@echo -n 'Checking scss: ' && which $(SCSS)
 	@echo -n 'Checking chrome: ' && which $(CHROME)
+	@echo -n 'Checking cfx: ' && which $(CFX)
 
 css: $(CSS_FILES)
 
@@ -59,6 +61,7 @@ firefox: app
 	cp -v build/app/css/bootstrap-*.css build/firefox/data/css
 	cp -vr build/app/img build/firefox/data
 	cp -vr build/app/fonts build/firefox/data
+	cd build/firefox && $(CFX) xpi
 
 phonegap: chrome
 	test -e build/phonegap || cp -rv build/chrome build/phonegap
