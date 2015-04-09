@@ -173,12 +173,14 @@ define([
     ],
 
     loadUserTags: function() {
-      this.userTags = $.cookie('eksi_okuyucu_usertags') || {};
+      this.userTags = JSON.parse(localStorage.getItem('eksi_okuyucu_usertags'))
+                      || {};
     },
 
 
     saveUserTags: function() {
-      $.cookie('eksi_okuyucu_usertags', this.userTags, { expires: 3650 });
+      localStorage.setItem('eksi_okuyucu_usertags',
+                           JSON.stringify(this.userTags));
     },
 
     getUserTags: function(username) {

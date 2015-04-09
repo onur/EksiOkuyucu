@@ -41,10 +41,7 @@ define([
   
 
     loadConf: function () {
-      $.cookie.json = true;
-
-      var user_options = $.cookie (this.name);
-      if (!user_options) return;
+      var user_options = JSON.parse(localStorage.getItem(this.name)) || {};
 
       if (typeof (user_options.popover) != 'undefined')
         this.options.popover = user_options.popover;
@@ -67,7 +64,7 @@ define([
 
 
     saveConf: function () {
-      $.cookie (this.name, this.options, { expires: 3650 });
+      localStorage.setItem(this.name, JSON.stringify(this.options));
     },
 
 
