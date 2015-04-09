@@ -50,7 +50,6 @@ define([
 
 
     bindScroll: function(view) {
-      var that = this;
       $(window).scroll(function(ev) {
         view.checkScroll();
       });
