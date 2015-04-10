@@ -59,6 +59,10 @@ ul.dropdown-menu li a {
 div.entry-dropdown {
   margin-left: 5px; }
 
+div.navbar-eksi-okuyucu .nav li a {
+  padding-left: 11px;
+  padding-right: 11px; }
+
 /* SIDEBAR */
 #wrapper {
   padding-left: 250px; }
