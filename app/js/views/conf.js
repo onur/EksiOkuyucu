@@ -45,7 +45,7 @@ define([
 
     events: {
       'click ul.theme a': 'changeTheme',
-      'click ul.font a': 'changeFont',
+      'click div.font a': 'changeFont',
       'change input': 'changeOption',
       'change #index-page': 'changeIndex',
       'click #remove-usertag-button': 'removeUserTag'
@@ -70,7 +70,7 @@ define([
       ConfHelper.switchFont ();
       ConfHelper.saveConf ();
 
-      $(this.el).find('ul.font a').each(function() {
+      $(this.el).find('div.font a').each(function() {
         $(this).removeClass('active');
       });
       $(ev.currentTarget).addClass('active');
