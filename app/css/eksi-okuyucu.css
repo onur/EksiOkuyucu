@@ -180,7 +180,9 @@ div.navbar-eksi-okuyucu .nav li a {
 /* SCROLLBAR */
 /* CONF */
 div.eksi-okuyucu-conf ul.theme {
-  display: inline; }
+  display: inline;
+  padding: 0;
+  margin: 0; }
 div.eksi-okuyucu-conf ul.theme li {
   display: inline; }
 div.eksi-okuyucu-conf ul.theme li a {
