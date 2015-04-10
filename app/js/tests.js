@@ -6,8 +6,6 @@ require.config ({
     backbone: 'libs/backbone-min',
     text: 'libs/text',
     bootstrap: 'libs/bootstrap.min',
-    jquery_cookie: 'libs/jquery.cookie',
-    select2: 'libs/select2.min',
     templates: '../templates',
     jasmine: 'libs/jasmine-2.2.0/jasmine',
     'jasmine-html': 'libs/jasmine-2.2.0/jasmine-html',
@@ -21,12 +19,6 @@ require.config ({
     },
     'jquery': {
        exports: '$'
-    },
-    'jquery_cookie': {
-       deps: ["jquery"]
-    },
-    'select2': {
-       deps: ["jquery"]
     },
     'jasmine-html': {
        deps: ['jasmine'],
