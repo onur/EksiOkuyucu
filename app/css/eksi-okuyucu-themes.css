@@ -1,8 +1,5 @@
 /* THEMES */
 /* DEFAULT THEME */
-.navbar a {
-  color: inherit; }
-
 body.theme-default {
   background-color: #e9eaed; }
   body.theme-default #main {
