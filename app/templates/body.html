@@ -7,6 +7,7 @@
      </div>
      <div class="collapse navbar-collapse navbar-eksi-okuyucu">
       <ul class="nav navbar-nav navbar-left">
+        <li><a href="#" title="Arama" data-toggle="modal" data-target="#search-modal"><span class="glyphicon glyphicon-search"></span><span class="menu-title"> Arama</span></a></li>
         <li class="dropdown">
         <a href="#" id="user-drop" role="button" class="dropdown-toggle" data-toggle="dropdown" title="Ben"><span class="glyphicon glyphicon-user"></span><span class="unread-count"></span><span class="menu-title"> Ben</span></a>
           <ul id="ben-items" class="dropdown-menu" role="menu" aria-labelledby="user-drop">
@@ -45,6 +46,23 @@
     </div>
   </div>
 </nav>
+
+
+
+<div id="search-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="input-group">
+          <input type="text" class="form-control" id="search-input" placeholder="Aranacak kelimeyi giriniz">
+          <a href="#" class="input-group-addon btn btn-default" data-action="clear"><span class="glyphicon glyphicon-trash"></span></a>
+          <a href="#" class="input-group-addon btn btn-default" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+        <div id="search-results" class="list-group"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div id="wrapper">
