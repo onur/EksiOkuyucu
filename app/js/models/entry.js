@@ -73,8 +73,16 @@ define([
                                .match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
           var domain = matches && matches[1];
           domain = domain.replace (/^[^.]*\.(?=\w+\.\w+$)/, '');
-          $(this).html ('<span class="glyphicon glyphicon-globe"></span> ' +
-                        domain);
+
+          // show picture glyphicon if link is image
+          var icon;
+          if ($(this).attr('href').match(/(?:([^:\/?#]+):)?(?:\/\/([^\/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?/i)) {
+            icon = '<span class="glyphicon glyphicon-picture"></span> ';
+          } else {
+            icon = '<span class="glyphicon glyphicon-globe"></span> ';
+          }
+
+          $(this).html (icon + domain);
 
         }
 
