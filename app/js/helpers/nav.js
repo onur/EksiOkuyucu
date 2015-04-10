@@ -17,6 +17,9 @@ define([
       // remove binding of refresh button and hide by default
       $('#refresh-topic-container').off();
 
+      // scrollTop with initialize
+      $(window).scrollTop();
+
       // clear page content
       if (typeof (title) != undefined) {
         $('#main').html ('');
