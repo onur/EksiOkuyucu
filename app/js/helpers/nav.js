@@ -18,7 +18,7 @@ define([
       $('#refresh-topic-container').off();
 
       // scrollTop with initialize
-      $(window).scrollTop();
+      window.scrollTo(0, 0);
 
       // clear page content
       if (typeof (title) != undefined) {
