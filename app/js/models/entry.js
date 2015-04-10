@@ -75,9 +75,12 @@ define([
           domain = domain.replace (/^[^.]*\.(?=\w+\.\w+$)/, '');
 
           // show picture glyphicon if link is image
+          // show facetime-video glyphicon if domain is youtube
           var icon;
           if ($(this).attr('href').match(/(?:([^:\/?#]+):)?(?:\/\/([^\/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?/i)) {
             icon = '<span class="glyphicon glyphicon-picture"></span> ';
+          } else if (domain == 'youtube.com') {
+            icon = '<span class="glyphicon glyphicon-facetime-video"></span> ';
           } else {
             icon = '<span class="glyphicon glyphicon-globe"></span> ';
           }
