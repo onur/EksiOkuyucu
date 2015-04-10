@@ -62,6 +62,10 @@ div.entry {
 
 }
 
+.popover-content {
+  max-height: 200px;
+  overflow-y: auto;
+}
 
 .eksi-nav {
   position: fixed;
