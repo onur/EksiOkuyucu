@@ -4,55 +4,41 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
-  'collections/search',
-  'select2'
+  'collections/search'
 ], function ($, _, Backbone, TopicCollection, SearchCollection) {
 
   var SearchView = Backbone.View.extend ({
 
-    el: '#search',
+    el: '#search-modal',
     timeout: false,
 
     initialize: function () {
       this.topicCollection = new TopicCollection ();
       this.searchCollection = new SearchCollection ();
-
-      var that = this;
-
-      $(this.el).select2 ({
-        minimumInputLength: 1,
-        query: function (query) {
-          if (that.timeout)
-            clearTimeout (that.timeout);
-          that.timeout = setTimeout (function () {
-            that.query (query);
-          }, 400);
-        }
-      });
-
-      // events property doesn't work on select2
-      $(this.el).on ('change', function (ev) { that.change (ev); });
-
     },
 
 
-    query: function (query) {
+    query: function () {
 
-      var data = { results: [] };
 
-      this.searchCollection.query = query.term;
+      $('#search-results').html('');
+
+      if (!(this.searchCollection.query = $('#search-input').val()))
+          return;
+
       this.searchCollection.fetch ({
         success: function (topics) {
 
+
           for (var i = 0; i < topics.length; ++i) {
 
-            data.results.push ({
-              id: topics.at (i).get ('title'),
-              text: topics.at (i).get ('title'),
-            });
+            $('#search-results').append(
+                $('<a>').attr('href', '#')
+                        .attr('class', 'list-group-item')
+                        .text(topics.at (i).get ('title'))
+            );
 
           }
-          query.callback (data);
 
         }
       });
@@ -76,11 +62,51 @@ define([
       location.href = '#tl/basliklar/istatistik/' + escape (val.substr (1)) + '/son-entryleri';
     },
 
+
+    events: {
+      'shown.bs.modal': 'focus',
+      'keyup #search-input': 'change',
+      'click #search-results a': 'click',
+      'click a[data-action="clear"]': 'clear',
+    },
+
+
+    focus: function() {
+      $('#search-input').focus();
+    },
+
     change: function (ev) {
-      if (ev.val.charAt (0) == '@')
-        this.openUser (ev.val)
+      if (this.timeout)
+        clearTimeout (this.timeout);
+
+      var that = this;
+      this.timeout = setTimeout (function() {
+        that.query();
+      }, 400);
+    },
+
+    click: function (ev) {
+      var term = $(ev.currentTarget).text();
+
+      term = term.toLowerCase();
+      term = term.replace(/(ç|Ç)/g, 'c');
+      term = term.replace(/(ğ|Ğ)/g, 'g');
+      term = term.replace(/(İ|ı)/g, 'i');
+      term = term.replace(/(ö|Ö)/g, 'o');
+      term = term.replace(/(ü|Ü)/g, 'u');
+
+      if (term.charAt (0) == '@')
+        this.openUser (term)
       else
-        this.openEntry (ev.val);
+        this.openEntry (term);
+      $(this.el).modal('hide');
+      return false;
+    },
+
+    clear: function() {
+      $('#search-results').html('');
+      $('#search-input').val('').focus();
+      return false;
     }
 
 
