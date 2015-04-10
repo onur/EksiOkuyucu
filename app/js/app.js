@@ -7,10 +7,11 @@ define([
   'helpers/usertag',
   'views/sidebar',
   'views/user',
+  'views/search',
   'text!templates/body.html',
   'bootstrap'
 ], function ($, _, Backbone, Router, ConfHelper, UserTagHelper,
-             SidebarView, UserView, BodyTemplate) {
+             SidebarView, UserView, SearchView, BodyTemplate) {
   var initialize = function (tests) {
 
     ConfHelper.loadConf ();
@@ -22,6 +23,7 @@ define([
     $('body').html (_.template (BodyTemplate));
 
     var sidebarView = new SidebarView  ();
+    var searchView = new SearchView();
 
     var userView = new UserView ();
 
