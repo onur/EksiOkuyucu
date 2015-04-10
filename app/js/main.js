@@ -15,15 +15,11 @@ require.config ({
     backbone: 'libs/backbone-min',
     text: 'libs/text',
     bootstrap: 'libs/bootstrap.min',
-    select2: 'libs/select2.min',
     templates: '../templates'
   },
 
   shim: {
     'bootstrap': {
-       deps: ["jquery"]
-    },
-    'select2': {
        deps: ["jquery"]
     }
   }
