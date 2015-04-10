@@ -14,7 +14,8 @@ body.theme-default {
     color: #aaa; }
   body.theme-default #sidebar a.list-group-item {
     color: #222;
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 14px; }
   body.theme-default .loader-walk > div {
     background-color: #008cba; }
 
