@@ -39,34 +39,6 @@ div.entry {
     /*padding: 8px 22px 0 8px*/
     margin: 8px 8px 0 8px; }
 
-/* SELECT2 */
-.search-select {
-  width: 100%; }
-
-.select2-container .select2-choice,
-.select2-container .select2-choice > .select2-chosen {
-  border: none;
-  background-color: inherit;
-  background-image: none;
-  box-shadow: none; }
-
-.select2-container .select2-choice .select2-arrow {
-  display: none; }
-
-.select2-drop {
-  margin-left: 20px;
-  background-color: inherit; }
-
-.select2-results .select2-no-results,
-.select2-results .select2-searching,
-.select2-results .select2-selection-limit {
-  background-color: inherit; }
-
-.popover-content {
-  max-height: 200px;
-  min-width: 200px;
-  overflow-y: auto; }
-
 .eksi-nav {
   position: fixed;
   margin-left: 250px; }
