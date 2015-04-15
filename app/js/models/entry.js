@@ -18,9 +18,48 @@ define([
       favoriteCount: 0,
     },
 
+
+    parseTime: function (time) {
+
+      // replace entry id from time str
+      var time = time.replace(/\#\d+ /, '');
+      console.log(time);
+
+      // 5 different time format used in eksisozluk
+      // 1. for oldest entries:
+      //   30.05.2004
+      // 2. newest entries:
+      //   30.05.2004 17:01
+      // 3. oldest entries with edit time:
+      //   20.02.1999 ~ 17.12.2000 13:37
+      // 4. newest entries with edit time:
+      //   05.03.2004 10:25 ~ 10:28
+      // 5. newest entries with edit date and time:
+      //   05.03.2004 10:28 ~ 23.12.2005 14:57
+      // new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
+      var date;
+      var match;
+      
+      // TODO: edit time can also be parsed in here
+      if (match = time.match(/^(\d+)\.(\d+)\.(\d+)$/)) {
+        date = new Date(match[3], parseInt(match[2]) - 1, match[1]);
+      } else if (match = time.match(/^(\d+)\.(\d+)\.(\d+) (\d+):(\d+)$/)) {
+        date = new Date(match[3], parseInt(match[2]) - 1, match[1], match[4], match[5]);
+      } else if (match = time.match(/^(\d+)\.(\d+)\.(\d+) ~ (\d+)\.(\d+)\.(\d+) (\d+):(\d+)$/)) {
+        date = new Date(match[3], parseInt(match[2]) - 1, match[1], match[4], match[5]);
+      } else if (match = time.match(/(\d+)\.(\d+)\.(\d+) (\d+):(\d+) ~ (\d+):(\d+)$/)) {
+        date = new Date(match[3], parseInt(match[2]) - 1, match[1], match[4], match[5]);
+      } else if (match = time.match(/(\d+)\.(\d+)\.(\d+) (\d+):(\d+) ~ (\d+)\.(\d+)\.(\d+) (\d+):(\d+)$/)) {
+        date = new Date(match[3], parseInt(match[2]) - 1, match[1], match[4], match[5]);
+      } else {
+        date = new Date();
+      }
+
+      return date;
+    },
+
     
     relativeTime: function (time) {
-      var current = new Date ();
 
       var msPerMinute = 60 * 1000;
       var msPerHour = msPerMinute * 60;
@@ -29,7 +68,8 @@ define([
       var msPerYear = msPerDay * 365;
 
       // FIXME: need to check DST
-      var elapsed = current - new Date (time) + (3*60*60*1000);
+      var current = new Date ();
+      var elapsed = current - this.parseTime(time);
 
       if (elapsed < msPerMinute) {
         return Math.round (elapsed/1000) + ' saniye';   
