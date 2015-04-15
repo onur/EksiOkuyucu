@@ -5,7 +5,7 @@
   "description": "Modern HTML5 ekşisözlük okuyucusu",
   "author": "",
   "license": "MIT",
-  "version": "0.1",
+  "version": "0.1.0",
   "permissions": {
     "cross-domain-content": [
       "https://eksisozluk.com",
