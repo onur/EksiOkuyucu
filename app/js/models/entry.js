@@ -119,7 +119,7 @@ define([
           var icon;
           if ($(this).attr('href').match(/(?:([^:\/?#]+):)?(?:\/\/([^\/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?/i)) {
             icon = '<span class="glyphicon glyphicon-picture"></span> ';
-          } else if (domain == 'youtube.com') {
+          } else if (domain == 'youtube.com' || domain == 'youtu.be') {
             icon = '<span class="glyphicon glyphicon-facetime-video"></span> ';
           } else {
             icon = '<span class="glyphicon glyphicon-globe"></span> ';
