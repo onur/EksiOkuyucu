@@ -156,11 +156,11 @@ define([
                   $(htmlDoc).find ('a.entry-date').text()));
       this.set ('id', $(htmlDoc).find ('footer').attr ('data-id'));
       this.set ('isFavorite',
-                $(htmlDoc).find ('footer').attr ('data-isfavorite') == 'true'
+                $(htmlDoc).attr ('data-isfavorite') == 'true'
                     ? true : false );
       this.set ('favoriteCount',
                 parseInt (
-                  $(htmlDoc).find ('footer').attr ('data-favorite-count'))
+                  $(htmlDoc).attr ('data-favorite-count'))
                 );
       this.set ('author', $(htmlDoc).find ('a.entry-author').text ());
       this.set ('author_tags', UserTagHelper.getUserTags(this.get('author')));
