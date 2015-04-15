@@ -51,7 +51,7 @@ define([
                                     .attr ('href')
                                     .replace (/^\/*/, '');
 
-      $(htmlDoc).find ('article').each (function () {
+      $(htmlDoc).find ('#entry-list li').each (function () {
         var entry = new EksiEntry ({ htmlDoc: this });
 
         // add entry to end of array if order is desc

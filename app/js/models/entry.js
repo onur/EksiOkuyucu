@@ -113,8 +113,7 @@ define([
       this.set ('content', this.parseContent (this.get ('rawContent')));
       this.set ('creationTime',
                 this.relativeTime(
-                  $(htmlDoc).find ('time[itemprop="commentTime"]')
-                            .attr ('datetime')));
+                  $(htmlDoc).find ('a.entry-date').text()));
       this.set ('id', $(htmlDoc).find ('footer').attr ('data-id'));
       this.set ('isFavorite',
                 $(htmlDoc).find ('footer').attr ('data-isfavorite') == 'true'
@@ -123,7 +122,7 @@ define([
                 parseInt (
                   $(htmlDoc).find ('footer').attr ('data-favorite-count'))
                 );
-      this.set ('author', $(htmlDoc).find ('address a').text ());
+      this.set ('author', $(htmlDoc).find ('a.entry-author').text ());
       this.set ('author_tags', UserTagHelper.getUserTags(this.get('author')));
 
     }
