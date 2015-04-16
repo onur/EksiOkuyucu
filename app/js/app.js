@@ -3,6 +3,7 @@ define([
   'underscore',
   'backbone',
   'router',
+  'helpers/app',
   'helpers/conf',
   'helpers/usertag',
   'views/sidebar',
@@ -10,7 +11,7 @@ define([
   'views/search',
   'text!templates/body.html',
   'bootstrap'
-], function ($, _, Backbone, Router, ConfHelper, UserTagHelper,
+], function ($, _, Backbone, Router, AppHelper, ConfHelper, UserTagHelper,
              SidebarView, UserView, SearchView, BodyTemplate) {
   return {
     initialize: function (tests) {
@@ -23,13 +24,13 @@ define([
 
       $('body').html (_.template (BodyTemplate));
 
-      this.sidebarView = new SidebarView  ();
-      this.searchView = new SearchView();
+      AppHelper.sidebarView = new SidebarView  ();
+      AppHelper.searchView = new SearchView();
 
-      this.userView = new UserView ();
+      AppHelper.userView = new UserView ();
 
       if (!tests) {
-        this.sidebarView.render ();
+        AppHelper.sidebarView.render ();
         Router.initialize ();
       }
     }

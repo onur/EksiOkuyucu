@@ -3,12 +3,13 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'helpers/app',
   'helpers/conf',
   'text!templates/conf.html',
   'text!templates/add_usertag_modal.html',
   'helpers/nav',
   'helpers/usertag',
-], function($, _, Backbone, ConfHelper, ConfTemplate,
+], function($, _, Backbone, AppHelper, ConfHelper, ConfTemplate,
             AddUsertagModalTemplate, NavHelper, UserTagHelper){
 
 
@@ -87,7 +88,7 @@ define([
       if (option == 'channel') {
         var channel = $(ev.currentTarget).attr('data-channel');
         ConfHelper.setChannel(channel, val);
-        require(['app'], function(App) { App.sidebarView.fillChannelsMenu(); });
+        AppHelper.sidebarView.fillChannelsMenu();
       } else {
         ConfHelper.setOption (option, val);
       }
