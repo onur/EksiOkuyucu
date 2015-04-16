@@ -23,13 +23,13 @@ define([
 
       $('body').html (_.template (BodyTemplate));
 
-      var sidebarView = new SidebarView  ();
-      var searchView = new SearchView();
+      this.sidebarView = new SidebarView  ();
+      this.searchView = new SearchView();
 
-      var userView = new UserView ();
+      this.userView = new UserView ();
 
       if (!tests) {
-        sidebarView.render ();
+        this.sidebarView.render ();
         Router.initialize ();
       }
     }
