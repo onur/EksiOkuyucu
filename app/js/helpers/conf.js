@@ -10,7 +10,7 @@ define([
     // default options
     options: {
 
-      theme: 'default',
+      theme: 'spacelab',
 
       // popovers for internal links
       popover: true,
