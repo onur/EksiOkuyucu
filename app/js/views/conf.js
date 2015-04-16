@@ -83,7 +83,14 @@ define([
       var option = $(ev.currentTarget).attr ('value');
       var val = $(ev.currentTarget).is (':checked');
 
-      ConfHelper.setOption (option, val);
+      // FIXME: poor design. Listening change input is causing this
+      if (option == 'channel') {
+        var channel = $(ev.currentTarget).attr('data-channel');
+        ConfHelper.setChannel(channel, val);
+      } else {
+        ConfHelper.setOption (option, val);
+      }
+
     },
 
     changeIndex: function (ev) {
