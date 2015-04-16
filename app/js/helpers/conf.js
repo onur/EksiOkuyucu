@@ -109,24 +109,13 @@ define([
 
     setOption: function (option, val) {
 
-      var somethingChanged = false;
-
-      if (option == 'popover' && this.options.popover != val) {
-        this.options.popover = val;
+      var that = this;
+      _.map(this.options, function(op_val, op) {
+        if (option != op || op_val == val)
+          return;
+        that.options[op] = val;
         somethingChanged = true;
-      } else if (option == 'readability' && this.options.readability != val) {
-        this.options.readability = val;
-        somethingChanged = true;
-      } else if (option == 'youtube' && this.options.youtube != val) {
-        this.options.youtube = val;
-        somethingChanged = true;
-      } else if (option == 'images' && this.options.images != val) {
-        this.options.images = val;
-        somethingChanged = true;
-      } else if (option == 'tag_ak_trolls' && this.options.tag_ak_trolls != val) {
-        this.options.tag_ak_trolls = val;
-        somethingChanged = true;
-      }
+      });
 
       if (somethingChanged)
         this.saveConf ();
