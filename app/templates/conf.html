@@ -141,6 +141,48 @@
 
     <div class="panel-heading">
 
+      <h4 class="panel-title">Kanallar</h4>
+
+      <em>Kanallar menüsünde görmek istediğiniz kanal listesi</em>
+
+    </div>
+
+    <div class="panel-body">
+
+      <% _.map([
+           '#anket',
+           '#bilim',
+           '#edebiyat',
+           '#ekşi-sözlük',
+           '#ilişkiler',
+           '#müzik',
+           '#oyun',
+           '#programlama',
+           '#sanat',
+           '#sinema',
+           '#siyaset',
+           '#spor',
+           '#tarih',
+           '#teknoloji',
+           '#tv'
+         ], function(channel) { %>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="channel" data-channel="<%= channel %>" <% if (options.channels.indexOf(channel) >= 0) { %>checked<% } %>>
+          <%= channel %>
+        </label>
+      </div>
+
+      <% }); %>
+
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+
       <h4 class="panel-title">Fişlemiş kullanıcılar</h4>
 
       <em>Kullanıcı adının yanında etiketini de görmenizi sağlar.</em>
