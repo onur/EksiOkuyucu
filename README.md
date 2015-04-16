@@ -6,10 +6,7 @@ yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
 
 ### Temel özellikleri:
 
-* Reklamsızdır ve reklamsız kalacaktır. Kâr amacı güdmeden
-  geliştirildiğinden, reklam alanları tasarlanmamıştır.
-* Bukalemun gibi her gün farklı bir renk almaz. Hangi renk temasını
-  seçerseniz sürekli onda kullanırsınız.
+* Reklamsızdır ve reklamsız kalacaktır.
 * Mahremiyete önem verir. Sadece eksisozluk.com üzerinden veri alış verişi
   yapar. Google analytics bile kullanılmamıştır. Ekşi Sözlük'ün reklam
   scriptlerini önemsemez.
