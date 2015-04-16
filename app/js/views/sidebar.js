@@ -4,9 +4,10 @@ define([
   'underscore',
   'backbone',
   'collections/sidebar',
+  'helpers/conf',
   'text!templates/sidebar.html'
 ], function ($, _, Backbone, SidebarCollection,
-             SidebarTemplate) {
+             ConfHelper, SidebarTemplate) {
 
   var SidebarView = Backbone.View.extend ({
     el: '#sidebar',
@@ -17,7 +18,6 @@ define([
 
       // register channels event
       var that = this;
-      $("#channels a").click (function () { that.click (this); });
 
       $("#sidebar-wrapper").on ('scroll', function () {
         that.checkScroll (this);
@@ -35,6 +35,8 @@ define([
       $(window).on ('resize', function () {
         that.hideLeftFrame ();
       });
+
+      this.fillChannelsMenu();
 
       // TODO: add swipe events for sidebar
       // http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
@@ -115,6 +117,22 @@ define([
         this.showLeftFrame ();
       else
         this.hideLeftFrame ();
+    },
+
+
+    fillChannelsMenu: function () {
+      var that = this;
+
+      $("#channels a").off();
+      $('#channels li.divider').nextAll().remove();
+
+      _.map(ConfHelper.options.channels, function(channel) {
+        $('#channels').append(
+            _.template('<li><a href="#hot/<%= channel.substr(1, channel.length) %>"><%= channel %></a></li>',
+                       { channel: channel }))
+      });
+
+      $("#channels a").click (function () { that.click (this); });
     }
 
   });
