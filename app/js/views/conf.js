@@ -87,6 +87,7 @@ define([
       if (option == 'channel') {
         var channel = $(ev.currentTarget).attr('data-channel');
         ConfHelper.setChannel(channel, val);
+        require(['app'], function(App) { App.sidebarView.fillChannelsMenu(); });
       } else {
         ConfHelper.setOption (option, val);
       }
