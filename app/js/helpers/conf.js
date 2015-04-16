@@ -69,6 +69,11 @@ define([
 
 
     switchTheme: function () {
+
+      var themes = ['cyborg', 'darkly', 'flatly', 'lumen', 'spacelab', 'yeti'];
+      if (themes.indexOf(this.options.theme) < 0)
+        this.options.theme = 'spacelab';
+
       $('#theme-css-file').attr('href',
           'css/bootstrap-' + this.options.theme + '.min.css');
       $('body').attr ('class', 'theme-' + this.options.theme);
