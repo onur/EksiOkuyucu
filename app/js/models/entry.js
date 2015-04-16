@@ -23,7 +23,6 @@ define([
 
       // replace entry id from time str
       var time = time.replace(/\#\d+ /, '');
-      console.log(time);
 
       // 5 different time format used in eksisozluk
       // 1. for oldest entries:
