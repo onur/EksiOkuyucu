@@ -31,7 +31,26 @@ define([
       font: 'default',
 
       // tag_ak_trolls
-      tag_ak_trolls: true
+      tag_ak_trolls: true,
+
+      // default active channels
+      channels: [
+        '#anket',
+        '#bilim',
+        '#edebiyat',
+        '#ekşi-sözlük',
+        '#ilişkiler',
+        '#müzik',
+        '#oyun',
+        '#programlama',
+        '#sanat',
+        '#sinema',
+        '#siyaset',
+        '#spor',
+        '#tarih',
+        '#teknoloji',
+        '#tv'
+      ]
 
     },
 
@@ -59,6 +78,8 @@ define([
         this.options.font = user_options.font;
       if (typeof (user_options.tag_ak_trolls) != 'undefined')
         this.options.tag_ak_trolls = user_options.tag_ak_trolls;
+      if (typeof (user_options.channels ) != 'undefined')
+        this.options.channels = user_options.channels;
 
     },
 
@@ -133,6 +154,25 @@ define([
         return this.options.images;
       else
         return false;
+    },
+
+
+    setChannel: function (channel, val) {
+      var somethingChanged = false;
+      var index;
+
+      if (val == true && this.options.channels.indexOf(channel) < 0) {
+        this.options.channels.push(channel);
+        this.options.channels.sort();
+        somethingChanged = true;
+      } else if (val == false &&
+                 (index = this.options.channels.indexOf(channel)) >= 0) {
+        this.options.channels.splice(index, 1);
+        somethingChanged = true;
+      }
+
+      if (somethingChanged)
+        this.saveConf ();
     }
 
   };
