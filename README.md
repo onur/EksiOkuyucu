@@ -4,7 +4,7 @@
 takip etmek için geliştirilmiş tarayıcı eklentisi. Ekşi Sözlük'ün üstünü
 yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
 
-### Temel özellikleri:
+### Temel özellikleri
 
 * Reklamsızdır ve reklamsız kalacaktır.
 * Mahremiyete önem verir. Sadece eksisozluk.com üzerinden veri alış verişi
@@ -15,7 +15,7 @@ yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
   ekranlara kadar uygun şekilde çalışır.
 
 
-### Gösterim özellikleri:
+### Gösterim özellikleri
 
 * Başlıkları, normal gösterim seçeneklerinine ek olara, son atılan
   entryden, ilk atılan entrye göre gösterebilir. Gündemi takip etmeyi
