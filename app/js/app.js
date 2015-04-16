@@ -14,11 +14,14 @@ define([
 ], function ($, _, Backbone, Router, AppHelper, ConfHelper, UserTagHelper,
              SidebarView, UserView, SearchView, BodyTemplate) {
   return {
+    version: '0.1.0',
     initialize: function (tests) {
 
       ConfHelper.loadConf ();
       ConfHelper.switchTheme ();
       ConfHelper.switchFont ();
+
+      AppHelper.initialize (this.version);
 
       UserTagHelper.loadUserTags();
 
