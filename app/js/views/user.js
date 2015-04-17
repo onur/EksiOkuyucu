@@ -131,6 +131,8 @@ define([
 
       this.getToken ();
       $('#login-modal').modal ('show');
+
+      return false;
     },
 
     login: function () {
