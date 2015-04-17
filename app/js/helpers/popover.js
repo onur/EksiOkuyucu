@@ -101,7 +101,7 @@ define([
             
             $(ev.currentTarget).after ('<div><blockquote><img src="' + 
                                        link +
-                                       '" alt="" /></blockquote></div>');
+                                       '" alt="" class="img-responsive" /></blockquote></div>');
             $(ev.currentTarget).attr ('data-loaded', 'true');
           } else {
             window.open (link);
