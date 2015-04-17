@@ -29,7 +29,7 @@ define([
     favorite: function (ev) {
 
       if (!AppHelper.userView.loggedIn)
-        return AppHelper.userView.loginForm() || false;
+        return AppHelper.userView.loginForm();
 
       var favorite_count =
               parseInt($(ev.currentTarget).attr('data-favorite-count')),
@@ -65,7 +65,7 @@ define([
     sukela: function (ev) {
 
       if (!AppHelper.userView.loggedIn)
-        return AppHelper.userView.loginForm() || false;
+        return AppHelper.userView.loginForm();
 
       var rate = $(ev.currentTarget).hasClass('btn-primary') ? -1 : 1;
 
