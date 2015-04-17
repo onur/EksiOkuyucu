@@ -1,19 +1,19 @@
 /* THEMES */
-/* DEFAULT THEME */
-body.theme-default {
+/* YETI THEME */
+body.theme-yeti {
   background-color: #e9eaed; }
-  body.theme-default #main {
+  body.theme-yeti #main {
     margin-top: 45px; }
-  body.theme-default #sidebar-wrapper {
+  body.theme-yeti #sidebar-wrapper {
     top: 45px;
     box-shadow: 2px 0px 20px 0px rgba(50, 50, 50, 0.25); }
-  body.theme-default div.entry div.meta span.time {
+  body.theme-yeti div.entry div.meta span.time {
     color: #aaa; }
-  body.theme-default #sidebar a.list-group-item {
+  body.theme-yeti #sidebar a.list-group-item {
     color: #222;
     font-weight: normal;
     font-size: 14px; }
-  body.theme-default .loader-walk > div {
+  body.theme-yeti .loader-walk > div {
     background-color: #008cba; }
 
 /* Cyborg */
