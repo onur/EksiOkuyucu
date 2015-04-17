@@ -4,7 +4,8 @@ define([
   'underscore',
   'backbone',
   'helpers/popover',
-], function ($, _, Backbone, PopoverHelper) {
+  'helpers/app'
+], function ($, _, Backbone, PopoverHelper, AppHelper) {
 
   var EntryView = Backbone.View.extend ({
     el: '#main',
@@ -26,6 +27,9 @@ define([
 
 
     favorite: function (ev) {
+
+      if (!AppHelper.userView.loggedIn)
+        return AppHelper.userView.loginForm() || false;
 
       var favorite_count =
               parseInt($(ev.currentTarget).attr('data-favorite-count')),
@@ -59,6 +63,9 @@ define([
     },
 
     sukela: function (ev) {
+
+      if (!AppHelper.userView.loggedIn)
+        return AppHelper.userView.loginForm() || false;
 
       var rate = $(ev.currentTarget).hasClass('btn-primary') ? -1 : 1;
 
