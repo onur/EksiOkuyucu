@@ -143,6 +143,8 @@ define([
       var password = $('#login-password').val ();
       var remember_me = $('#login-remember-me').is (':checked');
 
+      $('#login-modal div.alert').addClass('hidden');
+
       $.ajax ({
         type: 'POST',
         url: 'https://eksisozluk.com/giris',
@@ -161,6 +163,8 @@ define([
 
             $('#login-modal').modal ('hide');
             that.getSubscriptions ();
+          } else {
+            $('#login-modal div.alert').removeClass('hidden');
           }
         },
       });
