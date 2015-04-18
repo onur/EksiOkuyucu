@@ -2,8 +2,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'helpers/app'
+], function ($, _, Backbone, AppHelper) {
   
   var TopicList = Backbone.Collection.extend ({
 
@@ -12,7 +13,7 @@ define([
     external_url: '',
 
     url: function () {
-      return 'https://eksisozluk.com/' + this.external_url +
+      return AppHelper.urlPrefix + this.external_url +
              '?p=' + this.page;
     },
 

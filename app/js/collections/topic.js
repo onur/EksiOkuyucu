@@ -3,8 +3,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/entry'
-], function ($, _, Backbone, EksiEntry) {
+  'models/entry',
+  'helpers/app'
+], function ($, _, Backbone, EksiEntry, AppHelper) {
 
   var Topic = Backbone.Collection.extend ({
 
@@ -22,7 +23,7 @@ define([
   
 
     url: function  () {
-      var url = 'https://eksisozluk.com/' + this.external_url;
+      var url = AppHelper.urlPrefix + this.external_url;
 
       url += this.external_url.match (/\?/) ? '&' : '?';
       url += 'p=' + (this.page <= 0 ? 1 : this.page);

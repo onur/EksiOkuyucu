@@ -2,8 +2,9 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'helpers/app',
+], function ($, _, Backbone, AppHelper) {
   
   var Sidebar = Backbone.Collection.extend ({
 
@@ -12,7 +13,7 @@ define([
     channel: 'basliklar/populer',
 
     url: function () {
-      return 'https://eksisozluk.com/' + this.channel +
+      return AppHelper.urlPrefix + this.channel +
              '?a=popular&p=' + this.page;
     },
 

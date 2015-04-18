@@ -3,14 +3,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
-], function ($, _, Backbone) {
+  'helpers/app'
+], function ($, _, Backbone, AppHelper) {
 
   var Search = Backbone.Collection.extend ({
 
     query: '',
 
     url: function () {
-      return 'https://eksisozluk.com/autocomplete/query?q=' +
+      return AppHelper.urlPrefix + 'autocomplete/query?q=' +
              escape (this.query);
     },
 

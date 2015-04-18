@@ -2,12 +2,15 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'helpers/app'
+], function ($, _, Backbone, AppHelper) {
   
   var DebeList = Backbone.Collection.extend ({
 
-    url: 'https://eksisozluk.com/istatistik/dunun-en-begenilen-entryleri',
+    url: function () {
+      return AppHelper.urlPrefix + 'istatistik/dunun-en-begenilen-entryleri';
+    },
 
     parse: function (resp) {
       var entries = [];
