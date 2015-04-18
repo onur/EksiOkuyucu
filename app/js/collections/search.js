@@ -29,9 +29,10 @@ define([
 
     fetch: function (options) {
       options = options || {};
-      options.headers = {
-        'X-Requested-With': 'XMLHttpRequest'
-      };
+      if (AppHelper.isExtension)
+        options.headers = {
+          'X-Requested-With': 'XMLHttpRequest'
+        };
       return Backbone.Collection.prototype.fetch.call (this, options);
     }
 
