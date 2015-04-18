@@ -129,6 +129,13 @@ define([
 
     loginForm: function () {
 
+      if (!AppHelper.isExtension) {
+        AppHelper.modal('Eklenti',
+            'Bu özellik sadece Ekşi Okuyucu eklenti ' +
+            'olarak kurulduğunda çalışmaktadır');
+        return false;
+      }
+
       if (!$('#login-modal').length) {
         $('body').append (_.template (LoginModalTemplate));
       }
