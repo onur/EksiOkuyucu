@@ -4,11 +4,12 @@ define([
   'underscore',
   'backbone',
   'helpers/conf',
+  'helpers/app',
   'collections/olay',
   'text!templates/login_modal.html',
   'text!templates/user_items.html'
-], function($, _, Backbone, ConfHelper, OlayCollection, LoginModalTemplate,
-            UserItemsTemplate) {
+], function($, _, Backbone, ConfHelper, AppHelper, OlayCollection,
+            LoginModalTemplate, UserItemsTemplate) {
 
   var UserView = Backbone.View.extend ({
 
@@ -82,6 +83,9 @@ define([
 
 
     checkLoggedIn: function () {
+
+      if (!AppHelper.isExtension)
+        return;
 
       var that = this;
 
