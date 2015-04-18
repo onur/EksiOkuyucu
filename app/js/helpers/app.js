@@ -2,7 +2,7 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
   'text!templates/modal.html',
 ], function($, _, Backbone, ModalTemplate) {
   return {
@@ -18,7 +18,7 @@ define([
         this.isExtension = false;
         this.urlPrefix   = 'http://proxy.eksiokuyucu.com/';
       }
-    }
+    },
 
     modal: function(title, message) {
 
