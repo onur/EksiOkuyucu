@@ -13,8 +13,7 @@ define([
     initialize: function(version) {
       this.version = version;
 
-      if (document.domain == 'eksiokuyucu.com' ||
-          document.domain.match(/github.io$/)) {
+      if (document.domain.match(/(github\.io|\.com)$/)) {
         this.isExtension = false;
         this.urlPrefix   = 'http://proxy.eksiokuyucu.com/';
       }

@@ -2,12 +2,13 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function ($, _, Backbone) {
+  'backbone',
+  'helpers/app'
+], function ($, _, Backbone, AppHelper) {
   
   var OlayList = Backbone.Collection.extend ({
 
-    url: 'https://eksisozluk.com/basliklar/olay',
+    url: AppHelper.urlPrefix + 'basliklar/olay',
 
     parse: function (resp) {
       var entries = [];
