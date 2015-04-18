@@ -95,8 +95,14 @@ define([
       if (themes.indexOf(this.options.theme) < 0)
         this.options.theme = 'spacelab';
 
-      $('#theme-css-file').attr('href',
-          'css/bootstrap-' + this.options.theme + '.min.css');
+
+      var theme_css = $('<link>').attr('href',
+          'css/bootstrap-' + this.options.theme + '.min.css')
+        .attr('type', 'text/css').attr('id', 'theme-css-file')
+        .attr('rel', 'stylesheet');
+
+      $('#theme-css-file').remove();
+      $('head').prepend(theme_css);
       $('body').attr ('class', 'theme-' + this.options.theme);
     },
 
