@@ -16,7 +16,7 @@ define([
 
       if (document.domain.match(/(github\.io|\.com)$/)) {
         this.isExtension = false;
-        this.urlPrefix   = 'http://proxy.eksiokuyucu.com/';
+        this.urlPrefix   = 'http://proxy.eksi.ninja/';
       }
     },
 
