@@ -1,0 +1,79 @@
+
+<div id="welcome-modal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Ekşi Okuyucu <%= version.version_str %></h4>
+      </div>
+      <div class="modal-body">
+        <!-- content starts here -->
+        <div class="container-fluid">
+          <div class="jumbotron text-center">
+            <h1>Ekşi Okuyucu</h1>
+            <p class="lead">Okuması kolay Ekşi Sözlük</p>
+          </div>
+
+          <% if (!isExtension) { %>
+
+          <div class="alert alert-warning">
+            <p>
+              Ekşi Okuyucu'nun bağımsız çalışan sürümünü kullanıyorsunuz. Bu sürüm
+              eksisozluk.com'a direkt bağlanamadığından, verileri proxy
+              yardımıyla almaktadır. Ayrıca kullanıcı girişi devre dışı
+              bırakılmıştır. 
+            </p>
+            <p>
+              Ekşi Okuyucu Chrome, Firefox, Android,
+              iOS ve Windows Phone eklentisi olarak tasarlanmıştır. Siz de
+              <a href="https://github.com/onuraslan/EksiOkuyucu" class="alert-link">https://github.com/onuraslan/EksiOkuyucu</a>
+              adresini ziyaret ederek
+              kendi platformunuza ait uygulamayı kurabilirsiniz.
+            </p>
+          </div>
+
+          <% } %>
+
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Başlıklar</h4>
+              <img src="../screenshots/basliklar.png" class="img-responsive center-block" alt="">
+              <p>Başlık listelerini (gündem, debe, sükela, kanallar), ilk entryleriyle birlikte gösterir.</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Gömülü Entryler</h4>
+              <img src="../screenshots/embeded.png" class="img-responsive center-block" alt="">
+              <p>Sözlük içerisinde linklenmiş başlıkları sayfa değiştirmeden
+                 görmenizi sağlar.</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Fişleme</h4>
+              <img src="../screenshots/ak_troll.png" class="img-responsive center-block" alt="">
+              <p>Kullanıcılara istediğiniz etiketleri atamanızı sağlar. Ak troller sizin için fişlenmiştir.</p>
+            </div>
+          </div>
+
+          <h3 class="text-center lead">Ve çok daha fazlası</h3>
+
+          <p class="text-center">
+            Ekşi Okuyucu, ekşi sözlük okumayı ve gündemi
+            takip etmeyi kolaylaştırmak için yapılmıştır ve tamamen açık kaynak
+            kodludur. Siz de geliştirmesine yardımcı olabilirsiniz.
+          </p>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-md-6 text-left">
+              <iframe src="https://ghbtns.com/github-btn.html?user=onuraslan&repo=EksiOkuyucu&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          </div>
+          <div class="col-md-6 text-right">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Tamam</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
