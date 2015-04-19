@@ -14,7 +14,7 @@ define([
     initialize: function(version) {
       this.version = version;
 
-      if (document.domain.match(/(github\.io|\.com)$/)) {
+      if (document.domain.match(/(github\.io|eksi\.ninja)$/)) {
         this.isExtension = false;
         this.urlPrefix   = 'http://proxy.eksi.ninja/';
       }
