@@ -220,7 +220,6 @@ div.navbar-eksi-okuyucu .nav li a {
   position: relative;
   float: none;
   left: 0;
-  letter-spacing: -2px;
 }
 
 .menu-title {
@@ -230,6 +229,14 @@ div.navbar-eksi-okuyucu .nav li a {
 div.entry {
   margin-bottom: 5px;
   border-radius: 0;
+}
+
+.navbar-brand {
+  padding-left: 0;
+  padding-right: 0;
+  width: 65%;
+  overflow: hidden;
+  font-size: 16px;
 }
 
 }
