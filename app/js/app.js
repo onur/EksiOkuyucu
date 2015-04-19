@@ -32,6 +32,8 @@ define([
 
       AppHelper.userView = new UserView ();
 
+      AppHelper.welcome();
+
       if (!tests) {
         AppHelper.sidebarView.render ();
         Router.initialize ();
