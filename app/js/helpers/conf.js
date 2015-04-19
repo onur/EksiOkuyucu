@@ -62,24 +62,11 @@ define([
     loadConf: function () {
       var user_options = JSON.parse(localStorage.getItem(this.name)) || {};
 
-      if (typeof (user_options.popover) != 'undefined')
-        this.options.popover = user_options.popover;
-      if (typeof (user_options.theme) != 'undefined')
-        this.options.theme = user_options.theme;
-      if (typeof (user_options.readability) != 'undefined')
-        this.options.readability = user_options.readability;
-      if (typeof (user_options.youtube) != 'undefined')
-        this.options.youtube = user_options.youtube;
-      if (typeof (user_options.images) != 'undefined')
-        this.options.images = user_options.images;
-      if (typeof (user_options.index) != 'undefined')
-        this.options.index = user_options.index;
-      if (typeof (user_options.font) != 'undefined')
-        this.options.font = user_options.font;
-      if (typeof (user_options.tag_ak_trolls) != 'undefined')
-        this.options.tag_ak_trolls = user_options.tag_ak_trolls;
-      if (typeof (user_options.channels ) != 'undefined')
-        this.options.channels = user_options.channels;
+      var that = this;
+      _.map(this.options, function(val, key) {
+        if (typeof(user_options[key]) != 'undefined')
+          that.options[key] = user_options[key];
+      });
 
     },
 
