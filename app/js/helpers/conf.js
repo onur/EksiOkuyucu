@@ -50,7 +50,7 @@ define([
         '#tarih',
         '#teknoloji',
         '#tv'
-      ]
+      ],
 
 
       welcome_page: false
