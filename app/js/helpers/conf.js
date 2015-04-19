@@ -52,6 +52,9 @@ define([
         '#tv'
       ]
 
+
+      welcome_page: false
+
     },
 
 
