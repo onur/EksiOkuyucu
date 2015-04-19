@@ -1,10 +1,9 @@
 /*
- * EksiOkuyucu - unofficial eksisozluk client
- * http://eksiokuyucu.com/
+ * EksiOkuyucu - eksisozluk reader
+ * https://github.com/onuraslan/EksiOkuyucu
  *
- * Copyright (C) 2014  Onur Aslan  <onuraslan@gmail.com>
+ * Copyright (C) 2015  Onur Aslan  <onur@onur.im>
  * Licensed under MIT
- * https://github.com/onuraslan/EksiOkuyucu/blob/master/COPYING
  */
 
 require.config ({
