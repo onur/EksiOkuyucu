@@ -63,7 +63,6 @@ define([
 
 
     click: function (ev) {
-      console.log("ZZZZZZZZZZZ");
       var channel = $(ev).attr ('href').match (/^#(hot)*(\/)*(.*?)$/, '')[3];
 
       if (channel == '')
