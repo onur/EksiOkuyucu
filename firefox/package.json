@@ -6,6 +6,7 @@
   "author": "",
   "license": "MIT",
   "version": "0.1.0",
+  "icon": "data/img/icon.png",
   "permissions": {
     "cross-domain-content": [
       "https://eksisozluk.com",
