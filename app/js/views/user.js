@@ -62,6 +62,8 @@ define([
 
           // check subscriptions every min
           setTimeout (function () { that.getSubscriptions (); }, 60000);
+
+          AppHelper.sidebarView.bindHideMenu();
         }
       });
     },
@@ -142,6 +144,8 @@ define([
 
       this.getToken ();
       $('#login-modal').modal ('show');
+
+      AppHelper.sidebarView.hideMenu();
 
       return false;
     },
