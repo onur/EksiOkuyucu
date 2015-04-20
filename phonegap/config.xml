@@ -14,6 +14,8 @@
       Onur Aslan
     </author>
 
+    <icon src="img/icon.png" />
+
     <access origin="*"  />
 
     <preference name="permissions" value="none" />
