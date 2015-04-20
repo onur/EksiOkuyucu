@@ -63,6 +63,7 @@ define([
 
 
     click: function (ev) {
+      console.log("ZZZZZZZZZZZ");
       var channel = $(ev).attr ('href').match (/^#(hot)*(\/)*(.*?)$/, '')[3];
 
       if (channel == '')
@@ -143,7 +144,6 @@ define([
     bindHideMenu: function () {
       var that = this;
 
-      $('div.navbar-eksi-okuyucu a').off();
       $('div.navbar-eksi-okuyucu a').click (function () {
         that.hideMenu(this);
       });
