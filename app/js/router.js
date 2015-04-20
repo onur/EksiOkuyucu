@@ -9,10 +9,11 @@ define([
   'views/sukela',
   'views/debe',
   'views/conf',
-  'helpers/conf'
+  'helpers/conf',
+  'helpers/app'
 ], function ($, _, Backbone, SidebarView, TopicView,
              TopicListView, HotView, SukelaView, DebeView, ConfView,
-             ConfHelper) {
+             ConfHelper, AppHelper) {
   var AppRouter = Backbone.Router.extend ({
     routes: {
       '': 'defaultAction',
@@ -44,6 +45,8 @@ define([
       var hotView = new HotView ();
       hotView.render (index.substr(1));
     }
+
+    AppHelper.welcome();
   };
 
   var initialize = function () {
