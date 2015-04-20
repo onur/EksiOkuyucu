@@ -26,12 +26,6 @@ define([
       // bind show left frame button for mobile layout
       $('#left-frame-toggle').click (function () { that.toggleLeftFrame (); });
 
-      // bind navbar toggle button
-      $('.nav a').click (function () {
-        if ($(window).width () < 767 && $(this).attr ('href') != '#')
-          $('#navbar-toggle').click ();
-      });
-
       $(window).on ('resize', function () {
         that.hideLeftFrame ();
       });
@@ -85,6 +79,8 @@ define([
       this.render ();
 
       this.showLeftFrame ();
+
+      this.hideMenu(ev);
     },
 
     checkScroll: function () {
@@ -133,6 +129,24 @@ define([
       });
 
       $("#channels a").click (function () { that.click (this); });
+    },
+
+
+    // Hide menu for narrow screens
+    hideMenu: function (currentTarget) {
+
+      if ($(window).width () < 767 && $(currentTarget).attr ('href') != '#')
+        $('div.navbar-eksi-okuyucu').removeClass('in');
+
+    },
+
+    bindHideMenu: function () {
+      var that = this;
+
+      $('div.navbar-eksi-okuyucu a').off();
+      $('div.navbar-eksi-okuyucu a').click (function () {
+        that.hideMenu(this);
+      });
     }
 
   });
