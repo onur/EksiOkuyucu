@@ -18,5 +18,8 @@
     "default_icon": "app/img/icon.png",
     "default_title": "Ekşi Okuyucu Geliştirici Sürümü"
   },
+  "icons": {
+    "128": "app/img/icon.png"
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://*.bootstrapcdn.com; object-src 'self'"
 }

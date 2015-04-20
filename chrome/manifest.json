@@ -18,5 +18,8 @@
     "default_icon": "img/icon.png",
     "default_title": "Ekşi Okuyucu 2"
   },
+  "icons": {
+    "128": "img/icon.png"
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.googleapis.com https://*.bootstrapcdn.com; object-src 'self'"
 }
