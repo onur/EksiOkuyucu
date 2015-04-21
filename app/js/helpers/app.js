@@ -18,7 +18,7 @@ define([
 
       if (document.domain.match(/(github\.io|eksi\.ninja)$/)) {
         this.isExtension = false;
-        this.urlPrefix   = 'http://proxy.eksi.ninja/';
+        this.urlPrefix   = '/proxy/';
       }
     },
 
