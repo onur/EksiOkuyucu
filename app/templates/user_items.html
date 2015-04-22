@@ -6,10 +6,10 @@
 <li role="presentation" class="divider"></li> 
 <% } %>
 <li role="presentation" class="dropdown-header"><%= user %></li> 
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= user %>/favori-entryleri">Favori entrylerim</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= user %>/son-entryleri">Son entrylerim</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= user %>/en-begenilenleri">En beğenilenlerim</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= user %>/favorilenen-entryleri">En çok favorilenen enyrylerim</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= user %>/son-oylananlari">Son oylanan entrylerim</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= escape(user) %>/favori-entryleri">Favori entrylerim</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= escape(user) %>/son-entryleri">Son entrylerim</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= escape(user) %>/en-begenilenleri">En beğenilenlerim</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= escape(user) %>/favorilenen-entryleri">En çok favorilenen enyrylerim</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#tl/basliklar/istatistik/<%= escape(user) %>/son-oylananlari">Son oylanan entrylerim</a></li>
 <li role="presentation" class="divider"></li> 
 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="logout-button"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Terk</a></li>
