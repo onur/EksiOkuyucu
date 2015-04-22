@@ -1,14 +1,13 @@
 
-var widgets = require ("sdk/widget");
+var ui =  require("sdk/ui");
 var tabs = require ("sdk/tabs");
 var data = require ("sdk/self").data;
 
-var widget = widgets.Widget ({
+var button = ui.ActionButton({
   id: "eksi-okuyucu",
-  label: "Eksi Okuyucu",
-  contentURL: data.url ("img/icon.png"),
+  label: "Ekşi Okuyucu",
+  icon: data.url ("img/icon.png"),
   onClick: function () {
-    //EksiPanel.show ();
     tabs.open({
       url: data.url("index.html"),
       inBackground: false,
