@@ -16,7 +16,6 @@ check:
 	@echo 'Checking dependencies'
 	@echo -n 'Checking nodejs: ' && which $(NODE)
 	@echo -n 'Checking scss: '   && which $(SCSS)
-	@echo -n 'Checking chrome: ' && which $(CHROME)
 	@echo -n 'Checking cfx: '    && which $(CFX)
 	@echo -n 'Checking zip: '    && which $(ZIP)
 
