@@ -2,8 +2,6 @@
 
 NODE=nodejs
 SCSS=scss
-CHROME=chromium
-CHROME_KEY=chrome/chrome.pem
 CFX=cfx
 ZIP=zip
 
@@ -40,7 +38,6 @@ clean-css:
 	$(RM) -rv $(CSS_FILES)
 
 chrome: app
-	test -e $(CHROME_KEY)
 	mkdir -pv build/chrome/js build/chrome/css
 	cp -v chrome/chrome.js build/chrome 
 	cp -v chrome/index.html build/chrome 
@@ -50,7 +47,7 @@ chrome: app
 	cp -v build/app/css/bootstrap-*.css build/chrome/css
 	cp -vr build/app/img build/chrome
 	cp -vr build/app/fonts build/chrome
-	$(CHROME) --pack-extension=build/chrome --pack-extension-key=$(CHROME_KEY)
+	cd build/chrome && $(ZIP) -r ../chrome.zip .
 
 firefox: app
 	mkdir -pv build/firefox/data build/firefox/lib
