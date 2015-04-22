@@ -2,6 +2,7 @@
   "manifest_version": 2,
 
   "name": "Ekşi Okuyucu",
+  "short_name": "eksi-okuyucu",
   "description": "Modern HTML5 ekşisözlük okuyucusu",
   "version": "0.1.0",
 
