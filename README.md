@@ -4,6 +4,8 @@
 takip etmek için geliştirilmiş tarayıcı eklentisi. Ekşi Sözlük'ün üstünü
 yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
 
+![Ekşi Okuyucu](http://eksi.ninja/screenshots/01.png)
+
 ### Temel özellikleri
 
 * Reklamsızdır ve reklamsız kalacaktır.
