@@ -153,7 +153,7 @@ define([
       this.set ('creationTime',
                 this.relativeTime(
                   $(htmlDoc).find ('a.entry-date').text()));
-      this.set ('id', $(htmlDoc).find ('footer').attr ('data-id'));
+      this.set ('id', $(htmlDoc).attr('data-id'));
       this.set ('isFavorite',
                 $(htmlDoc).attr ('data-isfavorite') == 'true'
                     ? true : false );
