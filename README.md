@@ -1,8 +1,8 @@
 # Ekşi Okuyucu
 
-<https://eksisozluk.com/> okumayı kolaylaştırmak ve gündemi daha verimli
-takip etmek için geliştirilmiş tarayıcı eklentisi. Ekşi Sözlük'ün üstünü
-yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
+[eksisozluk.com](https://eksisozluk.com/) okumayı kolaylaştırmak ve gündemi
+daha verimli takip etmek için geliştirilmiş tarayıcı eklentisi. Ekşi
+Sözlük'ün üstünü yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
 
 ![Ekşi Okuyucu](http://eksi.ninja/screenshots/01.png)
 
@@ -29,8 +29,8 @@ yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
 * Kullanıcılarin son entrylerini, en beğenilen entrylerini, en çok
   favorilenen entrylerini, son oylanan entrylerini, favori entrylerini
   başlık ve entry içeriği ile birlikte gösterir. 
-* Entry içerisinde yer alan ekşi içerisindeki dahili linkleri, başlığın
-  ilk entrysi ile birlikte link üzerinde gösterir.
+* Entry içerisinde yer alan ekşi içerisindeki dahili linkleri, başlığın ilk
+  entrysi ile birlikte link üzerinde gösterir.
 * Resim linkleri tıklandıktan sonra direkt sayfa içerisinde gösterilir.
 * Youtube videolarını sayfa içerisinde oynatmanızı sağlar.
 * Kullanıcıları fişlemenizi sağlar. Ak-troller otomatikmen fişlenmiştir.
@@ -59,8 +59,8 @@ Uygulamayı geliştirmeye katkıda bulunmak istiyorsanız Chrome ile
 sayfasında bulunan geliştirici modunu aktif ederek eklentiyi yükleyebilir
 ve üzerinde değişiklikler yapabilirsiniz.
 
-Her türlü pull request, görüş ve önerilerinizi eklentinin github
-sayfasına gönderebilirsiniz.
+Her türlü pull request, görüş ve önerilerinizi eklentinin github sayfasına
+gönderebilirsiniz.
 
 
 ### Temalar
@@ -74,11 +74,10 @@ kullanarak kendi temanızı yapabilir ve projeye gönderebilirsiniz.
 
 Ekşi Okuyucu BDD (behaviour driven development) prensibi ile
 geliştirilmektedir. Eklentiyi geliştirici modunda kurduktan sonra
-`tests.html` sayfasını açarak testleri
-çalıştırabilirsiniz. Testler `jasmine` ile geliştirilmiştir. Ekşi
-Okuyucu'nun yeni sürümü, tüm tesler başarılı bir şekilde geçerse
-dağıtılmaktadır. Bir çok durum testlere dahil edilmiştir. `app/js/tests/`
-dizininde yapılan testleri görebilirsiniz.
+`tests.html` sayfasını açarak testleri çalıştırabilirsiniz. Testler
+`jasmine` ile geliştirilmiştir. Ekşi Okuyucu'nun yeni sürümü, tüm tesler
+başarılı bir şekilde geçerse dağıtılmaktadır. Bir çok durum testlere dahil
+edilmiştir. `app/js/tests/` dizininde yapılan testleri görebilirsiniz.
 
 Testler aynı zamanda ileride ekşi sözlük url yapılarını veya HTML
 çıktılarını değiştirirse, sorunu kolayca tesbit etmeye yarar. Sizde
@@ -127,9 +126,9 @@ gerçekleştirebilmeniz için gerekenler:
 `vim:ts=4:sw=2:et`
 
 Uygulamayı geliştirmeye ilk başladığımda, GNU stilinde olduğu gibi
-fonksiyon adından sonra ve parantezlerden önce bir boşluk
-kullanıyordum (örn: `foo ();`). Fakat bu alışkanlığımdan bir süredir
-vazgeçtim, coğu fonksiyondan sonra boşluk bulunsa da, olmaması sorun değil.
+fonksiyon adından sonra ve parantezlerden önce bir boşluk kullanıyordum
+(örn: `foo ();`). Fakat bu alışkanlığımdan bir süredir vazgeçtim, coğu
+fonksiyondan sonra boşluk bulunsa da, olmaması sorun değil.
 
 
 ### Lisans
