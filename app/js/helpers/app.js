@@ -32,11 +32,12 @@ define([
     },
 
 
-    welcome: function () {
+    welcome: function (showAlways) {
 
       var welcome_page_version = [];
       var current_version = this.version.match(/(\d+)\.(\d+)\.(\d+)/);
-      if (ConfHelper.options.welcome_page &&
+      if (typeof(showAlways) == 'undefined' &&
+          ConfHelper.options.welcome_page &&
           (welcome_page_version =
                ConfHelper.options.welcome_page.match(/(\d+)\.(\d+)\.(\d+)/)) &&
           current_version[1] <= welcome_page_version[1] &&
