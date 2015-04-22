@@ -49,24 +49,6 @@ define([
 
       this.hidePopover ();
 
-      // TODO: expand this
-      var position = function (context, source) {
-        var position = $(source).position ();
-        var main_position = $(that.el).width ();
-
-        if ($(window).width () < 767) {
-          return "auto";
-        }
-
-        if (position.top < 100)
-          return "bottom";
-
-        if (position.left < 300)
-          return "auto left";
-
-        return "auto top";
-      };
-
       // external link
 
       // FIXME: this is shitty code I've ever written
@@ -158,7 +140,7 @@ define([
 
           $(ev.currentTarget).attr ('data-content',
                    $('<p>' + entries.at (0).get ('content') + '</p>').text ());
-          $(ev.currentTarget).popover ({ placement: position,
+          $(ev.currentTarget).popover ({ placement: 'auto right',
                                          trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
@@ -171,7 +153,7 @@ define([
         error: function () {
           $(ev.currentTarget).attr ('data-content',
             '404 böyle bir başlık/entry yok')
-          $(ev.currentTarget).popover ({ placement: position,
+          $(ev.currentTarget).popover ({ placement: 'auto right',
                                          trigger: 'manual' });
           $(ev.currentTarget).popover ('show');
 
