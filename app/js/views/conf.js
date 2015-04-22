@@ -49,7 +49,8 @@ define([
       'click div.font a': 'changeFont',
       'change input': 'changeOption',
       'change #index-page': 'changeIndex',
-      'click #remove-usertag-button': 'removeUserTag'
+      'click #remove-usertag-button': 'removeUserTag',
+      'click a[href="#about"]': 'about'
     },
 
 
@@ -139,6 +140,11 @@ define([
         UserTagHelper.removeUserTag(tag[0], tag[1]);
         $(this).remove();
       });
+      return false;
+    },
+
+    about: function () {
+      AppHelper.welcome(true);
       return false;
     }
 
