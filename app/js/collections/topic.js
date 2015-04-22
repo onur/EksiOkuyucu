@@ -13,6 +13,7 @@ define([
     // 1 DESC
     // 2 TODAY_ASC
     // 3 SUKELA
+    // 3+ SNAPSHOT for followed topics
     order: 2,
 
     title: '',
