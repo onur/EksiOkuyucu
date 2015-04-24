@@ -10,7 +10,7 @@ Sözlük'ün üstünü yamalamak yerine, HTML çıktısını işleyip önünüze
 
 * [Chrome](https://chrome.google.com/webstore/detail/nihndelpipkdjpacfpgpailghcnglimj)
 * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/eksi-okuyucu/)
-* [Standalone](http://eksi.ninja/)
+* [Standalone](http://eksi.ninja/) *proxy ile çalışır*
 * Android, iOS ve Windows Phone hâlâ test aşamasında
 
 ### Temel özellikleri
