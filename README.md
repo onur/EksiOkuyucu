@@ -6,6 +6,13 @@ Sözlük'ün üstünü yamalamak yerine, HTML çıktısını işleyip önünüze
 
 ![Ekşi Okuyucu](http://eksi.ninja/screenshots/01.png)
 
+#### İndir
+
+* [Chrome](https://chrome.google.com/webstore/detail/nihndelpipkdjpacfpgpailghcnglimj)
+* [Firefox](https://addons.mozilla.org/en-US/firefox/addon/eksi-okuyucu/)
+* [Standalone](http://eksi.ninja/)
+* Android, iOS ve Windows Phone hâlâ test aşamasında
+
 ### Temel özellikleri
 
 * Reklamsızdır ve reklamsız kalacaktır.
