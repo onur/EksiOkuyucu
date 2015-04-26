@@ -1,3 +1,7 @@
+<% var channels = [ '#anket', '#bilim', '#edebiyat', '#ekşi-sözlük',
+           '#ilişkiler', '#müzik', '#oyun', '#programlama', '#sanat',
+           '#sinema', '#siyaset', '#spor', '#tarih', '#teknoloji', '#tv' ]; %>
+
 <div class="eksi-okuyucu-conf">
 
   <div class="panel panel-default">
@@ -71,21 +75,9 @@
           <option <% if (options.index == 'Bugün') { %>selected<% } %>>Bugün</option>
           <option <% if (options.index == 'Debe') { %>selected<% } %>>Debe</option>
           <option <% if (options.index == '$ükela') { %>selected<% } %>>$ükela</option>
-          <option <% if (options.index == '#anket') { %>selected<% } %>>#anket</option>
-          <option <% if (options.index == '#bilim') { %>selected<% } %>>#bilim</option>
-          <option <% if (options.index == '#edebiyat') { %>selected<% } %>>#edebiyat</option>
-          <option <% if (options.index == '#ekşi-sözlük') { %>selected<% } %>>#ekşi-sözlük</option>
-          <option <% if (options.index == '#ilişkiler') { %>selected<% } %>>#ilişkiler</option>
-          <option <% if (options.index == '#müzik') { %>selected<% } %>>#müzik</option>
-          <option <% if (options.index == '#oyun') { %>selected<% } %>>#oyun</option>
-          <option <% if (options.index == '#programlama') { %>selected<% } %>>#programlama</option>
-          <option <% if (options.index == '#sanat') { %>selected<% } %>>#sanat</option>
-          <option <% if (options.index == '#sinema') { %>selected<% } %>>#sinema</option>
-          <option <% if (options.index == '#siyaset') { %>selected<% } %>>#siyaset</option>
-          <option <% if (options.index == '#spor') { %>selected<% } %>>#spor</option>
-          <option <% if (options.index == '#tarih') { %>selected<% } %>>#tarih</option>
-          <option <% if (options.index == '#teknoloji') { %>selected<% } %>>#teknoloji</option>
-          <option <% if (options.index == '#tv') { %>selected<% } %>>#tv</option>
+          <% _.map(channels, function(channel) { %>
+          <option <% if (options.index == channel) { %>selected<% } %>><%= channel %></option>
+          <% }); %>
 
         </select>
       </div>
@@ -148,23 +140,7 @@
 
     <div class="panel-body">
 
-      <% _.map([
-           '#anket',
-           '#bilim',
-           '#edebiyat',
-           '#ekşi-sözlük',
-           '#ilişkiler',
-           '#müzik',
-           '#oyun',
-           '#programlama',
-           '#sanat',
-           '#sinema',
-           '#siyaset',
-           '#spor',
-           '#tarih',
-           '#teknoloji',
-           '#tv'
-         ], function(channel) { %>
+      <% _.map(channels, function(channel) { %>
 
       <div class="checkbox">
         <label>
