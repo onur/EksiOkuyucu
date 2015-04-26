@@ -106,12 +106,12 @@ define([
                 'd83f7c87d05f46dcff11e87cbe4b278268f30132'
                ).done (function (data) {
 
-                  $(ev.currentTarget).after ('<div><blockquote>' + 
-                                             data.content +
-                                             '</blockquote></div>');
-                  $(ev.currentTarget).attr ('data-loaded', 'true');
+                 $(ev.currentTarget).after ('<div><blockquote>' + 
+                                            data.content +
+                                            '</blockquote></div>');
+                 $(ev.currentTarget).attr ('data-loaded', 'true');
 
-                  NavHelper.loader(false);
+                 NavHelper.loader(false);
 
                }).error (function () {
                  NavHelper.loader(false);
