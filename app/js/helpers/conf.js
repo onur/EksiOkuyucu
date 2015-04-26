@@ -135,14 +135,8 @@ define([
     },
 
     getOption: function (option) {
-      if (option == 'popover')
-        return this.options.popover;
-      else if (option == 'readability')
-        return this.options.readability;
-      else if (option == 'youtube')
-        return this.options.youtube;
-      else if (option == 'images')
-        return this.options.images;
+      if (typeof(this.options[option]) != 'undefined')
+        return this.options[option];
       else
         return false;
     },
