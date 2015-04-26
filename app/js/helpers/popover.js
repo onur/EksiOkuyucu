@@ -99,6 +99,7 @@ define([
         }
 
         // get content from readability if external url is not an image
+        NavHelper.loader(true);
         $.ajax ('https://readability.com/api/content/v1/parser?url=' +
                 escape (link) + '&token=' +
                 // token supposed to be secret but who cares
@@ -110,7 +111,10 @@ define([
                                              '</blockquote></div>');
                   $(ev.currentTarget).attr ('data-loaded', 'true');
 
+                  NavHelper.loader(false);
+
                }).error (function () {
+                 NavHelper.loader(false);
                  window.open (link);
                });
 
