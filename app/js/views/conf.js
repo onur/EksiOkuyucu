@@ -18,6 +18,9 @@ define([
 
     initialize: function () {
       NavHelper.initialize ('Ayarlar');
+
+      // FIXME: Navhelper stucking for some reason
+      NavHelper.loader(false);
     },
 
     render: function () {
