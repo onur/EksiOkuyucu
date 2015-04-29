@@ -45,8 +45,6 @@ define([
       var hotView = new HotView ();
       hotView.render (index.substr(1));
     }
-
-    AppHelper.welcome();
   };
 
   var initialize = function () {
