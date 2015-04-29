@@ -111,6 +111,8 @@ ile karşılaşırsanız yeni bir hata kaydı oluşturun.
 * Navigasyon menüsü, dar ekranlarda pek stabil değil. Bu da uygulamayı çoğu
   zaman dar ekranlarda kullanılmaz hâle getirebiliyor. Bu nedenden dolayı
   akıllı telefon desteği ilk sürümde yer almamaktadır.
+* Ekşi Sözlük'teki son değişikliklerin ardından *Bugün* sadece kullanıcı
+  girişi yapmış olanlar için çalışmakta.
 
 
 ### Planlanan Özellikler
