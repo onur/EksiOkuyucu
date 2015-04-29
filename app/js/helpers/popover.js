@@ -3,9 +3,10 @@ define([
   'underscore',
   'backbone',
   'collections/topic',
+  'helpers/app',
   'helpers/conf',
   'helpers/nav'
-], function($, _, Backbone, TopicCollection, ConfHelper, NavHelper) {
+], function($, _, Backbone, TopicCollection, AppHelper, ConfHelper, NavHelper) {
   return {
 
     parseYoutubeUrl: function (url) {
@@ -93,7 +94,7 @@ define([
 
         }
 
-        if (!ConfHelper.getOption ('readability')) {
+        if (!ConfHelper.getOption ('readability') || !AppHelper.isExtension) {
           window.open (link);
           return false;
         }
