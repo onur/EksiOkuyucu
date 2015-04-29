@@ -6,12 +6,17 @@ Sözlük'ün üstünü yamalamak yerine, HTML çıktısını işleyip önünüze
 
 ![Ekşi Okuyucu](http://eksi.ninja/screenshots/01.png)
 
+Adından da anlaşılacağı gibi sadece okumayı kolaylaştırmak için
+tasarlanmıştır. Kullanıcı girişi, favorileme ve sukela butonları
+sonradan eklenmiştir. İleride başlık takip etme ve entry yollama
+özellikleri *muhtemelen* eklenecektir.
+
 #### İndir
 
 * [Chrome](https://chrome.google.com/webstore/detail/nihndelpipkdjpacfpgpailghcnglimj)
 * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/eksi-okuyucu/)
-* [Standalone](http://eksi.ninja/) *proxy ile çalışır*
-* Android, iOS ve Windows Phone hâlâ test aşamasında
+* [Standalone](http://eksi.ninja/) *(proxy ile çalışır)*
+* Android, iOS ve Windows Phone hazır olduğunda yayımlanacak.
 
 ### Temel özellikleri
 
@@ -103,6 +108,9 @@ ile karşılaşırsanız yeni bir hata kaydı oluşturun.
 * Bir view yüklenirken, sidebar veya navbardan farklı bir linke tıklanırsa,
   mevcut view yüklenmeye devam ediyor ve 2 view aynı anda renderlenmeye
   çalışıyor.
+* Navigasyon menüsü, dar ekranlarda pek stabil değil. Bu da uygulamayı çoğu
+  zaman dar ekranlarda kullanılmaz hâle getirebiliyor. Bu nedenden dolayı
+  akıllı telefon desteği ilk sürümde yer almamaktadır.
 
 
 ### Planlanan Özellikler
@@ -123,7 +131,6 @@ gerçekleştirebilmeniz için gerekenler:
 * GNU make
 * nodejs
 * r.js
-* chromium
 * scss
 * firefox-addon-sdk
 
