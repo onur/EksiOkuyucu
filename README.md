@@ -2,7 +2,8 @@
 
 [eksisozluk.com](https://eksisozluk.com/) okumayı kolaylaştırmak ve gündemi
 daha verimli takip etmek için geliştirilmiş tarayıcı eklentisi. Ekşi
-Sözlük'ün üstünü yamalamak yerine, HTML çıktısını işleyip önünüze sunar.
+Sözlük'ün üstünü yamalamak yerine, yeni bir Ekşi Sözlük deneyimi yaratmak
+için yapılmıştır.
 
 ![Ekşi Okuyucu](http://eksi.ninja/screenshots/01.png)
 
