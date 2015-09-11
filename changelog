@@ -1,3 +1,11 @@
+EksiOkuyucu (0.1.1) UNRELEASED; urgency=medium
+
+  * Yazar URLlerinde boşluk yerine kısa çizgi (-) kullan.
+    (Closes: #1)
+  * Standalone sürümde tüm içeriği gziple.
+
+ -- Onur Aslan <onur@onur.im>  Sat, 12 Sep 2015 00:03:16 +0300
+
 EksiOkuyucu (0.1.0) unstable; urgency=low
 
   * İlk önizleme sürümü.
