@@ -14,6 +14,7 @@ define([
       creationTime: '',
       modifyTime: '',
       author: '',
+      author_link: '',
       isFavorite: false,
       favoriteCount: 0,
     },
@@ -162,6 +163,7 @@ define([
                   $(htmlDoc).attr ('data-favorite-count'))
                 );
       this.set ('author', $(htmlDoc).find ('a.entry-author').text ());
+      this.set ('author_link', this.get ('author').replace(/ /g, '-'));
       this.set ('author_tags', UserTagHelper.getUserTags(this.get('author')));
 
     }
