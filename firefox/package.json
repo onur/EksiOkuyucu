@@ -5,7 +5,7 @@
   "description": "Modern HTML5 ekşisözlük okuyucusu",
   "author": "",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "data/img/icon.png",
   "permissions": {
     "cross-domain-content": [

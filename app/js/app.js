@@ -14,7 +14,7 @@ define([
 ], function ($, _, Backbone, Router, AppHelper, ConfHelper, UserTagHelper,
              SidebarView, UserView, SearchView, BodyTemplate) {
   return {
-    version: '0.1.0',
+    version: '0.1.1',
     initialize: function (tests) {
 
       ConfHelper.loadConf ();
