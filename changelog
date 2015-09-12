@@ -1,4 +1,4 @@
-EksiOkuyucu (0.1.1) UNRELEASED; urgency=medium
+EksiOkuyucu (0.1.1) unstable; urgency=low
 
   * Yazar URLlerinde boşluk yerine kısa çizgi (-) kullan.
     (Closes: #1)
@@ -7,7 +7,7 @@ EksiOkuyucu (0.1.1) UNRELEASED; urgency=medium
   * "Bugün" linkini navigasyondan kaldır. Ekşisözlük bugün atılan entryler
     için kullanıcı girişi istiyor.
 
- -- Onur Aslan <onur@onur.im>  Sat, 12 Sep 2015 00:03:16 +0300
+ -- Onur Aslan <onur@onur.im>  Sat, 12 Sep 2015 13:35:25 +0300
 
 EksiOkuyucu (0.1.0) unstable; urgency=low
 
