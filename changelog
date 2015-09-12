@@ -4,6 +4,8 @@ EksiOkuyucu (0.1.1) UNRELEASED; urgency=medium
     (Closes: #1)
   * Standalone sürümde tüm içeriği gziple.
   * Firefox buildi için optimize edilmeyen bir build kuralı oluştur.
+  * "Bugün" linkini navigasyondan kaldır. Ekşisözlük bugün atılan entryler
+    için kullanıcı girişi istiyor.
 
  -- Onur Aslan <onur@onur.im>  Sat, 12 Sep 2015 00:03:16 +0300
 
