@@ -86,14 +86,11 @@ define([
         this.options.theme = 'spacelab';
 
       var theme_css_file = 'css/bootstrap-' + this.options.theme + '.min.css';
-      var that = this;
-      require(['text!' + theme_css_file], function() {
 
-        $('#theme-css-file').attr('href',
-            'css/bootstrap-' + that.options.theme + '.min.css');
-        $('body').attr ('class', 'theme-' + that.options.theme);
+      $('#theme-css-file').attr('href',
+          'css/bootstrap-' + this.options.theme + '.min.css');
+      $('body').attr ('class', 'theme-' + this.options.theme);
 
-      });
     },
 
 
