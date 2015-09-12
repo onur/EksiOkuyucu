@@ -76,7 +76,6 @@ define([
 
       var channel_urls = {
         'Gündem': 'basliklar/populer',
-        'Bugün': 'basliklar/bugun',
         '#anket': 'basliklar/kanal/anket',
         '#bilim': 'basliklar/kanal/bilim',
         '#edebiyat': 'basliklar/kanal/edebiyat',
