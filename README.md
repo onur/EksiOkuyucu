@@ -16,7 +16,7 @@ sonradan eklenmiştir. İleride başlık takip etme ve entry yollama
 
 * [Chrome](https://chrome.google.com/webstore/detail/nihndelpipkdjpacfpgpailghcnglimj)
 * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/eksi-okuyucu/)
-* [Standalone](http://eksi.ninja/) *(proxy ile çalışır)*
+* [Standalone](http://eksi.ninja/)
 * Android, iOS ve Windows Phone hazır olduğunda yayımlanacak.
 
 ### Temel özellikleri
