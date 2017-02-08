@@ -10,7 +10,7 @@ define([
 
     page: 1,
     pageCount: 1,
-    channel: 'basliklar/populer',
+    channel: 'basliklar/gundem',
 
     url: function () {
       return AppHelper.urlPrefix + this.channel +

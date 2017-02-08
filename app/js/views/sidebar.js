@@ -66,7 +66,7 @@ define([
       var channel = $(ev).attr ('href').match (/^#(hot)*(\/)*(.*?)$/, '')[3];
 
       if (channel == '')
-        channel = 'basliklar/populer';
+        channel = 'basliklar/gundem';
       else if (channel == 'bugun')
         channel = 'basliklar/bugun';
       else
